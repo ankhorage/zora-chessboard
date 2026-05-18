@@ -1,7 +1,7 @@
 {
-  "packageName": "@ankhorage/zora",
+  "packageName": "@ankhorage/zora-chessboard",
   "packageId": "@ankhorage/zora-chessboard",
-  "description": "ZORA — an opinionated UI kit for React Native + Web built on top of @ankhorage/surface.",
+  "description": "Chessboard component for React Native and React Native Web apps built on ZORA.",
   "badges": [
     {
       "id": "license",
@@ -60,9 +60,7 @@
   ],
   "usage": null,
   "config": null,
-  "entrypoints": [
-    "src/index.ts"
-  ],
+  "entrypoints": ["src/index.ts"],
   "modules": [
     {
       "path": "src/index.ts",
