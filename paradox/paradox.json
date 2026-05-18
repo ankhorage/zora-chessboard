@@ -12,7 +12,7 @@
     {
       "id": "npm",
       "label": "npm",
-      "value": "v2.4.8",
+      "value": "v0.0.0",
       "color": "cb3837"
     },
     {
@@ -60,7 +60,9 @@
   ],
   "usage": null,
   "config": null,
-  "entrypoints": ["src/index.ts"],
+  "entrypoints": [
+    "src/index.ts"
+  ],
   "modules": [
     {
       "path": "src/index.ts",
