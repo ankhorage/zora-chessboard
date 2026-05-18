@@ -1,6 +1,12 @@
 import { Chess, type Move } from 'chess.js';
 
-import type { ChessMoveAttempt, ChessMoveResult, ChessPieceCode, ChessSquareId } from './types';
+import type {
+  ChessMoveAttempt,
+  ChessMoveResult,
+  ChessPieceCode,
+  ChessPromotionPiece,
+  ChessSquareId,
+} from './types';
 
 export interface ChessPieceState {
   color: 'black' | 'white';
@@ -20,12 +26,20 @@ function toPieceCode(piece: { color: 'b' | 'w'; type: string }): ChessPieceCode 
   return piece.color === 'w' ? piece.type.toUpperCase() : piece.type.toLowerCase();
 }
 
+function toPromotionPiece(piece: string | undefined): ChessPromotionPiece | undefined {
+  if (piece === 'q' || piece === 'r' || piece === 'b' || piece === 'n') {
+    return piece;
+  }
+
+  return undefined;
+}
+
 function toMoveResult(move: Move, fen: string): ChessMoveResult {
   return {
     fen,
     from: move.from,
     lan: move.lan,
-    promotion: move.promotion,
+    promotion: toPromotionPiece(move.promotion),
     san: move.san,
     to: move.to,
   };
