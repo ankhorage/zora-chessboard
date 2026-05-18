@@ -2,9 +2,47 @@
 
 ## ChessBoard
 
-Kind: `value`
+Kind: `function`
 Module: `src/ChessBoard.tsx`
-Source: `src/ChessBoard.tsx:179:14`
+Source: `src/ChessBoard.tsx:43:1`
+
+### Signatures
+
+- `({
+  fen,
+  orientation = 'white',
+  selectedSquare = null,
+  legalTargets,
+  lastMove = null,
+  disabled = false,
+  showCoordinates = false,
+  validateMoves = true,
+  colorScheme: colorOverrides,
+  onSquarePress,
+  onMoveAttempt,
+  onLegalMove,
+  onInvalidMove,
+  renderPiece,
+  testID,
+}: ChessBoardProps) => React.JSX.Element`
+  - {
+    fen,
+    orientation = 'white',
+    selectedSquare = null,
+    legalTargets,
+    lastMove = null,
+    disabled = false,
+    showCoordinates = false,
+    validateMoves = true,
+    colorScheme: colorOverrides,
+    onSquarePress,
+    onMoveAttempt,
+    onLegalMove,
+    onInvalidMove,
+    renderPiece,
+    testID,
+    }: `ChessBoardProps`
+  - returns: `React.JSX.Element`
 
 ## ChessBoardColorOverrides
 
@@ -39,13 +77,13 @@ Source: `src/types.ts:33:1`
 
 Kind: `value`
 Module: `src/meta.ts`
-Source: `src/meta.ts:3:14`
+Source: `src/meta.ts:1:14`
 
 ## ChessBoardOrientation
 
 Kind: `unknown`
 Module: `src/types.ts`
-Source: `src/types.ts:7:1`
+Source: `src/types.ts:6:1`
 
 ## ChessBoardProps
 
@@ -89,7 +127,7 @@ Source: `src/colors.ts:3:1`
 
 Kind: `type`
 Module: `src/types.ts`
-Source: `src/types.ts:13:1`
+Source: `src/types.ts:12:1`
 
 ### Members
 
@@ -103,7 +141,7 @@ Source: `src/types.ts:13:1`
 
 Kind: `type`
 Module: `src/types.ts`
-Source: `src/types.ts:19:1`
+Source: `src/types.ts:18:1`
 
 ### Members
 
@@ -120,7 +158,7 @@ Source: `src/types.ts:19:1`
 
 Kind: `unknown`
 Module: `src/types.ts`
-Source: `src/types.ts:9:1`
+Source: `src/types.ts:8:1`
 
 ## ChessPieceRenderContext
 
@@ -146,7 +184,7 @@ Source: `src/types.ts:31:1`
 
 Kind: `type`
 Module: `src/engine.ts`
-Source: `src/engine.ts:5:1`
+Source: `src/engine.ts:11:1`
 
 ### Members
 
@@ -160,25 +198,25 @@ Source: `src/engine.ts:5:1`
 
 Kind: `unknown`
 Module: `src/types.ts`
-Source: `src/types.ts:11:1`
+Source: `src/types.ts:10:1`
 
 ## ChessSquareId
 
 Kind: `unknown`
 Module: `src/types.ts`
-Source: `src/types.ts:5:1`
+Source: `src/types.ts:4:1`
 
 ## chessSquares
 
 Kind: `value`
 Module: `src/squares.ts`
-Source: `src/squares.ts:6:14`
+Source: `src/squares.ts:10:14`
 
 ## createBoardSquares
 
 Kind: `function`
 Module: `src/squares.ts`
-Source: `src/squares.ts:8:1`
+Source: `src/squares.ts:12:1`
 
 ### Signatures
 
@@ -203,7 +241,7 @@ Source: `src/colors.ts:28:1`
 
 Kind: `function`
 Module: `src/engine.ts`
-Source: `src/engine.ts:60:1`
+Source: `src/engine.ts:74:1`
 
 ### Signatures
 
@@ -216,7 +254,7 @@ Source: `src/engine.ts:60:1`
 
 Kind: `function`
 Module: `src/squares.ts`
-Source: `src/squares.ts:22:1`
+Source: `src/squares.ts:26:1`
 
 ### Signatures
 
@@ -228,7 +266,7 @@ Source: `src/squares.ts:22:1`
 
 Kind: `function`
 Module: `src/squares.ts`
-Source: `src/squares.ts:26:1`
+Source: `src/squares.ts:30:1`
 
 ### Signatures
 
@@ -240,7 +278,7 @@ Source: `src/squares.ts:26:1`
 
 Kind: `function`
 Module: `src/squares.ts`
-Source: `src/squares.ts:15:1`
+Source: `src/squares.ts:19:1`
 
 ### Signatures
 
@@ -252,7 +290,7 @@ Source: `src/squares.ts:15:1`
 
 Kind: `function`
 Module: `src/engine.ts`
-Source: `src/engine.ts:34:1`
+Source: `src/engine.ts:48:1`
 
 ### Signatures
 
@@ -264,7 +302,7 @@ Source: `src/engine.ts:34:1`
 
 Kind: `function`
 Module: `src/engine.ts`
-Source: `src/engine.ts:69:1`
+Source: `src/engine.ts:83:1`
 
 ### Signatures
 

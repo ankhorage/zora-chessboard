@@ -15,6 +15,7 @@ Chessboard component for React Native and React Native Web apps built on ZORA.
 - [Architecture overview](././paradox/diagrams/architecture-overview.mmd)
 - [Module relationships](././paradox/diagrams/module-relationships.mmd)
 - [Export graph](././paradox/diagrams/export-graph.mmd)
+- [ChessBoard sequence](././paradox/diagrams/sequences/chess-board.mmd)
 - [getLegalTargets sequence](././paradox/diagrams/sequences/get-legal-targets.mmd)
 - [readChessPieces sequence](././paradox/diagrams/sequences/read-chess-pieces.mmd)
 - [tryMove sequence](././paradox/diagrams/sequences/try-move.mmd)

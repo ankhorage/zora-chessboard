@@ -4,16 +4,30 @@
     "description": null,
     "isReadme": false,
     "examples": [],
-    "kind": "value",
+    "kind": "function",
     "modulePath": "src/ChessBoard.tsx",
     "sourceLocation": {
       "filePath": "src/ChessBoard.tsx",
-      "line": 179,
-      "column": 14
+      "line": 43,
+      "column": 1
     },
     "exportPaths": ["src/index.ts"],
-    "relatedSymbols": [],
-    "signatures": [],
+    "relatedSymbols": ["ChessBoardProps"],
+    "signatures": [
+      {
+        "label": "({\n  fen,\n  orientation = 'white',\n  selectedSquare = null,\n  legalTargets,\n  lastMove = null,\n  disabled = false,\n  showCoordinates = false,\n  validateMoves = true,\n  colorScheme: colorOverrides,\n  onSquarePress,\n  onMoveAttempt,\n  onLegalMove,\n  onInvalidMove,\n  renderPiece,\n  testID,\n}: ChessBoardProps) => React.JSX.Element",
+        "parameters": [
+          {
+            "name": "{\n  fen,\n  orientation = 'white',\n  selectedSquare = null,\n  legalTargets,\n  lastMove = null,\n  disabled = false,\n  showCoordinates = false,\n  validateMoves = true,\n  colorScheme: colorOverrides,\n  onSquarePress,\n  onMoveAttempt,\n  onLegalMove,\n  onInvalidMove,\n  renderPiece,\n  testID,\n}",
+            "type": "ChessBoardProps",
+            "required": true,
+            "description": null
+          }
+        ],
+        "returnType": "React.JSX.Element",
+        "returnDescription": null
+      }
+    ],
     "members": [],
     "structuredRows": []
   },
@@ -147,7 +161,7 @@
     "modulePath": "src/meta.ts",
     "sourceLocation": {
       "filePath": "src/meta.ts",
-      "line": 3,
+      "line": 1,
       "column": 14
     },
     "exportPaths": ["src/index.ts"],
@@ -165,7 +179,7 @@
     "modulePath": "src/types.ts",
     "sourceLocation": {
       "filePath": "src/types.ts",
-      "line": 7,
+      "line": 6,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -340,7 +354,7 @@
     "modulePath": "src/types.ts",
     "sourceLocation": {
       "filePath": "src/types.ts",
-      "line": 13,
+      "line": 12,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -380,7 +394,7 @@
     "modulePath": "src/types.ts",
     "sourceLocation": {
       "filePath": "src/types.ts",
-      "line": 19,
+      "line": 18,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -441,7 +455,7 @@
     "modulePath": "src/types.ts",
     "sourceLocation": {
       "filePath": "src/types.ts",
-      "line": 9,
+      "line": 8,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -517,7 +531,7 @@
     "modulePath": "src/engine.ts",
     "sourceLocation": {
       "filePath": "src/engine.ts",
-      "line": 5,
+      "line": 11,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -557,7 +571,7 @@
     "modulePath": "src/types.ts",
     "sourceLocation": {
       "filePath": "src/types.ts",
-      "line": 11,
+      "line": 10,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -575,7 +589,7 @@
     "modulePath": "src/types.ts",
     "sourceLocation": {
       "filePath": "src/types.ts",
-      "line": 5,
+      "line": 4,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -593,7 +607,7 @@
     "modulePath": "src/squares.ts",
     "sourceLocation": {
       "filePath": "src/squares.ts",
-      "line": 6,
+      "line": 10,
       "column": 14
     },
     "exportPaths": ["src/index.ts"],
@@ -611,7 +625,7 @@
     "modulePath": "src/squares.ts",
     "sourceLocation": {
       "filePath": "src/squares.ts",
-      "line": 8,
+      "line": 12,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -681,7 +695,7 @@
     "modulePath": "src/engine.ts",
     "sourceLocation": {
       "filePath": "src/engine.ts",
-      "line": 60,
+      "line": 74,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -719,7 +733,7 @@
     "modulePath": "src/squares.ts",
     "sourceLocation": {
       "filePath": "src/squares.ts",
-      "line": 22,
+      "line": 26,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -751,7 +765,7 @@
     "modulePath": "src/squares.ts",
     "sourceLocation": {
       "filePath": "src/squares.ts",
-      "line": 26,
+      "line": 30,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -783,7 +797,7 @@
     "modulePath": "src/squares.ts",
     "sourceLocation": {
       "filePath": "src/squares.ts",
-      "line": 15,
+      "line": 19,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -815,7 +829,7 @@
     "modulePath": "src/engine.ts",
     "sourceLocation": {
       "filePath": "src/engine.ts",
-      "line": 34,
+      "line": 48,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],
@@ -847,7 +861,7 @@
     "modulePath": "src/engine.ts",
     "sourceLocation": {
       "filePath": "src/engine.ts",
-      "line": 69,
+      "line": 83,
       "column": 1
     },
     "exportPaths": ["src/index.ts"],

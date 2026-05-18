@@ -210,13 +210,13 @@
             <li>
               <button class="nav-button" type="button" data-target="src/engine.ts">
                 src/engine.ts
-                <small>6 functions</small>
+                <small>7 functions</small>
               </button>
             </li>
             <li>
               <button class="nav-button" type="button" data-target="src/squares.ts">
                 src/squares.ts
-                <small>4 functions</small>
+                <small>5 functions</small>
               </button>
             </li>
           </ul>
@@ -228,7 +228,7 @@
             <h2>Package overview</h2>
             <div class="summary">
               <div><strong>25</strong><span class="muted">public exports</span></div>
-              <div><strong>0</strong><span class="muted">components</span></div>
+              <div><strong>1</strong><span class="muted">components</span></div>
               <div><strong>8</strong><span class="muted">modules</span></div>
               <div><strong>1</strong><span class="muted">entrypoints</span></div>
             </div>
@@ -352,13 +352,66 @@
               <article
                 class="item"
                 id="symbol-chessboard"
-                data-search="ChessBoard value src/ChessBoard.tsx "
+                data-search="ChessBoard function src/ChessBoard.tsx  ChessBoardProps ({&#10;  fen,&#10;  orientation = &#39;white&#39;,&#10;  selectedSquare = null,&#10;  legalTargets,&#10;  lastMove = null,&#10;  disabled = false,&#10;  showCoordinates = false,&#10;  validateMoves = true,&#10;  colorScheme: colorOverrides,&#10;  onSquarePress,&#10;  onMoveAttempt,&#10;  onLegalMove,&#10;  onInvalidMove,&#10;  renderPiece,&#10;  testID,&#10;}: ChessBoardProps) =&gt; React.JSX.Element"
               >
                 <h4>ChessBoard</h4>
-                <p class="muted">value • <code>src/ChessBoard.tsx:179:14</code></p>
+                <p class="muted">function • <code>src/ChessBoard.tsx:43:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">ChessBoardProps</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+({
+  fen,
+  orientation = &#39;white&#39;,
+  selectedSquare = null,
+  legalTargets,
+  lastMove = null,
+  disabled = false,
+  showCoordinates = false,
+  validateMoves = true,
+  colorScheme: colorOverrides,
+  onSquarePress,
+  onMoveAttempt,
+  onLegalMove,
+  onInvalidMove,
+  renderPiece,
+  testID,
+}: ChessBoardProps) =&gt; React.JSX.Element</pre
+                  >
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <code
+                            >{ fen, orientation = &#39;white&#39;, selectedSquare = null,
+                            legalTargets, lastMove = null, disabled = false, showCoordinates =
+                            false, validateMoves = true, colorScheme: colorOverrides, onSquarePress,
+                            onMoveAttempt, onLegalMove, onInvalidMove, renderPiece, testID, }</code
+                          >
+                        </td>
+                        <td><code>ChessBoardProps</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Returns:</strong> <code>React.JSX.Element</code></p>
+                </div>
               </article>
             </section>
             <section>
@@ -459,7 +512,7 @@
                 data-search="ChessPieceState type src/engine.ts "
               >
                 <h4>ChessPieceState</h4>
-                <p class="muted">type • <code>src/engine.ts:5:1</code></p>
+                <p class="muted">type • <code>src/engine.ts:11:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -509,7 +562,7 @@
                 data-search='getLegalTargets function src/engine.ts  (fen: string, from: import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square) =&gt; readonly import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square[]'
               >
                 <h4>getLegalTargets</h4>
-                <p class="muted">function • <code>src/engine.ts:60:1</code></p>
+                <p class="muted">function • <code>src/engine.ts:74:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -561,7 +614,7 @@
                 data-search='readChessPieces function src/engine.ts  ChessPieceState (fen: string) =&gt; ReadonlyMap&lt;import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square, ChessPieceState&gt;'
               >
                 <h4>readChessPieces</h4>
-                <p class="muted">function • <code>src/engine.ts:34:1</code></p>
+                <p class="muted">function • <code>src/engine.ts:48:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
@@ -608,7 +661,7 @@
                 data-search="tryMove function src/engine.ts  ChessMoveAttempt ChessMoveResult (fen: string, attempt: ChessMoveAttempt) =&gt; ChessMoveResult | null"
               >
                 <h4>tryMove</h4>
-                <p class="muted">function • <code>src/engine.ts:69:1</code></p>
+                <p class="muted">function • <code>src/engine.ts:83:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
@@ -657,7 +710,7 @@
                 data-search="chessBoardMeta value src/meta.ts "
               >
                 <h4>chessBoardMeta</h4>
-                <p class="muted">value • <code>src/meta.ts:3:14</code></p>
+                <p class="muted">value • <code>src/meta.ts:1:14</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -685,7 +738,7 @@
                 data-search="chessSquares value src/squares.ts "
               >
                 <h4>chessSquares</h4>
-                <p class="muted">value • <code>src/squares.ts:6:14</code></p>
+                <p class="muted">value • <code>src/squares.ts:10:14</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -696,7 +749,7 @@
                 data-search='createBoardSquares function src/squares.ts  ChessBoardOrientation (orientation: ChessBoardOrientation) =&gt; readonly import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square[]'
               >
                 <h4>createBoardSquares</h4>
-                <p class="muted">function • <code>src/squares.ts:8:1</code></p>
+                <p class="muted">function • <code>src/squares.ts:12:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
@@ -743,7 +796,7 @@
                 data-search='getSquareFile function src/squares.ts  (square: import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square) =&gt; string'
               >
                 <h4>getSquareFile</h4>
-                <p class="muted">function • <code>src/squares.ts:22:1</code></p>
+                <p class="muted">function • <code>src/squares.ts:26:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -783,7 +836,7 @@
                 data-search='getSquareRank function src/squares.ts  (square: import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square) =&gt; string'
               >
                 <h4>getSquareRank</h4>
-                <p class="muted">function • <code>src/squares.ts:26:1</code></p>
+                <p class="muted">function • <code>src/squares.ts:30:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -823,7 +876,7 @@
                 data-search='isLightSquare function src/squares.ts  (square: import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square) =&gt; boolean'
               >
                 <h4>isLightSquare</h4>
-                <p class="muted">function • <code>src/squares.ts:15:1</code></p>
+                <p class="muted">function • <code>src/squares.ts:19:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -986,7 +1039,7 @@
                 data-search="ChessBoardOrientation unknown src/types.ts "
               >
                 <h4>ChessBoardOrientation</h4>
-                <p class="muted">unknown • <code>src/types.ts:7:1</code></p>
+                <p class="muted">unknown • <code>src/types.ts:6:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -1137,7 +1190,7 @@
                 data-search="ChessMoveAttempt type src/types.ts  ChessPromotionPiece"
               >
                 <h4>ChessMoveAttempt</h4>
-                <p class="muted">type • <code>src/types.ts:13:1</code></p>
+                <p class="muted">type • <code>src/types.ts:12:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
@@ -1188,7 +1241,7 @@
                 data-search="ChessMoveResult type src/types.ts  ChessPromotionPiece"
               >
                 <h4>ChessMoveResult</h4>
-                <p class="muted">type • <code>src/types.ts:19:1</code></p>
+                <p class="muted">type • <code>src/types.ts:18:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
@@ -1260,7 +1313,7 @@
                 data-search="ChessPieceCode unknown src/types.ts "
               >
                 <h4>ChessPieceCode</h4>
-                <p class="muted">unknown • <code>src/types.ts:9:1</code></p>
+                <p class="muted">unknown • <code>src/types.ts:8:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -1328,7 +1381,7 @@
                 data-search="ChessPromotionPiece unknown src/types.ts "
               >
                 <h4>ChessPromotionPiece</h4>
-                <p class="muted">unknown • <code>src/types.ts:11:1</code></p>
+                <p class="muted">unknown • <code>src/types.ts:10:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -1339,7 +1392,7 @@
                 data-search="ChessSquareId unknown src/types.ts "
               >
                 <h4>ChessSquareId</h4>
-                <p class="muted">unknown • <code>src/types.ts:5:1</code></p>
+                <p class="muted">unknown • <code>src/types.ts:4:1</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -1348,7 +1401,118 @@
           </section>
           <section class="panel">
             <h2>Component registry</h2>
-            <p class="empty">No components were detected.</p>
+            <article
+              class="item"
+              id="component-chessboard"
+              data-search="ChessBoard src/ChessBoard.tsx  colorScheme ChessBoardColorOverrides | undefined disabled boolean | undefined fen string lastMove ChessMoveAttempt | null | undefined legalTargets readonly ChessSquareId[] | undefined onInvalidMove (move: ChessMoveAttempt) =&gt; void | undefined onLegalMove (move: ChessMoveResult) =&gt; void | undefined onMoveAttempt (move: ChessMoveAttempt) =&gt; void | undefined onSquarePress (square: ChessSquareId) =&gt; void | undefined orientation ChessBoardOrientation | undefined renderPiece ChessPieceRenderer | undefined selectedSquare ChessSquareId | null | undefined showCoordinates boolean | undefined testID string | undefined validateMoves boolean | undefined"
+            >
+              <h3>ChessBoard</h3>
+              <p class="muted"><code>src/ChessBoard.tsx:43:1</code></p>
+
+              <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Prop</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>colorScheme</code></td>
+                    <td><code>ChessBoardColorOverrides | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>disabled</code></td>
+                    <td><code>boolean | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>fen</code></td>
+                    <td><code>string</code></td>
+                    <td>yes</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>lastMove</code></td>
+                    <td><code>ChessMoveAttempt | null | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>legalTargets</code></td>
+                    <td><code>readonly ChessSquareId[] | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>onInvalidMove</code></td>
+                    <td><code>(move: ChessMoveAttempt) =&gt; void | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>onLegalMove</code></td>
+                    <td><code>(move: ChessMoveResult) =&gt; void | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>onMoveAttempt</code></td>
+                    <td><code>(move: ChessMoveAttempt) =&gt; void | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>onSquarePress</code></td>
+                    <td><code>(square: ChessSquareId) =&gt; void | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>orientation</code></td>
+                    <td><code>ChessBoardOrientation | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>renderPiece</code></td>
+                    <td><code>ChessPieceRenderer | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>selectedSquare</code></td>
+                    <td><code>ChessSquareId | null | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>showCoordinates</code></td>
+                    <td><code>boolean | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>testID</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>validateMoves</code></td>
+                    <td><code>boolean | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
           </section>
           <section class="panel">
             <h2>Diagrams</h2>
@@ -1472,7 +1636,7 @@ graph LR
                 module_src_squares_ts[&quot;src/squares.ts&quot;]
                 module_src_types_ts[&quot;src/types.ts&quot;]
                 export_ChessBoard[&quot;ChessBoard&quot;] module_src_ChessBoard_tsx --&gt;
-                export_ChessBoard
+                export_ChessBoard export_ChessBoard -.-&gt; export_ChessBoardProps
                 export_ChessBoardColorOverrides[&quot;ChessBoardColorOverrides&quot;]
                 module_src_types_ts --&gt; export_ChessBoardColorOverrides
                 export_ChessBoardColorScheme[&quot;ChessBoardColorScheme&quot;] module_src_types_ts
@@ -1539,6 +1703,7 @@ graph LR
   module_src_types_ts[&quot;src/types.ts&quot;]
   export_ChessBoard[&quot;ChessBoard&quot;]
   module_src_ChessBoard_tsx --&gt; export_ChessBoard
+  export_ChessBoard -.-&gt; export_ChessBoardProps
   export_ChessBoardColorOverrides[&quot;ChessBoardColorOverrides&quot;]
   module_src_types_ts --&gt; export_ChessBoardColorOverrides
   export_ChessBoardColorScheme[&quot;ChessBoardColorScheme&quot;]
@@ -1607,6 +1772,30 @@ graph LR
             </article>
             <article
               class="item"
+              data-search="ChessBoard sequence diagrams/sequences/chess-board.mmd"
+            >
+              <h3>ChessBoard sequence</h3>
+              <p class="muted"><code>diagrams/sequences/chess-board.mmd</code></p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_ChessBoard as ChessBoard participant
+                participant_useZoraTheme as useZoraTheme
+                participant_ChessBoard-&gt;&gt;participant_useZoraTheme: useZoraTheme()
+                participant_useZoraTheme--&gt;&gt;participant_ChessBoard: return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_ChessBoard as ChessBoard
+  participant participant_useZoraTheme as useZoraTheme
+  participant_ChessBoard-&gt;&gt;participant_useZoraTheme: useZoraTheme()
+  participant_useZoraTheme--&gt;&gt;participant_ChessBoard: return
+</pre
+                >
+              </details>
+            </article>
+            <article
+              class="item"
               data-search="getLegalTargets sequence diagrams/sequences/get-legal-targets.mmd"
             >
               <h3>getLegalTargets sequence</h3>
@@ -1658,10 +1847,13 @@ sequenceDiagram
               <p class="muted"><code>diagrams/sequences/try-move.mmd</code></p>
               <div class="mermaid">
                 sequenceDiagram participant participant_createChess as createChess participant
-                participant_toMoveResult as toMoveResult participant participant_tryMove as tryMove
+                participant_toMoveResult as toMoveResult participant participant_toPromotionPiece as
+                toPromotionPiece participant participant_tryMove as tryMove
                 participant_tryMove-&gt;&gt;participant_createChess: createChess()
                 participant_createChess--&gt;&gt;participant_tryMove: return
                 participant_tryMove-&gt;&gt;participant_toMoveResult: toMoveResult()
+                participant_toMoveResult-&gt;&gt;participant_toPromotionPiece: toPromotionPiece()
+                participant_toPromotionPiece--&gt;&gt;participant_toMoveResult: return
                 participant_toMoveResult--&gt;&gt;participant_tryMove: return
               </div>
               <details>
@@ -1670,10 +1862,13 @@ sequenceDiagram
 sequenceDiagram
   participant participant_createChess as createChess
   participant participant_toMoveResult as toMoveResult
+  participant participant_toPromotionPiece as toPromotionPiece
   participant participant_tryMove as tryMove
   participant_tryMove-&gt;&gt;participant_createChess: createChess()
   participant_createChess--&gt;&gt;participant_tryMove: return
   participant_tryMove-&gt;&gt;participant_toMoveResult: toMoveResult()
+  participant_toMoveResult-&gt;&gt;participant_toPromotionPiece: toPromotionPiece()
+  participant_toPromotionPiece--&gt;&gt;participant_toMoveResult: return
   participant_toMoveResult--&gt;&gt;participant_tryMove: return
 </pre
                 >
@@ -1694,14 +1889,14 @@ sequenceDiagram
               <p class="muted"><code>src/ChessBoard.tsx:35:1</code></p>
               <p class="empty">No description available.</p>
             </article>
-            <article class="item" data-search="ChessBoardInner src/ChessBoard.tsx ">
-              <h3>ChessBoardInner</h3>
+            <article class="item" data-search="ChessBoard src/ChessBoard.tsx ">
+              <h3>ChessBoard</h3>
               <p class="muted"><code>src/ChessBoard.tsx:43:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="handleSquarePress src/ChessBoard.tsx ">
               <h3>handleSquarePress</h3>
-              <p class="muted"><code>src/ChessBoard.tsx:81:9</code></p>
+              <p class="muted"><code>src/ChessBoard.tsx:79:9</code></p>
               <p class="empty">No description available.</p>
             </article>
           </section>
@@ -1721,32 +1916,37 @@ sequenceDiagram
             <h2>src/engine.ts</h2>
             <article class="item" data-search="createChess src/engine.ts ">
               <h3>createChess</h3>
-              <p class="muted"><code>src/engine.ts:11:1</code></p>
+              <p class="muted"><code>src/engine.ts:17:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="toPieceCode src/engine.ts ">
               <h3>toPieceCode</h3>
-              <p class="muted"><code>src/engine.ts:19:1</code></p>
+              <p class="muted"><code>src/engine.ts:25:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="toPromotionPiece src/engine.ts ">
+              <h3>toPromotionPiece</h3>
+              <p class="muted"><code>src/engine.ts:29:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="toMoveResult src/engine.ts ">
               <h3>toMoveResult</h3>
-              <p class="muted"><code>src/engine.ts:23:1</code></p>
+              <p class="muted"><code>src/engine.ts:37:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="readChessPieces src/engine.ts ">
               <h3>readChessPieces</h3>
-              <p class="muted"><code>src/engine.ts:34:1</code></p>
+              <p class="muted"><code>src/engine.ts:48:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="getLegalTargets src/engine.ts ">
               <h3>getLegalTargets</h3>
-              <p class="muted"><code>src/engine.ts:60:1</code></p>
+              <p class="muted"><code>src/engine.ts:74:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="tryMove src/engine.ts ">
               <h3>tryMove</h3>
-              <p class="muted"><code>src/engine.ts:69:1</code></p>
+              <p class="muted"><code>src/engine.ts:83:1</code></p>
               <p class="empty">No description available.</p>
             </article>
           </section>
@@ -1754,24 +1954,29 @@ sequenceDiagram
         <section id="view-src-squares-ts" class="view" data-view="src/squares.ts" hidden>
           <section class="panel">
             <h2>src/squares.ts</h2>
+            <article class="item" data-search="toSquare src/squares.ts ">
+              <h3>toSquare</h3>
+              <p class="muted"><code>src/squares.ts:6:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
             <article class="item" data-search="createBoardSquares src/squares.ts ">
               <h3>createBoardSquares</h3>
-              <p class="muted"><code>src/squares.ts:8:1</code></p>
+              <p class="muted"><code>src/squares.ts:12:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="isLightSquare src/squares.ts ">
               <h3>isLightSquare</h3>
-              <p class="muted"><code>src/squares.ts:15:1</code></p>
+              <p class="muted"><code>src/squares.ts:19:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="getSquareFile src/squares.ts ">
               <h3>getSquareFile</h3>
-              <p class="muted"><code>src/squares.ts:22:1</code></p>
+              <p class="muted"><code>src/squares.ts:26:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="getSquareRank src/squares.ts ">
               <h3>getSquareRank</h3>
-              <p class="muted"><code>src/squares.ts:26:1</code></p>
+              <p class="muted"><code>src/squares.ts:30:1</code></p>
               <p class="empty">No description available.</p>
             </article>
           </section>
