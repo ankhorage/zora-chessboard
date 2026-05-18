@@ -60,25 +60,46 @@
   ],
   "usage": null,
   "config": null,
-  "entrypoints": ["src/index.ts"],
+  "entrypoints": [
+    "src/index.ts"
+  ],
   "modules": [
     {
       "path": "src/ChessBoard.tsx",
       "isEntrypoint": false,
-      "dependencies": ["src/colors.ts", "src/engine.ts", "src/squares.ts", "src/types.ts"],
-      "exports": ["ChessBoard"]
+      "dependencies": [
+        "src/colors.ts",
+        "src/engine.ts",
+        "src/squares.ts",
+        "src/types.ts"
+      ],
+      "exports": [
+        "ChessBoard"
+      ]
     },
     {
       "path": "src/colors.ts",
       "isEntrypoint": false,
-      "dependencies": ["src/types.ts"],
-      "exports": ["ChessColorThemeShape", "createChessBoardColorScheme"]
+      "dependencies": [
+        "src/types.ts"
+      ],
+      "exports": [
+        "ChessColorThemeShape",
+        "createChessBoardColorScheme"
+      ]
     },
     {
       "path": "src/engine.ts",
       "isEntrypoint": false,
-      "dependencies": ["src/types.ts"],
-      "exports": ["ChessPieceState", "getLegalTargets", "readChessPieces", "tryMove"]
+      "dependencies": [
+        "src/types.ts"
+      ],
+      "exports": [
+        "ChessPieceState",
+        "getLegalTargets",
+        "readChessPieces",
+        "tryMove"
+      ]
     },
     {
       "path": "src/index.ts",
@@ -116,18 +137,26 @@
       "path": "src/meta.ts",
       "isEntrypoint": false,
       "dependencies": [],
-      "exports": ["chessBoardMeta"]
+      "exports": [
+        "chessBoardMeta"
+      ]
     },
     {
       "path": "src/registry.ts",
       "isEntrypoint": false,
-      "dependencies": ["src/meta.ts"],
-      "exports": ["ZORA_CHESS_COMPONENT_META"]
+      "dependencies": [
+        "src/meta.ts"
+      ],
+      "exports": [
+        "ZORA_CHESS_COMPONENT_META"
+      ]
     },
     {
       "path": "src/squares.ts",
       "isEntrypoint": false,
-      "dependencies": ["src/types.ts"],
+      "dependencies": [
+        "src/types.ts"
+      ],
       "exports": [
         "chessSquares",
         "createBoardSquares",
@@ -161,16 +190,34 @@
       "description": null,
       "isReadme": false,
       "examples": [],
-      "kind": "value",
+      "kind": "function",
       "modulePath": "src/ChessBoard.tsx",
       "sourceLocation": {
         "filePath": "src/ChessBoard.tsx",
-        "line": 179,
-        "column": 14
+        "line": 43,
+        "column": 1
       },
-      "exportPaths": ["src/index.ts"],
-      "relatedSymbols": [],
-      "signatures": [],
+      "exportPaths": [
+        "src/index.ts"
+      ],
+      "relatedSymbols": [
+        "ChessBoardProps"
+      ],
+      "signatures": [
+        {
+          "label": "({\n  fen,\n  orientation = 'white',\n  selectedSquare = null,\n  legalTargets,\n  lastMove = null,\n  disabled = false,\n  showCoordinates = false,\n  validateMoves = true,\n  colorScheme: colorOverrides,\n  onSquarePress,\n  onMoveAttempt,\n  onLegalMove,\n  onInvalidMove,\n  renderPiece,\n  testID,\n}: ChessBoardProps) => React.JSX.Element",
+          "parameters": [
+            {
+              "name": "{\n  fen,\n  orientation = 'white',\n  selectedSquare = null,\n  legalTargets,\n  lastMove = null,\n  disabled = false,\n  showCoordinates = false,\n  validateMoves = true,\n  colorScheme: colorOverrides,\n  onSquarePress,\n  onMoveAttempt,\n  onLegalMove,\n  onInvalidMove,\n  renderPiece,\n  testID,\n}",
+              "type": "ChessBoardProps",
+              "required": true,
+              "description": null
+            }
+          ],
+          "returnType": "React.JSX.Element",
+          "returnDescription": null
+        }
+      ],
       "members": [],
       "structuredRows": []
     },
@@ -186,7 +233,9 @@
         "line": 48,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [],
@@ -204,7 +253,9 @@
         "line": 33,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [
@@ -304,10 +355,12 @@
       "modulePath": "src/meta.ts",
       "sourceLocation": {
         "filePath": "src/meta.ts",
-        "line": 3,
+        "line": 1,
         "column": 14
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [],
@@ -322,10 +375,12 @@
       "modulePath": "src/types.ts",
       "sourceLocation": {
         "filePath": "src/types.ts",
-        "line": 7,
+        "line": 6,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [],
@@ -343,7 +398,9 @@
         "line": 50,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [
         "ChessBoardColorScheme",
         "ChessBoardOrientation",
@@ -474,7 +531,9 @@
         "line": 3,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [
@@ -497,11 +556,15 @@
       "modulePath": "src/types.ts",
       "sourceLocation": {
         "filePath": "src/types.ts",
-        "line": 13,
+        "line": 12,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
-      "relatedSymbols": ["ChessPromotionPiece"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
+      "relatedSymbols": [
+        "ChessPromotionPiece"
+      ],
       "signatures": [],
       "members": [
         {
@@ -537,11 +600,15 @@
       "modulePath": "src/types.ts",
       "sourceLocation": {
         "filePath": "src/types.ts",
-        "line": 19,
+        "line": 18,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
-      "relatedSymbols": ["ChessPromotionPiece"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
+      "relatedSymbols": [
+        "ChessPromotionPiece"
+      ],
       "signatures": [],
       "members": [
         {
@@ -598,10 +665,12 @@
       "modulePath": "src/types.ts",
       "sourceLocation": {
         "filePath": "src/types.ts",
-        "line": 9,
+        "line": 8,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [],
@@ -619,7 +688,9 @@
         "line": 25,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [
@@ -659,7 +730,9 @@
         "line": 31,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [],
@@ -674,10 +747,12 @@
       "modulePath": "src/engine.ts",
       "sourceLocation": {
         "filePath": "src/engine.ts",
-        "line": 5,
+        "line": 11,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [
@@ -714,10 +789,12 @@
       "modulePath": "src/types.ts",
       "sourceLocation": {
         "filePath": "src/types.ts",
-        "line": 11,
+        "line": 10,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [],
@@ -732,10 +809,12 @@
       "modulePath": "src/types.ts",
       "sourceLocation": {
         "filePath": "src/types.ts",
-        "line": 5,
+        "line": 4,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [],
@@ -750,10 +829,12 @@
       "modulePath": "src/squares.ts",
       "sourceLocation": {
         "filePath": "src/squares.ts",
-        "line": 6,
+        "line": 10,
         "column": 14
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [],
@@ -768,11 +849,15 @@
       "modulePath": "src/squares.ts",
       "sourceLocation": {
         "filePath": "src/squares.ts",
-        "line": 8,
+        "line": 12,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
-      "relatedSymbols": ["ChessBoardOrientation"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
+      "relatedSymbols": [
+        "ChessBoardOrientation"
+      ],
       "signatures": [
         {
           "label": "(orientation: ChessBoardOrientation) => readonly import(\"/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess\").Square[]",
@@ -803,8 +888,13 @@
         "line": 28,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
-      "relatedSymbols": ["ChessBoardColorScheme", "ChessColorThemeShape"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
+      "relatedSymbols": [
+        "ChessBoardColorScheme",
+        "ChessColorThemeShape"
+      ],
       "signatures": [
         {
           "label": "(theme: ChessColorThemeShape, overrides?: Partial<ChessBoardColorScheme> | undefined) => ChessBoardColorScheme",
@@ -838,10 +928,12 @@
       "modulePath": "src/engine.ts",
       "sourceLocation": {
         "filePath": "src/engine.ts",
-        "line": 60,
+        "line": 74,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [
         {
@@ -876,10 +968,12 @@
       "modulePath": "src/squares.ts",
       "sourceLocation": {
         "filePath": "src/squares.ts",
-        "line": 22,
+        "line": 26,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [
         {
@@ -908,10 +1002,12 @@
       "modulePath": "src/squares.ts",
       "sourceLocation": {
         "filePath": "src/squares.ts",
-        "line": 26,
+        "line": 30,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [
         {
@@ -940,10 +1036,12 @@
       "modulePath": "src/squares.ts",
       "sourceLocation": {
         "filePath": "src/squares.ts",
-        "line": 15,
+        "line": 19,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [
         {
@@ -972,11 +1070,15 @@
       "modulePath": "src/engine.ts",
       "sourceLocation": {
         "filePath": "src/engine.ts",
-        "line": 34,
+        "line": 48,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
-      "relatedSymbols": ["ChessPieceState"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
+      "relatedSymbols": [
+        "ChessPieceState"
+      ],
       "signatures": [
         {
           "label": "(fen: string) => ReadonlyMap<import(\"/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess\").Square, ChessPieceState>",
@@ -1004,11 +1106,16 @@
       "modulePath": "src/engine.ts",
       "sourceLocation": {
         "filePath": "src/engine.ts",
-        "line": 69,
+        "line": 83,
         "column": 1
       },
-      "exportPaths": ["src/index.ts"],
-      "relatedSymbols": ["ChessMoveAttempt", "ChessMoveResult"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
+      "relatedSymbols": [
+        "ChessMoveAttempt",
+        "ChessMoveResult"
+      ],
       "signatures": [
         {
           "label": "(fen: string, attempt: ChessMoveAttempt) => ChessMoveResult | null",
@@ -1045,14 +1152,130 @@
         "line": 3,
         "column": 14
       },
-      "exportPaths": ["src/index.ts"],
+      "exportPaths": [
+        "src/index.ts"
+      ],
       "relatedSymbols": [],
       "signatures": [],
       "members": [],
       "structuredRows": []
     }
   ],
-  "components": [],
+  "components": [
+    {
+      "name": "ChessBoard",
+      "description": null,
+      "isReadme": false,
+      "examples": [],
+      "modulePath": "src/ChessBoard.tsx",
+      "sourceLocation": {
+        "filePath": "src/ChessBoard.tsx",
+        "line": 43,
+        "column": 1
+      },
+      "exportPaths": [
+        "src/index.ts"
+      ],
+      "props": [
+        {
+          "name": "colorScheme",
+          "type": "ChessBoardColorOverrides | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "disabled",
+          "type": "boolean | undefined",
+          "required": false,
+          "defaultValue": "false",
+          "description": null
+        },
+        {
+          "name": "fen",
+          "type": "string",
+          "required": true,
+          "description": null
+        },
+        {
+          "name": "lastMove",
+          "type": "ChessMoveAttempt | null | undefined",
+          "required": false,
+          "defaultValue": "null",
+          "description": null
+        },
+        {
+          "name": "legalTargets",
+          "type": "readonly ChessSquareId[] | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "onInvalidMove",
+          "type": "(move: ChessMoveAttempt) => void | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "onLegalMove",
+          "type": "(move: ChessMoveResult) => void | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "onMoveAttempt",
+          "type": "(move: ChessMoveAttempt) => void | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "onSquarePress",
+          "type": "(square: ChessSquareId) => void | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "orientation",
+          "type": "ChessBoardOrientation | undefined",
+          "required": false,
+          "defaultValue": "'white'",
+          "description": null
+        },
+        {
+          "name": "renderPiece",
+          "type": "ChessPieceRenderer | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "selectedSquare",
+          "type": "ChessSquareId | null | undefined",
+          "required": false,
+          "defaultValue": "null",
+          "description": null
+        },
+        {
+          "name": "showCoordinates",
+          "type": "boolean | undefined",
+          "required": false,
+          "defaultValue": "false",
+          "description": null
+        },
+        {
+          "name": "testID",
+          "type": "string | undefined",
+          "required": false,
+          "description": null
+        },
+        {
+          "name": "validateMoves",
+          "type": "boolean | undefined",
+          "required": false,
+          "defaultValue": "true",
+          "description": null
+        }
+      ]
+    }
+  ],
   "sourceFunctions": [
     {
       "name": "isDarkPiece",
@@ -1073,7 +1296,7 @@
       }
     },
     {
-      "name": "ChessBoardInner",
+      "name": "ChessBoard",
       "description": null,
       "sourceLocation": {
         "filePath": "src/ChessBoard.tsx",
@@ -1086,7 +1309,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/ChessBoard.tsx",
-        "line": 81,
+        "line": 79,
         "column": 9
       }
     },
@@ -1104,7 +1327,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/engine.ts",
-        "line": 11,
+        "line": 17,
         "column": 1
       }
     },
@@ -1113,7 +1336,16 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/engine.ts",
-        "line": 19,
+        "line": 25,
+        "column": 1
+      }
+    },
+    {
+      "name": "toPromotionPiece",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/engine.ts",
+        "line": 29,
         "column": 1
       }
     },
@@ -1122,7 +1354,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/engine.ts",
-        "line": 23,
+        "line": 37,
         "column": 1
       }
     },
@@ -1131,7 +1363,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/engine.ts",
-        "line": 34,
+        "line": 48,
         "column": 1
       }
     },
@@ -1140,7 +1372,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/engine.ts",
-        "line": 60,
+        "line": 74,
         "column": 1
       }
     },
@@ -1149,7 +1381,16 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/engine.ts",
-        "line": 69,
+        "line": 83,
+        "column": 1
+      }
+    },
+    {
+      "name": "toSquare",
+      "description": null,
+      "sourceLocation": {
+        "filePath": "src/squares.ts",
+        "line": 6,
         "column": 1
       }
     },
@@ -1158,7 +1399,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/squares.ts",
-        "line": 8,
+        "line": 12,
         "column": 1
       }
     },
@@ -1167,7 +1408,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/squares.ts",
-        "line": 15,
+        "line": 19,
         "column": 1
       }
     },
@@ -1176,7 +1417,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/squares.ts",
-        "line": 22,
+        "line": 26,
         "column": 1
       }
     },
@@ -1185,12 +1426,20 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/squares.ts",
-        "line": 26,
+        "line": 30,
         "column": 1
       }
     }
   ],
   "sequenceScenarios": [
+    {
+      "kind": "export",
+      "name": "ChessBoard",
+      "sourcePath": "src/ChessBoard.tsx",
+      "symbolName": "ChessBoard",
+      "description": null,
+      "isReadme": false
+    },
     {
       "kind": "export",
       "name": "createBoardSquares",
@@ -1336,7 +1585,7 @@
     ],
     "calls": [
       {
-        "fromSymbol": "ChessBoardInner",
+        "fromSymbol": "ChessBoard",
         "toSymbol": "useZoraTheme",
         "callExpression": "useZoraTheme",
         "sourcePath": "src/ChessBoard.tsx"
@@ -1432,10 +1681,10 @@
         "sourcePath": "src/ChessBoard.tsx"
       },
       {
-        "fromSymbol": "src/ChessBoard.tsx",
-        "toSymbol": "withZoraThemeScope",
-        "callExpression": "withZoraThemeScope",
-        "sourcePath": "src/ChessBoard.tsx"
+        "fromSymbol": "toMoveResult",
+        "toSymbol": "toPromotionPiece",
+        "callExpression": "toPromotionPiece",
+        "sourcePath": "src/engine.ts"
       },
       {
         "fromSymbol": "readChessPieces",
@@ -1466,9 +1715,25 @@
         "toSymbol": "toMoveResult",
         "callExpression": "toMoveResult",
         "sourcePath": "src/engine.ts"
+      },
+      {
+        "fromSymbol": "src/squares.ts",
+        "toSymbol": "toSquare",
+        "callExpression": "toSquare",
+        "sourcePath": "src/squares.ts"
       }
     ],
     "typeReferences": [
+      {
+        "fromSymbol": "ChessBoard",
+        "toType": "ChessBoardProps",
+        "sourcePath": "src/ChessBoard.tsx"
+      },
+      {
+        "fromSymbol": "ChessBoard",
+        "toType": "React",
+        "sourcePath": "src/ChessBoard.tsx"
+      },
       {
         "fromSymbol": "createChessBoardColorScheme",
         "toType": "ChessBoardColorScheme",
@@ -1645,6 +1910,37 @@
         "sourcePath": "src/types.ts"
       }
     ],
-    "componentComposition": []
+    "componentComposition": [
+      {
+        "fromComponent": "ChessBoard",
+        "toComponent": "View",
+        "jsxElement": "<View\n      style={[\n        styles.board,\n        {\n          borderColor: colors.border,\n          opacity: disabled ? 0.56 : 1,\n        },\n      ]}\n      testID={testID}\n    >",
+        "sourcePath": "src/ChessBoard.tsx"
+      },
+      {
+        "fromComponent": "ChessBoard",
+        "toComponent": "Pressable",
+        "jsxElement": "<Pressable\n            accessibilityRole=\"button\"\n            disabled={disabled}\n            key={square}\n            onPress={() => handleSquarePress(square)}\n            style={[styles.square, { backgroundColor }]}\n            testID={testID ? `${testID}-square-${square}` : undefined}\n          >",
+        "sourcePath": "src/ChessBoard.tsx"
+      },
+      {
+        "fromComponent": "ChessBoard",
+        "toComponent": "Text",
+        "jsxElement": "<Text selectable={false} style={[styles.coordinate, { color: labelColor }]}>",
+        "sourcePath": "src/ChessBoard.tsx"
+      },
+      {
+        "fromComponent": "ChessBoard",
+        "toComponent": "View",
+        "jsxElement": "<View pointerEvents=\"none\" style={styles.pieceContainer}>",
+        "sourcePath": "src/ChessBoard.tsx"
+      },
+      {
+        "fromComponent": "ChessBoard",
+        "toComponent": "DefaultPiece",
+        "jsxElement": "<DefaultPiece color={pieceColor} piece={piece.piece} square={square} />",
+        "sourcePath": "src/ChessBoard.tsx"
+      }
+    ]
   }
 }

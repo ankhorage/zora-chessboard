@@ -9,6 +9,7 @@ graph LR
   module_src_types_ts["src/types.ts"]
   export_ChessBoard["ChessBoard"]
   module_src_ChessBoard_tsx --> export_ChessBoard
+  export_ChessBoard -.-> export_ChessBoardProps
   export_ChessBoardColorOverrides["ChessBoardColorOverrides"]
   module_src_types_ts --> export_ChessBoardColorOverrides
   export_ChessBoardColorScheme["ChessBoardColorScheme"]

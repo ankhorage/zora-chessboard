@@ -7,37 +7,16 @@
     <style>
       :root {
         color-scheme: light;
-        font-family:
-          Inter,
-          ui-sans-serif,
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          'Segoe UI',
-          sans-serif;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         background: #f5f7fb;
         color: #11203b;
       }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-      }
-      a {
-        color: #2459d3;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      button {
-        font: inherit;
-      }
-      code,
-      pre {
-        font-family: 'SFMono-Regular', ui-monospace, SFMono-Regular, Menlo, monospace;
-      }
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      a { color: #2459d3; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      button { font: inherit; }
+      code, pre { font-family: "SFMono-Regular", ui-monospace, SFMono-Regular, Menlo, monospace; }
       .layout {
         display: grid;
         grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
@@ -52,11 +31,8 @@
         max-height: 100vh;
         overflow: auto;
       }
-      .content {
-        padding: 2rem;
-      }
-      .panel,
-      .item {
+      .content { padding: 2rem; }
+      .panel, .item {
         background: #ffffff;
         border: 1px solid #d8dfec;
         border-radius: 0.9rem;
@@ -80,15 +56,12 @@
         border: 1px solid #c7d2e5;
         margin: 1rem 0 1.5rem;
       }
-      .nav-list,
-      .meta-list {
+      .nav-list, .meta-list {
         list-style: none;
         padding: 0;
         margin: 0;
       }
-      .nav-list li + li {
-        margin-top: 0.5rem;
-      }
+      .nav-list li + li { margin-top: 0.5rem; }
       .nav-button {
         width: 100%;
         display: block;
@@ -100,8 +73,7 @@
         padding: 0.55rem 0.7rem;
         text-align: left;
       }
-      .nav-button:hover,
-      .nav-button[aria-current='page'] {
+      .nav-button:hover, .nav-button[aria-current="page"] {
         background: #e8eefb;
         text-decoration: none;
       }
@@ -110,19 +82,9 @@
         color: #5e6d8c;
         margin-top: 0.15rem;
       }
-      .view[hidden] {
-        display: none;
-      }
-      .muted {
-        color: #5e6d8c;
-      }
-      .chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        padding: 0;
-        list-style: none;
-      }
+      .view[hidden] { display: none; }
+      .muted { color: #5e6d8c; }
+      .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; list-style: none; }
       .chip {
         border-radius: 999px;
         background: #e8eefb;
@@ -130,18 +92,8 @@
         padding: 0.25rem 0.65rem;
         font-size: 0.85rem;
       }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 0.8rem;
-      }
-      th,
-      td {
-        padding: 0.6rem;
-        border-bottom: 1px solid #e2e7f2;
-        text-align: left;
-        vertical-align: top;
-      }
+      table { width: 100%; border-collapse: collapse; margin-top: 0.8rem; }
+      th, td { padding: 0.6rem; border-bottom: 1px solid #e2e7f2; text-align: left; vertical-align: top; }
       pre {
         overflow: auto;
         border-radius: 0.75rem;
@@ -149,34 +101,13 @@
         color: #e7edf7;
         padding: 1rem;
       }
-      .empty {
-        font-style: italic;
-        color: #6f7f9c;
-      }
-      .mermaid {
-        margin: 1rem 0;
-        overflow: auto;
-      }
-      details > summary {
-        cursor: pointer;
-        color: #5e6d8c;
-        font-size: 0.9rem;
-        margin-top: 0.5rem;
-        user-select: none;
-      }
+      .empty { font-style: italic; color: #6f7f9c; }
+      .mermaid { margin: 1rem 0; overflow: auto; }
+      details > summary { cursor: pointer; color: #5e6d8c; font-size: 0.9rem; margin-top: 0.5rem; user-select: none; }
       @media (max-width: 900px) {
-        .layout {
-          grid-template-columns: 1fr;
-        }
-        .sidebar {
-          position: static;
-          max-height: none;
-          border-right: 0;
-          border-bottom: 1px solid #d8dfec;
-        }
-        .content {
-          padding: 1rem;
-        }
+        .layout { grid-template-columns: 1fr; }
+        .sidebar { position: static; max-height: none; border-right: 0; border-bottom: 1px solid #d8dfec; }
+        .content { padding: 1rem; }
       }
     </style>
   </head>
@@ -196,1194 +127,893 @@
               </button>
             </li>
             <li>
-              <button class="nav-button" type="button" data-target="src/ChessBoard.tsx">
-                src/ChessBoard.tsx
-                <small>4 functions</small>
-              </button>
-            </li>
-            <li>
-              <button class="nav-button" type="button" data-target="src/colors.ts">
-                src/colors.ts
-                <small>1 function</small>
-              </button>
-            </li>
-            <li>
-              <button class="nav-button" type="button" data-target="src/engine.ts">
-                src/engine.ts
-                <small>6 functions</small>
-              </button>
-            </li>
-            <li>
-              <button class="nav-button" type="button" data-target="src/squares.ts">
-                src/squares.ts
-                <small>4 functions</small>
-              </button>
-            </li>
+    <button class="nav-button" type="button" data-target="src/ChessBoard.tsx">
+      src/ChessBoard.tsx
+      <small>4 functions</small>
+    </button>
+  </li><li>
+    <button class="nav-button" type="button" data-target="src/colors.ts">
+      src/colors.ts
+      <small>1 function</small>
+    </button>
+  </li><li>
+    <button class="nav-button" type="button" data-target="src/engine.ts">
+      src/engine.ts
+      <small>7 functions</small>
+    </button>
+  </li><li>
+    <button class="nav-button" type="button" data-target="src/squares.ts">
+      src/squares.ts
+      <small>5 functions</small>
+    </button>
+  </li>
           </ul>
         </nav>
       </aside>
       <main class="content">
         <section id="view-home" class="view" data-view="home">
-          <section class="panel">
-            <h2>Package overview</h2>
-            <div class="summary">
-              <div><strong>25</strong><span class="muted">public exports</span></div>
-              <div><strong>0</strong><span class="muted">components</span></div>
-              <div><strong>8</strong><span class="muted">modules</span></div>
-              <div><strong>1</strong><span class="muted">entrypoints</span></div>
-            </div>
-            <h3>Entrypoints</h3>
-            <ul class="meta-list">
-              <li><code>src/index.ts</code></li>
-            </ul>
-          </section>
-
-          <section class="panel">
-            <h2>Modules</h2>
-            <article
-              class="item"
-              data-search="src/ChessBoard.tsx src/colors.ts src/engine.ts src/squares.ts src/types.ts ChessBoard"
-            >
-              <h3>src/ChessBoard.tsx</h3>
-              <p class="muted">Referenced module</p>
-              <p>
-                <strong>Dependencies:</strong> <code>src/colors.ts</code>,
-                <code>src/engine.ts</code>, <code>src/squares.ts</code>, <code>src/types.ts</code>
-              </p>
-              <p><strong>Exports:</strong> <code>ChessBoard</code></p>
-            </article>
-            <article
-              class="item"
-              data-search="src/colors.ts src/types.ts ChessColorThemeShape createChessBoardColorScheme"
-            >
-              <h3>src/colors.ts</h3>
-              <p class="muted">Referenced module</p>
-              <p><strong>Dependencies:</strong> <code>src/types.ts</code></p>
-              <p>
-                <strong>Exports:</strong> <code>ChessColorThemeShape</code>,
-                <code>createChessBoardColorScheme</code>
-              </p>
-            </article>
-            <article
-              class="item"
-              data-search="src/engine.ts src/types.ts ChessPieceState getLegalTargets readChessPieces tryMove"
-            >
-              <h3>src/engine.ts</h3>
-              <p class="muted">Referenced module</p>
-              <p><strong>Dependencies:</strong> <code>src/types.ts</code></p>
-              <p>
-                <strong>Exports:</strong> <code>ChessPieceState</code>,
-                <code>getLegalTargets</code>, <code>readChessPieces</code>, <code>tryMove</code>
-              </p>
-            </article>
-            <article
-              class="item"
-              data-search="src/index.ts ChessBoard ChessBoardColorOverrides ChessBoardColorScheme chessBoardMeta ChessBoardOrientation ChessBoardProps ChessColorThemeShape ChessMoveAttempt ChessMoveResult ChessPieceCode ChessPieceRenderContext ChessPieceRenderer ChessPieceState ChessPromotionPiece ChessSquareId chessSquares createBoardSquares createChessBoardColorScheme getLegalTargets getSquareFile getSquareRank isLightSquare readChessPieces tryMove ZORA_CHESS_COMPONENT_META"
-            >
-              <h3>src/index.ts</h3>
-              <p class="muted">Configured entrypoint</p>
-              <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
-              <p>
-                <strong>Exports:</strong> <code>ChessBoard</code>,
-                <code>ChessBoardColorOverrides</code>, <code>ChessBoardColorScheme</code>,
-                <code>chessBoardMeta</code>, <code>ChessBoardOrientation</code>,
-                <code>ChessBoardProps</code>, <code>ChessColorThemeShape</code>,
-                <code>ChessMoveAttempt</code>, <code>ChessMoveResult</code>,
-                <code>ChessPieceCode</code>, <code>ChessPieceRenderContext</code>,
-                <code>ChessPieceRenderer</code>, <code>ChessPieceState</code>,
-                <code>ChessPromotionPiece</code>, <code>ChessSquareId</code>,
-                <code>chessSquares</code>, <code>createBoardSquares</code>,
-                <code>createChessBoardColorScheme</code>, <code>getLegalTargets</code>,
-                <code>getSquareFile</code>, <code>getSquareRank</code>, <code>isLightSquare</code>,
-                <code>readChessPieces</code>, <code>tryMove</code>,
-                <code>ZORA_CHESS_COMPONENT_META</code>
-              </p>
-            </article>
-            <article class="item" data-search="src/meta.ts chessBoardMeta">
-              <h3>src/meta.ts</h3>
-              <p class="muted">Referenced module</p>
-              <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
-              <p><strong>Exports:</strong> <code>chessBoardMeta</code></p>
-            </article>
-            <article
-              class="item"
-              data-search="src/registry.ts src/meta.ts ZORA_CHESS_COMPONENT_META"
-            >
-              <h3>src/registry.ts</h3>
-              <p class="muted">Referenced module</p>
-              <p><strong>Dependencies:</strong> <code>src/meta.ts</code></p>
-              <p><strong>Exports:</strong> <code>ZORA_CHESS_COMPONENT_META</code></p>
-            </article>
-            <article
-              class="item"
-              data-search="src/squares.ts src/types.ts chessSquares createBoardSquares getSquareFile getSquareRank isLightSquare"
-            >
-              <h3>src/squares.ts</h3>
-              <p class="muted">Referenced module</p>
-              <p><strong>Dependencies:</strong> <code>src/types.ts</code></p>
-              <p>
-                <strong>Exports:</strong> <code>chessSquares</code>,
-                <code>createBoardSquares</code>, <code>getSquareFile</code>,
-                <code>getSquareRank</code>, <code>isLightSquare</code>
-              </p>
-            </article>
-            <article
-              class="item"
-              data-search="src/types.ts ChessBoardColorOverrides ChessBoardColorScheme ChessBoardOrientation ChessBoardProps ChessMoveAttempt ChessMoveResult ChessPieceCode ChessPieceRenderContext ChessPieceRenderer ChessPromotionPiece ChessSquareId"
-            >
-              <h3>src/types.ts</h3>
-              <p class="muted">Referenced module</p>
-              <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
-              <p>
-                <strong>Exports:</strong> <code>ChessBoardColorOverrides</code>,
-                <code>ChessBoardColorScheme</code>, <code>ChessBoardOrientation</code>,
-                <code>ChessBoardProps</code>, <code>ChessMoveAttempt</code>,
-                <code>ChessMoveResult</code>, <code>ChessPieceCode</code>,
-                <code>ChessPieceRenderContext</code>, <code>ChessPieceRenderer</code>,
-                <code>ChessPromotionPiece</code>, <code>ChessSquareId</code>
-              </p>
-            </article>
-          </section>
-          <section class="panel">
-            <h2>Public API</h2>
-
+          
+    <section class="panel">
+      <h2>Package overview</h2>
+      <div class="summary">
+        <div><strong>25</strong><span class="muted">public exports</span></div>
+        <div><strong>1</strong><span class="muted">components</span></div>
+        <div><strong>8</strong><span class="muted">modules</span></div>
+        <div><strong>1</strong><span class="muted">entrypoints</span></div>
+      </div>
+      <h3>Entrypoints</h3>
+      <ul class="meta-list">
+        <li><code>src/index.ts</code></li>
+      </ul>
+    </section>
+    
+    <section class="panel">
+      <h2>Modules</h2>
+      <article class="item" data-search="src/ChessBoard.tsx src/colors.ts src/engine.ts src/squares.ts src/types.ts ChessBoard">
+    <h3>src/ChessBoard.tsx</h3>
+    <p class="muted">Referenced module</p>
+    <p><strong>Dependencies:</strong> <code>src/colors.ts</code>, <code>src/engine.ts</code>, <code>src/squares.ts</code>, <code>src/types.ts</code></p>
+    <p><strong>Exports:</strong> <code>ChessBoard</code></p>
+  </article><article class="item" data-search="src/colors.ts src/types.ts ChessColorThemeShape createChessBoardColorScheme">
+    <h3>src/colors.ts</h3>
+    <p class="muted">Referenced module</p>
+    <p><strong>Dependencies:</strong> <code>src/types.ts</code></p>
+    <p><strong>Exports:</strong> <code>ChessColorThemeShape</code>, <code>createChessBoardColorScheme</code></p>
+  </article><article class="item" data-search="src/engine.ts src/types.ts ChessPieceState getLegalTargets readChessPieces tryMove">
+    <h3>src/engine.ts</h3>
+    <p class="muted">Referenced module</p>
+    <p><strong>Dependencies:</strong> <code>src/types.ts</code></p>
+    <p><strong>Exports:</strong> <code>ChessPieceState</code>, <code>getLegalTargets</code>, <code>readChessPieces</code>, <code>tryMove</code></p>
+  </article><article class="item" data-search="src/index.ts ChessBoard ChessBoardColorOverrides ChessBoardColorScheme chessBoardMeta ChessBoardOrientation ChessBoardProps ChessColorThemeShape ChessMoveAttempt ChessMoveResult ChessPieceCode ChessPieceRenderContext ChessPieceRenderer ChessPieceState ChessPromotionPiece ChessSquareId chessSquares createBoardSquares createChessBoardColorScheme getLegalTargets getSquareFile getSquareRank isLightSquare readChessPieces tryMove ZORA_CHESS_COMPONENT_META">
+    <h3>src/index.ts</h3>
+    <p class="muted">Configured entrypoint</p>
+    <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
+    <p><strong>Exports:</strong> <code>ChessBoard</code>, <code>ChessBoardColorOverrides</code>, <code>ChessBoardColorScheme</code>, <code>chessBoardMeta</code>, <code>ChessBoardOrientation</code>, <code>ChessBoardProps</code>, <code>ChessColorThemeShape</code>, <code>ChessMoveAttempt</code>, <code>ChessMoveResult</code>, <code>ChessPieceCode</code>, <code>ChessPieceRenderContext</code>, <code>ChessPieceRenderer</code>, <code>ChessPieceState</code>, <code>ChessPromotionPiece</code>, <code>ChessSquareId</code>, <code>chessSquares</code>, <code>createBoardSquares</code>, <code>createChessBoardColorScheme</code>, <code>getLegalTargets</code>, <code>getSquareFile</code>, <code>getSquareRank</code>, <code>isLightSquare</code>, <code>readChessPieces</code>, <code>tryMove</code>, <code>ZORA_CHESS_COMPONENT_META</code></p>
+  </article><article class="item" data-search="src/meta.ts chessBoardMeta">
+    <h3>src/meta.ts</h3>
+    <p class="muted">Referenced module</p>
+    <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
+    <p><strong>Exports:</strong> <code>chessBoardMeta</code></p>
+  </article><article class="item" data-search="src/registry.ts src/meta.ts ZORA_CHESS_COMPONENT_META">
+    <h3>src/registry.ts</h3>
+    <p class="muted">Referenced module</p>
+    <p><strong>Dependencies:</strong> <code>src/meta.ts</code></p>
+    <p><strong>Exports:</strong> <code>ZORA_CHESS_COMPONENT_META</code></p>
+  </article><article class="item" data-search="src/squares.ts src/types.ts chessSquares createBoardSquares getSquareFile getSquareRank isLightSquare">
+    <h3>src/squares.ts</h3>
+    <p class="muted">Referenced module</p>
+    <p><strong>Dependencies:</strong> <code>src/types.ts</code></p>
+    <p><strong>Exports:</strong> <code>chessSquares</code>, <code>createBoardSquares</code>, <code>getSquareFile</code>, <code>getSquareRank</code>, <code>isLightSquare</code></p>
+  </article><article class="item" data-search="src/types.ts ChessBoardColorOverrides ChessBoardColorScheme ChessBoardOrientation ChessBoardProps ChessMoveAttempt ChessMoveResult ChessPieceCode ChessPieceRenderContext ChessPieceRenderer ChessPromotionPiece ChessSquareId">
+    <h3>src/types.ts</h3>
+    <p class="muted">Referenced module</p>
+    <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
+    <p><strong>Exports:</strong> <code>ChessBoardColorOverrides</code>, <code>ChessBoardColorScheme</code>, <code>ChessBoardOrientation</code>, <code>ChessBoardProps</code>, <code>ChessMoveAttempt</code>, <code>ChessMoveResult</code>, <code>ChessPieceCode</code>, <code>ChessPieceRenderContext</code>, <code>ChessPieceRenderer</code>, <code>ChessPromotionPiece</code>, <code>ChessSquareId</code></p>
+  </article>
+    </section>
+    <section class="panel">
+      <h2>Public API</h2>
+      
             <section>
               <h3>src/ChessBoard.tsx</h3>
-              <article
-                class="item"
-                id="symbol-chessboard"
-                data-search="ChessBoard value src/ChessBoard.tsx "
-              >
-                <h4>ChessBoard</h4>
-                <p class="muted">value • <code>src/ChessBoard.tsx:179:14</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-              </article>
+              <article class="item" id="symbol-chessboard" data-search="ChessBoard function src/ChessBoard.tsx  ChessBoardProps ({&#10;  fen,&#10;  orientation = &#39;white&#39;,&#10;  selectedSquare = null,&#10;  legalTargets,&#10;  lastMove = null,&#10;  disabled = false,&#10;  showCoordinates = false,&#10;  validateMoves = true,&#10;  colorScheme: colorOverrides,&#10;  onSquarePress,&#10;  onMoveAttempt,&#10;  onLegalMove,&#10;  onInvalidMove,&#10;  renderPiece,&#10;  testID,&#10;}: ChessBoardProps) =&gt; React.JSX.Element">
+    <h4>ChessBoard</h4>
+    <p class="muted">function • <code>src/ChessBoard.tsx:43:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <ul class="chips"><li class="chip">ChessBoardProps</li></ul></div>
+    <div>
+        <h5>Signature</h5>
+        <pre>({
+  fen,
+  orientation = &#39;white&#39;,
+  selectedSquare = null,
+  legalTargets,
+  lastMove = null,
+  disabled = false,
+  showCoordinates = false,
+  validateMoves = true,
+  colorScheme: colorOverrides,
+  onSquarePress,
+  onMoveAttempt,
+  onLegalMove,
+  onInvalidMove,
+  renderPiece,
+  testID,
+}: ChessBoardProps) =&gt; React.JSX.Element</pre>
+        <table>
+                <thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr>
+                        <td><code>{
+  fen,
+  orientation = &#39;white&#39;,
+  selectedSquare = null,
+  legalTargets,
+  lastMove = null,
+  disabled = false,
+  showCoordinates = false,
+  validateMoves = true,
+  colorScheme: colorOverrides,
+  onSquarePress,
+  onMoveAttempt,
+  onLegalMove,
+  onInvalidMove,
+  renderPiece,
+  testID,
+}</code></td>
+                        <td><code>ChessBoardProps</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                </tbody>
+              </table>
+        <p><strong>Returns:</strong> <code>React.JSX.Element</code></p>
+      </div>
+    
+  </article>
             </section>
             <section>
               <h3>src/colors.ts</h3>
-              <article
-                class="item"
-                id="symbol-chesscolorthemeshape"
-                data-search="ChessColorThemeShape type src/colors.ts "
-              >
-                <h4>ChessColorThemeShape</h4>
-                <p class="muted">type • <code>src/colors.ts:3:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Member</th>
-                      <th>Kind</th>
-                      <th>Type</th>
-                      <th>Required</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>semantics</code></td>
-                      <td>property</td>
-                      <td>
-                        <code
-                          >{ action: { primary: { softBg: string; }; }; content: { default: string;
-                          muted: string; }; neutral: { divider: string; surface: string;
-                          surfaceHover: string; }; success: { softBg: string; }; warning: { softBg:
-                          string; }; }</code
-                        >
-                      </td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </article>
-              <article
-                class="item"
-                id="symbol-createchessboardcolorscheme"
-                data-search="createChessBoardColorScheme function src/colors.ts  ChessBoardColorScheme ChessColorThemeShape (theme: ChessColorThemeShape, overrides?: Partial&lt;ChessBoardColorScheme&gt; | undefined) =&gt; ChessBoardColorScheme"
-              >
-                <h4>createChessBoardColorScheme</h4>
-                <p class="muted">function • <code>src/colors.ts:28:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div>
-                  <strong>Related symbols:</strong>
-                  <ul class="chips">
-                    <li class="chip">ChessBoardColorScheme</li>
-                    <li class="chip">ChessColorThemeShape</li>
-                  </ul>
-                </div>
-                <div>
-                  <h5>Signature</h5>
-                  <pre>
-(theme: ChessColorThemeShape, overrides?: Partial&lt;ChessBoardColorScheme&gt; | undefined) =&gt; ChessBoardColorScheme</pre
-                  >
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Required</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
+              <article class="item" id="symbol-chesscolorthemeshape" data-search="ChessColorThemeShape type src/colors.ts ">
+    <h4>ChessColorThemeShape</h4>
+    <p class="muted">type • <code>src/colors.ts:3:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    <table>
+    <thead><tr><th>Member</th><th>Kind</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr>
+            <td><code>semantics</code></td>
+            <td>property</td>
+            <td><code>{ action: { primary: { softBg: string; }; }; content: { default: string; muted: string; }; neutral: { divider: string; surface: string; surfaceHover: string; }; success: { softBg: string; }; warning: { softBg: string; }; }</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr>
+    </tbody>
+  </table>
+  </article><article class="item" id="symbol-createchessboardcolorscheme" data-search="createChessBoardColorScheme function src/colors.ts  ChessBoardColorScheme ChessColorThemeShape (theme: ChessColorThemeShape, overrides?: Partial&lt;ChessBoardColorScheme&gt; | undefined) =&gt; ChessBoardColorScheme">
+    <h4>createChessBoardColorScheme</h4>
+    <p class="muted">function • <code>src/colors.ts:28:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <ul class="chips"><li class="chip">ChessBoardColorScheme</li><li class="chip">ChessColorThemeShape</li></ul></div>
+    <div>
+        <h5>Signature</h5>
+        <pre>(theme: ChessColorThemeShape, overrides?: Partial&lt;ChessBoardColorScheme&gt; | undefined) =&gt; ChessBoardColorScheme</pre>
+        <table>
+                <thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr>
                         <td><code>overrides</code></td>
                         <td><code>Partial&lt;ChessBoardColorScheme&gt; | undefined</code></td>
                         <td>no</td>
                         <td></td>
-                      </tr>
-                      <tr>
+                      </tr><tr>
                         <td><code>theme</code></td>
                         <td><code>ChessColorThemeShape</code></td>
                         <td>yes</td>
                         <td></td>
                       </tr>
-                    </tbody>
-                  </table>
-                  <p><strong>Returns:</strong> <code>ChessBoardColorScheme</code></p>
-                </div>
-              </article>
+                </tbody>
+              </table>
+        <p><strong>Returns:</strong> <code>ChessBoardColorScheme</code></p>
+      </div>
+    
+  </article>
             </section>
             <section>
               <h3>src/engine.ts</h3>
-              <article
-                class="item"
-                id="symbol-chesspiecestate"
-                data-search="ChessPieceState type src/engine.ts "
-              >
-                <h4>ChessPieceState</h4>
-                <p class="muted">type • <code>src/engine.ts:5:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Member</th>
-                      <th>Kind</th>
-                      <th>Type</th>
-                      <th>Required</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>color</code></td>
-                      <td>property</td>
-                      <td><code>&quot;black&quot; | &quot;white&quot;</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>piece</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>square</code></td>
-                      <td>property</td>
-                      <td>
-                        <code
-                          >import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square</code
-                        >
-                      </td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </article>
-              <article
-                class="item"
-                id="symbol-getlegaltargets"
-                data-search='getLegalTargets function src/engine.ts  (fen: string, from: import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square) =&gt; readonly import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square[]'
-              >
-                <h4>getLegalTargets</h4>
-                <p class="muted">function • <code>src/engine.ts:60:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-                <div>
-                  <h5>Signature</h5>
-                  <pre>
-(fen: string, from: import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square) =&gt; readonly import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square[]</pre
-                  >
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Required</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
+              <article class="item" id="symbol-chesspiecestate" data-search="ChessPieceState type src/engine.ts ">
+    <h4>ChessPieceState</h4>
+    <p class="muted">type • <code>src/engine.ts:11:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    <table>
+    <thead><tr><th>Member</th><th>Kind</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr>
+            <td><code>color</code></td>
+            <td>property</td>
+            <td><code>&quot;black&quot; | &quot;white&quot;</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>piece</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>square</code></td>
+            <td>property</td>
+            <td><code>import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr>
+    </tbody>
+  </table>
+  </article><article class="item" id="symbol-getlegaltargets" data-search="getLegalTargets function src/engine.ts  (fen: string, from: import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square) =&gt; readonly import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square[]">
+    <h4>getLegalTargets</h4>
+    <p class="muted">function • <code>src/engine.ts:74:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    <div>
+        <h5>Signature</h5>
+        <pre>(fen: string, from: import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square) =&gt; readonly import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square[]</pre>
+        <table>
+                <thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr>
                         <td><code>fen</code></td>
                         <td><code>string</code></td>
                         <td>yes</td>
                         <td></td>
-                      </tr>
-                      <tr>
+                      </tr><tr>
                         <td><code>from</code></td>
-                        <td>
-                          <code
-                            >import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square</code
-                          >
-                        </td>
+                        <td><code>import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square</code></td>
                         <td>yes</td>
                         <td></td>
                       </tr>
-                    </tbody>
-                  </table>
-                  <p>
-                    <strong>Returns:</strong>
-                    <code
-                      >readonly
-                      import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square[]</code
-                    >
-                  </p>
-                </div>
-              </article>
-              <article
-                class="item"
-                id="symbol-readchesspieces"
-                data-search='readChessPieces function src/engine.ts  ChessPieceState (fen: string) =&gt; ReadonlyMap&lt;import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square, ChessPieceState&gt;'
-              >
-                <h4>readChessPieces</h4>
-                <p class="muted">function • <code>src/engine.ts:34:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div>
-                  <strong>Related symbols:</strong>
-                  <ul class="chips">
-                    <li class="chip">ChessPieceState</li>
-                  </ul>
-                </div>
-                <div>
-                  <h5>Signature</h5>
-                  <pre>
-(fen: string) =&gt; ReadonlyMap&lt;import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square, ChessPieceState&gt;</pre
-                  >
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Required</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
+                </tbody>
+              </table>
+        <p><strong>Returns:</strong> <code>readonly import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square[]</code></p>
+      </div>
+    
+  </article><article class="item" id="symbol-readchesspieces" data-search="readChessPieces function src/engine.ts  ChessPieceState (fen: string) =&gt; ReadonlyMap&lt;import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square, ChessPieceState&gt;">
+    <h4>readChessPieces</h4>
+    <p class="muted">function • <code>src/engine.ts:48:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <ul class="chips"><li class="chip">ChessPieceState</li></ul></div>
+    <div>
+        <h5>Signature</h5>
+        <pre>(fen: string) =&gt; ReadonlyMap&lt;import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square, ChessPieceState&gt;</pre>
+        <table>
+                <thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr>
                         <td><code>fen</code></td>
                         <td><code>string</code></td>
                         <td>yes</td>
                         <td></td>
                       </tr>
-                    </tbody>
-                  </table>
-                  <p>
-                    <strong>Returns:</strong>
-                    <code
-                      >ReadonlyMap&lt;import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square,
-                      ChessPieceState&gt;</code
-                    >
-                  </p>
-                </div>
-              </article>
-              <article
-                class="item"
-                id="symbol-trymove"
-                data-search="tryMove function src/engine.ts  ChessMoveAttempt ChessMoveResult (fen: string, attempt: ChessMoveAttempt) =&gt; ChessMoveResult | null"
-              >
-                <h4>tryMove</h4>
-                <p class="muted">function • <code>src/engine.ts:69:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div>
-                  <strong>Related symbols:</strong>
-                  <ul class="chips">
-                    <li class="chip">ChessMoveAttempt</li>
-                    <li class="chip">ChessMoveResult</li>
-                  </ul>
-                </div>
-                <div>
-                  <h5>Signature</h5>
-                  <pre>(fen: string, attempt: ChessMoveAttempt) =&gt; ChessMoveResult | null</pre>
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Required</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
+                </tbody>
+              </table>
+        <p><strong>Returns:</strong> <code>ReadonlyMap&lt;import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square, ChessPieceState&gt;</code></p>
+      </div>
+    
+  </article><article class="item" id="symbol-trymove" data-search="tryMove function src/engine.ts  ChessMoveAttempt ChessMoveResult (fen: string, attempt: ChessMoveAttempt) =&gt; ChessMoveResult | null">
+    <h4>tryMove</h4>
+    <p class="muted">function • <code>src/engine.ts:83:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <ul class="chips"><li class="chip">ChessMoveAttempt</li><li class="chip">ChessMoveResult</li></ul></div>
+    <div>
+        <h5>Signature</h5>
+        <pre>(fen: string, attempt: ChessMoveAttempt) =&gt; ChessMoveResult | null</pre>
+        <table>
+                <thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr>
                         <td><code>attempt</code></td>
                         <td><code>ChessMoveAttempt</code></td>
                         <td>yes</td>
                         <td></td>
-                      </tr>
-                      <tr>
+                      </tr><tr>
                         <td><code>fen</code></td>
                         <td><code>string</code></td>
                         <td>yes</td>
                         <td></td>
                       </tr>
-                    </tbody>
-                  </table>
-                  <p><strong>Returns:</strong> <code>ChessMoveResult | null</code></p>
-                </div>
-              </article>
+                </tbody>
+              </table>
+        <p><strong>Returns:</strong> <code>ChessMoveResult | null</code></p>
+      </div>
+    
+  </article>
             </section>
             <section>
               <h3>src/meta.ts</h3>
-              <article
-                class="item"
-                id="symbol-chessboardmeta"
-                data-search="chessBoardMeta value src/meta.ts "
-              >
-                <h4>chessBoardMeta</h4>
-                <p class="muted">value • <code>src/meta.ts:3:14</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-              </article>
+              <article class="item" id="symbol-chessboardmeta" data-search="chessBoardMeta value src/meta.ts ">
+    <h4>chessBoardMeta</h4>
+    <p class="muted">value • <code>src/meta.ts:1:14</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    
+  </article>
             </section>
             <section>
               <h3>src/registry.ts</h3>
-              <article
-                class="item"
-                id="symbol-zora-chess-component-meta"
-                data-search="ZORA_CHESS_COMPONENT_META value src/registry.ts "
-              >
-                <h4>ZORA_CHESS_COMPONENT_META</h4>
-                <p class="muted">value • <code>src/registry.ts:3:14</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-              </article>
+              <article class="item" id="symbol-zora-chess-component-meta" data-search="ZORA_CHESS_COMPONENT_META value src/registry.ts ">
+    <h4>ZORA_CHESS_COMPONENT_META</h4>
+    <p class="muted">value • <code>src/registry.ts:3:14</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    
+  </article>
             </section>
             <section>
               <h3>src/squares.ts</h3>
-              <article
-                class="item"
-                id="symbol-chesssquares"
-                data-search="chessSquares value src/squares.ts "
-              >
-                <h4>chessSquares</h4>
-                <p class="muted">value • <code>src/squares.ts:6:14</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-              </article>
-              <article
-                class="item"
-                id="symbol-createboardsquares"
-                data-search='createBoardSquares function src/squares.ts  ChessBoardOrientation (orientation: ChessBoardOrientation) =&gt; readonly import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square[]'
-              >
-                <h4>createBoardSquares</h4>
-                <p class="muted">function • <code>src/squares.ts:8:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div>
-                  <strong>Related symbols:</strong>
-                  <ul class="chips">
-                    <li class="chip">ChessBoardOrientation</li>
-                  </ul>
-                </div>
-                <div>
-                  <h5>Signature</h5>
-                  <pre>
-(orientation: ChessBoardOrientation) =&gt; readonly import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square[]</pre
-                  >
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Required</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
+              <article class="item" id="symbol-chesssquares" data-search="chessSquares value src/squares.ts ">
+    <h4>chessSquares</h4>
+    <p class="muted">value • <code>src/squares.ts:10:14</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    
+  </article><article class="item" id="symbol-createboardsquares" data-search="createBoardSquares function src/squares.ts  ChessBoardOrientation (orientation: ChessBoardOrientation) =&gt; readonly import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square[]">
+    <h4>createBoardSquares</h4>
+    <p class="muted">function • <code>src/squares.ts:12:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <ul class="chips"><li class="chip">ChessBoardOrientation</li></ul></div>
+    <div>
+        <h5>Signature</h5>
+        <pre>(orientation: ChessBoardOrientation) =&gt; readonly import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square[]</pre>
+        <table>
+                <thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr>
                         <td><code>orientation</code></td>
                         <td><code>ChessBoardOrientation</code></td>
                         <td>yes</td>
                         <td></td>
                       </tr>
-                    </tbody>
-                  </table>
-                  <p>
-                    <strong>Returns:</strong>
-                    <code
-                      >readonly
-                      import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square[]</code
-                    >
-                  </p>
-                </div>
-              </article>
-              <article
-                class="item"
-                id="symbol-getsquarefile"
-                data-search='getSquareFile function src/squares.ts  (square: import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square) =&gt; string'
-              >
-                <h4>getSquareFile</h4>
-                <p class="muted">function • <code>src/squares.ts:22:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-                <div>
-                  <h5>Signature</h5>
-                  <pre>
-(square: import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square) =&gt; string</pre
-                  >
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Required</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
+                </tbody>
+              </table>
+        <p><strong>Returns:</strong> <code>readonly import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square[]</code></p>
+      </div>
+    
+  </article><article class="item" id="symbol-getsquarefile" data-search="getSquareFile function src/squares.ts  (square: import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square) =&gt; string">
+    <h4>getSquareFile</h4>
+    <p class="muted">function • <code>src/squares.ts:26:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    <div>
+        <h5>Signature</h5>
+        <pre>(square: import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square) =&gt; string</pre>
+        <table>
+                <thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr>
                         <td><code>square</code></td>
-                        <td>
-                          <code
-                            >import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square</code
-                          >
-                        </td>
+                        <td><code>import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square</code></td>
                         <td>yes</td>
                         <td></td>
                       </tr>
-                    </tbody>
-                  </table>
-                  <p><strong>Returns:</strong> <code>string</code></p>
-                </div>
-              </article>
-              <article
-                class="item"
-                id="symbol-getsquarerank"
-                data-search='getSquareRank function src/squares.ts  (square: import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square) =&gt; string'
-              >
-                <h4>getSquareRank</h4>
-                <p class="muted">function • <code>src/squares.ts:26:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-                <div>
-                  <h5>Signature</h5>
-                  <pre>
-(square: import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square) =&gt; string</pre
-                  >
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Required</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
+                </tbody>
+              </table>
+        <p><strong>Returns:</strong> <code>string</code></p>
+      </div>
+    
+  </article><article class="item" id="symbol-getsquarerank" data-search="getSquareRank function src/squares.ts  (square: import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square) =&gt; string">
+    <h4>getSquareRank</h4>
+    <p class="muted">function • <code>src/squares.ts:30:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    <div>
+        <h5>Signature</h5>
+        <pre>(square: import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square) =&gt; string</pre>
+        <table>
+                <thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr>
                         <td><code>square</code></td>
-                        <td>
-                          <code
-                            >import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square</code
-                          >
-                        </td>
+                        <td><code>import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square</code></td>
                         <td>yes</td>
                         <td></td>
                       </tr>
-                    </tbody>
-                  </table>
-                  <p><strong>Returns:</strong> <code>string</code></p>
-                </div>
-              </article>
-              <article
-                class="item"
-                id="symbol-islightsquare"
-                data-search='isLightSquare function src/squares.ts  (square: import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square) =&gt; boolean'
-              >
-                <h4>isLightSquare</h4>
-                <p class="muted">function • <code>src/squares.ts:15:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-                <div>
-                  <h5>Signature</h5>
-                  <pre>
-(square: import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square) =&gt; boolean</pre
-                  >
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Parameter</th>
-                        <th>Type</th>
-                        <th>Required</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
+                </tbody>
+              </table>
+        <p><strong>Returns:</strong> <code>string</code></p>
+      </div>
+    
+  </article><article class="item" id="symbol-islightsquare" data-search="isLightSquare function src/squares.ts  (square: import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square) =&gt; boolean">
+    <h4>isLightSquare</h4>
+    <p class="muted">function • <code>src/squares.ts:19:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    <div>
+        <h5>Signature</h5>
+        <pre>(square: import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square) =&gt; boolean</pre>
+        <table>
+                <thead><tr><th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+                <tbody>
+                  <tr>
                         <td><code>square</code></td>
-                        <td>
-                          <code
-                            >import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square</code
-                          >
-                        </td>
+                        <td><code>import(&quot;/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess&quot;).Square</code></td>
                         <td>yes</td>
                         <td></td>
                       </tr>
-                    </tbody>
-                  </table>
-                  <p><strong>Returns:</strong> <code>boolean</code></p>
-                </div>
-              </article>
+                </tbody>
+              </table>
+        <p><strong>Returns:</strong> <code>boolean</code></p>
+      </div>
+    
+  </article>
             </section>
             <section>
               <h3>src/types.ts</h3>
-              <article
-                class="item"
-                id="symbol-chessboardcoloroverrides"
-                data-search="ChessBoardColorOverrides unknown src/types.ts "
-              >
-                <h4>ChessBoardColorOverrides</h4>
-                <p class="muted">unknown • <code>src/types.ts:48:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-              </article>
-              <article
-                class="item"
-                id="symbol-chessboardcolorscheme"
-                data-search="ChessBoardColorScheme type src/types.ts "
-              >
-                <h4>ChessBoardColorScheme</h4>
-                <p class="muted">type • <code>src/types.ts:33:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Member</th>
-                      <th>Kind</th>
-                      <th>Type</th>
-                      <th>Required</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>border</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>coordinateText</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>darkPiece</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>darkSquare</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>darkSquareText</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>lastMoveFrom</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>lastMoveTo</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>legalTarget</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>lightPiece</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>lightSquare</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>lightSquareText</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>selectedSquare</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </article>
-              <article
-                class="item"
-                id="symbol-chessboardorientation"
-                data-search="ChessBoardOrientation unknown src/types.ts "
-              >
-                <h4>ChessBoardOrientation</h4>
-                <p class="muted">unknown • <code>src/types.ts:7:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-              </article>
-              <article
-                class="item"
-                id="symbol-chessboardprops"
-                data-search="ChessBoardProps type src/types.ts  ChessBoardColorScheme ChessBoardOrientation ChessMoveAttempt ChessMoveResult ChessPieceRenderer ChessSquareId"
-              >
-                <h4>ChessBoardProps</h4>
-                <p class="muted">type • <code>src/types.ts:50:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div>
-                  <strong>Related symbols:</strong>
-                  <ul class="chips">
-                    <li class="chip">ChessBoardColorScheme</li>
-                    <li class="chip">ChessBoardOrientation</li>
-                    <li class="chip">ChessMoveAttempt</li>
-                    <li class="chip">ChessMoveResult</li>
-                    <li class="chip">ChessPieceRenderer</li>
-                    <li class="chip">ChessSquareId</li>
-                  </ul>
-                </div>
-
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Member</th>
-                      <th>Kind</th>
-                      <th>Type</th>
-                      <th>Required</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>colorScheme</code></td>
-                      <td>property</td>
-                      <td><code>Partial&lt;ChessBoardColorScheme&gt; | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>disabled</code></td>
-                      <td>property</td>
-                      <td><code>boolean | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>fen</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>lastMove</code></td>
-                      <td>property</td>
-                      <td><code>ChessMoveAttempt | null | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>legalTargets</code></td>
-                      <td>property</td>
-                      <td><code>readonly Square[] | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>onInvalidMove</code></td>
-                      <td>property</td>
-                      <td><code>((move: ChessMoveAttempt) =&gt; void) | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>onLegalMove</code></td>
-                      <td>property</td>
-                      <td><code>((move: ChessMoveResult) =&gt; void) | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>onMoveAttempt</code></td>
-                      <td>property</td>
-                      <td><code>((move: ChessMoveAttempt) =&gt; void) | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>onSquarePress</code></td>
-                      <td>property</td>
-                      <td><code>((square: ChessSquareId) =&gt; void) | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>orientation</code></td>
-                      <td>property</td>
-                      <td><code>ChessBoardOrientation | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>renderPiece</code></td>
-                      <td>property</td>
-                      <td><code>ChessPieceRenderer | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>selectedSquare</code></td>
-                      <td>property</td>
-                      <td><code>Square | null | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>showCoordinates</code></td>
-                      <td>property</td>
-                      <td><code>boolean | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>testID</code></td>
-                      <td>property</td>
-                      <td><code>string | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>validateMoves</code></td>
-                      <td>property</td>
-                      <td><code>boolean | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </article>
-              <article
-                class="item"
-                id="symbol-chessmoveattempt"
-                data-search="ChessMoveAttempt type src/types.ts  ChessPromotionPiece"
-              >
-                <h4>ChessMoveAttempt</h4>
-                <p class="muted">type • <code>src/types.ts:13:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div>
-                  <strong>Related symbols:</strong>
-                  <ul class="chips">
-                    <li class="chip">ChessPromotionPiece</li>
-                  </ul>
-                </div>
-
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Member</th>
-                      <th>Kind</th>
-                      <th>Type</th>
-                      <th>Required</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>from</code></td>
-                      <td>property</td>
-                      <td><code>Square</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>promotion</code></td>
-                      <td>property</td>
-                      <td><code>ChessPromotionPiece | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>to</code></td>
-                      <td>property</td>
-                      <td><code>Square</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </article>
-              <article
-                class="item"
-                id="symbol-chessmoveresult"
-                data-search="ChessMoveResult type src/types.ts  ChessPromotionPiece"
-              >
-                <h4>ChessMoveResult</h4>
-                <p class="muted">type • <code>src/types.ts:19:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div>
-                  <strong>Related symbols:</strong>
-                  <ul class="chips">
-                    <li class="chip">ChessPromotionPiece</li>
-                  </ul>
-                </div>
-
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Member</th>
-                      <th>Kind</th>
-                      <th>Type</th>
-                      <th>Required</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>fen</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>from</code></td>
-                      <td>property</td>
-                      <td><code>Square</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>lan</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>promotion</code></td>
-                      <td>property</td>
-                      <td><code>ChessPromotionPiece | undefined</code></td>
-                      <td>no</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>san</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>to</code></td>
-                      <td>property</td>
-                      <td><code>Square</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </article>
-              <article
-                class="item"
-                id="symbol-chesspiececode"
-                data-search="ChessPieceCode unknown src/types.ts "
-              >
-                <h4>ChessPieceCode</h4>
-                <p class="muted">unknown • <code>src/types.ts:9:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-              </article>
-              <article
-                class="item"
-                id="symbol-chesspiecerendercontext"
-                data-search="ChessPieceRenderContext type src/types.ts "
-              >
-                <h4>ChessPieceRenderContext</h4>
-                <p class="muted">type • <code>src/types.ts:25:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Member</th>
-                      <th>Kind</th>
-                      <th>Type</th>
-                      <th>Required</th>
-                      <th>Description</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>color</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>piece</code></td>
-                      <td>property</td>
-                      <td><code>string</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td><code>square</code></td>
-                      <td>property</td>
-                      <td><code>Square</code></td>
-                      <td>yes</td>
-                      <td></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </article>
-              <article
-                class="item"
-                id="symbol-chesspiecerenderer"
-                data-search="ChessPieceRenderer unknown src/types.ts "
-              >
-                <h4>ChessPieceRenderer</h4>
-                <p class="muted">unknown • <code>src/types.ts:31:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-              </article>
-              <article
-                class="item"
-                id="symbol-chesspromotionpiece"
-                data-search="ChessPromotionPiece unknown src/types.ts "
-              >
-                <h4>ChessPromotionPiece</h4>
-                <p class="muted">unknown • <code>src/types.ts:11:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-              </article>
-              <article
-                class="item"
-                id="symbol-chesssquareid"
-                data-search="ChessSquareId unknown src/types.ts "
-              >
-                <h4>ChessSquareId</h4>
-                <p class="muted">unknown • <code>src/types.ts:5:1</code></p>
-
-                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
-                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
-              </article>
+              <article class="item" id="symbol-chessboardcoloroverrides" data-search="ChessBoardColorOverrides unknown src/types.ts ">
+    <h4>ChessBoardColorOverrides</h4>
+    <p class="muted">unknown • <code>src/types.ts:48:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    
+  </article><article class="item" id="symbol-chessboardcolorscheme" data-search="ChessBoardColorScheme type src/types.ts ">
+    <h4>ChessBoardColorScheme</h4>
+    <p class="muted">type • <code>src/types.ts:33:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    <table>
+    <thead><tr><th>Member</th><th>Kind</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr>
+            <td><code>border</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>coordinateText</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>darkPiece</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>darkSquare</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>darkSquareText</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>lastMoveFrom</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>lastMoveTo</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>legalTarget</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>lightPiece</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>lightSquare</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>lightSquareText</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>selectedSquare</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr>
+    </tbody>
+  </table>
+  </article><article class="item" id="symbol-chessboardorientation" data-search="ChessBoardOrientation unknown src/types.ts ">
+    <h4>ChessBoardOrientation</h4>
+    <p class="muted">unknown • <code>src/types.ts:6:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    
+  </article><article class="item" id="symbol-chessboardprops" data-search="ChessBoardProps type src/types.ts  ChessBoardColorScheme ChessBoardOrientation ChessMoveAttempt ChessMoveResult ChessPieceRenderer ChessSquareId">
+    <h4>ChessBoardProps</h4>
+    <p class="muted">type • <code>src/types.ts:50:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <ul class="chips"><li class="chip">ChessBoardColorScheme</li><li class="chip">ChessBoardOrientation</li><li class="chip">ChessMoveAttempt</li><li class="chip">ChessMoveResult</li><li class="chip">ChessPieceRenderer</li><li class="chip">ChessSquareId</li></ul></div>
+    
+    <table>
+    <thead><tr><th>Member</th><th>Kind</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr>
+            <td><code>colorScheme</code></td>
+            <td>property</td>
+            <td><code>Partial&lt;ChessBoardColorScheme&gt; | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>disabled</code></td>
+            <td>property</td>
+            <td><code>boolean | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>fen</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>lastMove</code></td>
+            <td>property</td>
+            <td><code>ChessMoveAttempt | null | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>legalTargets</code></td>
+            <td>property</td>
+            <td><code>readonly Square[] | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>onInvalidMove</code></td>
+            <td>property</td>
+            <td><code>((move: ChessMoveAttempt) =&gt; void) | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>onLegalMove</code></td>
+            <td>property</td>
+            <td><code>((move: ChessMoveResult) =&gt; void) | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>onMoveAttempt</code></td>
+            <td>property</td>
+            <td><code>((move: ChessMoveAttempt) =&gt; void) | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>onSquarePress</code></td>
+            <td>property</td>
+            <td><code>((square: ChessSquareId) =&gt; void) | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>orientation</code></td>
+            <td>property</td>
+            <td><code>ChessBoardOrientation | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>renderPiece</code></td>
+            <td>property</td>
+            <td><code>ChessPieceRenderer | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>selectedSquare</code></td>
+            <td>property</td>
+            <td><code>Square | null | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>showCoordinates</code></td>
+            <td>property</td>
+            <td><code>boolean | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>testID</code></td>
+            <td>property</td>
+            <td><code>string | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>validateMoves</code></td>
+            <td>property</td>
+            <td><code>boolean | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr>
+    </tbody>
+  </table>
+  </article><article class="item" id="symbol-chessmoveattempt" data-search="ChessMoveAttempt type src/types.ts  ChessPromotionPiece">
+    <h4>ChessMoveAttempt</h4>
+    <p class="muted">type • <code>src/types.ts:12:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <ul class="chips"><li class="chip">ChessPromotionPiece</li></ul></div>
+    
+    <table>
+    <thead><tr><th>Member</th><th>Kind</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr>
+            <td><code>from</code></td>
+            <td>property</td>
+            <td><code>Square</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>promotion</code></td>
+            <td>property</td>
+            <td><code>ChessPromotionPiece | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>to</code></td>
+            <td>property</td>
+            <td><code>Square</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr>
+    </tbody>
+  </table>
+  </article><article class="item" id="symbol-chessmoveresult" data-search="ChessMoveResult type src/types.ts  ChessPromotionPiece">
+    <h4>ChessMoveResult</h4>
+    <p class="muted">type • <code>src/types.ts:18:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <ul class="chips"><li class="chip">ChessPromotionPiece</li></ul></div>
+    
+    <table>
+    <thead><tr><th>Member</th><th>Kind</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr>
+            <td><code>fen</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>from</code></td>
+            <td>property</td>
+            <td><code>Square</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>lan</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>promotion</code></td>
+            <td>property</td>
+            <td><code>ChessPromotionPiece | undefined</code></td>
+            <td>no</td>
+            <td></td>
+          </tr><tr>
+            <td><code>san</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>to</code></td>
+            <td>property</td>
+            <td><code>Square</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr>
+    </tbody>
+  </table>
+  </article><article class="item" id="symbol-chesspiececode" data-search="ChessPieceCode unknown src/types.ts ">
+    <h4>ChessPieceCode</h4>
+    <p class="muted">unknown • <code>src/types.ts:8:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    
+  </article><article class="item" id="symbol-chesspiecerendercontext" data-search="ChessPieceRenderContext type src/types.ts ">
+    <h4>ChessPieceRenderContext</h4>
+    <p class="muted">type • <code>src/types.ts:25:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    <table>
+    <thead><tr><th>Member</th><th>Kind</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr>
+            <td><code>color</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>piece</code></td>
+            <td>property</td>
+            <td><code>string</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr><tr>
+            <td><code>square</code></td>
+            <td>property</td>
+            <td><code>Square</code></td>
+            <td>yes</td>
+            <td></td>
+          </tr>
+    </tbody>
+  </table>
+  </article><article class="item" id="symbol-chesspiecerenderer" data-search="ChessPieceRenderer unknown src/types.ts ">
+    <h4>ChessPieceRenderer</h4>
+    <p class="muted">unknown • <code>src/types.ts:31:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    
+  </article><article class="item" id="symbol-chesspromotionpiece" data-search="ChessPromotionPiece unknown src/types.ts ">
+    <h4>ChessPromotionPiece</h4>
+    <p class="muted">unknown • <code>src/types.ts:10:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    
+  </article><article class="item" id="symbol-chesssquareid" data-search="ChessSquareId unknown src/types.ts ">
+    <h4>ChessSquareId</h4>
+    <p class="muted">unknown • <code>src/types.ts:4:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+    
+    
+  </article>
             </section>
-          </section>
-          <section class="panel">
-            <h2>Component registry</h2>
-            <p class="empty">No components were detected.</p>
-          </section>
-          <section class="panel">
-            <h2>Diagrams</h2>
-            <article
-              class="item"
-              data-search="Architecture overview diagrams/architecture-overview.mmd"
-            >
-              <h3>Architecture overview</h3>
-              <p class="muted"><code>diagrams/architecture-overview.mmd</code></p>
-              <div class="mermaid">
-                graph TD package__ankhorage_zora_chess[&quot;@ankhorage/zora-chessboard&quot;]
-                entrypoint_src_index_ts[&quot;src/index.ts&quot;] package__ankhorage_zora_chess
-                --&gt; entrypoint_src_index_ts
-                module_src_ChessBoard_tsx[&quot;src/ChessBoard.tsx&quot;]
-                package__ankhorage_zora_chess -.-&gt; module_src_ChessBoard_tsx
-                module_src_ChessBoard_tsx --&gt; module_src_colors_ts module_src_ChessBoard_tsx
-                --&gt; module_src_engine_ts module_src_ChessBoard_tsx --&gt; module_src_squares_ts
-                module_src_ChessBoard_tsx --&gt; module_src_types_ts
-                module_src_colors_ts[&quot;src/colors.ts&quot;] package__ankhorage_zora_chess
-                -.-&gt; module_src_colors_ts module_src_colors_ts --&gt; module_src_types_ts
-                module_src_engine_ts[&quot;src/engine.ts&quot;] package__ankhorage_zora_chess
-                -.-&gt; module_src_engine_ts module_src_engine_ts --&gt; module_src_types_ts
-                module_src_index_ts[&quot;src/index.ts&quot;]
-                module_src_meta_ts[&quot;src/meta.ts&quot;] package__ankhorage_zora_chess -.-&gt;
-                module_src_meta_ts module_src_registry_ts[&quot;src/registry.ts&quot;]
-                package__ankhorage_zora_chess -.-&gt; module_src_registry_ts module_src_registry_ts
-                --&gt; module_src_meta_ts module_src_squares_ts[&quot;src/squares.ts&quot;]
-                package__ankhorage_zora_chess -.-&gt; module_src_squares_ts module_src_squares_ts
-                --&gt; module_src_types_ts module_src_types_ts[&quot;src/types.ts&quot;]
-                package__ankhorage_zora_chess -.-&gt; module_src_types_ts
-              </div>
-              <details>
-                <summary>View Mermaid source</summary>
-                <pre>
-graph TD
+    </section>
+    <section class="panel">
+      <h2>Component registry</h2>
+      <article class="item" id="component-chessboard" data-search="ChessBoard src/ChessBoard.tsx  colorScheme ChessBoardColorOverrides | undefined disabled boolean | undefined fen string lastMove ChessMoveAttempt | null | undefined legalTargets readonly ChessSquareId[] | undefined onInvalidMove (move: ChessMoveAttempt) =&gt; void | undefined onLegalMove (move: ChessMoveResult) =&gt; void | undefined onMoveAttempt (move: ChessMoveAttempt) =&gt; void | undefined onSquarePress (square: ChessSquareId) =&gt; void | undefined orientation ChessBoardOrientation | undefined renderPiece ChessPieceRenderer | undefined selectedSquare ChessSquareId | null | undefined showCoordinates boolean | undefined testID string | undefined validateMoves boolean | undefined">
+    <h3>ChessBoard</h3>
+    <p class="muted"><code>src/ChessBoard.tsx:43:1</code></p>
+    
+    <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+    <table>
+      <thead><tr><th>Prop</th><th>Type</th><th>Required</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr>
+              <td><code>colorScheme</code></td>
+              <td><code>ChessBoardColorOverrides | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>disabled</code></td>
+              <td><code>boolean | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>fen</code></td>
+              <td><code>string</code></td>
+              <td>yes</td>
+              <td></td>
+            </tr><tr>
+              <td><code>lastMove</code></td>
+              <td><code>ChessMoveAttempt | null | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>legalTargets</code></td>
+              <td><code>readonly ChessSquareId[] | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>onInvalidMove</code></td>
+              <td><code>(move: ChessMoveAttempt) =&gt; void | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>onLegalMove</code></td>
+              <td><code>(move: ChessMoveResult) =&gt; void | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>onMoveAttempt</code></td>
+              <td><code>(move: ChessMoveAttempt) =&gt; void | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>onSquarePress</code></td>
+              <td><code>(square: ChessSquareId) =&gt; void | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>orientation</code></td>
+              <td><code>ChessBoardOrientation | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>renderPiece</code></td>
+              <td><code>ChessPieceRenderer | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>selectedSquare</code></td>
+              <td><code>ChessSquareId | null | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>showCoordinates</code></td>
+              <td><code>boolean | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>testID</code></td>
+              <td><code>string | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr><tr>
+              <td><code>validateMoves</code></td>
+              <td><code>boolean | undefined</code></td>
+              <td>no</td>
+              <td></td>
+            </tr>
+      </tbody>
+    </table>
+  </article>
+    </section>
+    <section class="panel">
+      <h2>Diagrams</h2>
+      <article class="item" data-search="Architecture overview diagrams/architecture-overview.mmd">
+    <h3>Architecture overview</h3>
+    <p class="muted"><code>diagrams/architecture-overview.mmd</code></p>
+    <div class="mermaid">graph TD
   package__ankhorage_zora_chess[&quot;@ankhorage/zora-chessboard&quot;]
   entrypoint_src_index_ts[&quot;src/index.ts&quot;]
   package__ankhorage_zora_chess --&gt; entrypoint_src_index_ts
@@ -1410,35 +1040,42 @@ graph TD
   module_src_squares_ts --&gt; module_src_types_ts
   module_src_types_ts[&quot;src/types.ts&quot;]
   package__ankhorage_zora_chess -.-&gt; module_src_types_ts
-</pre
-                >
-              </details>
-            </article>
-            <article
-              class="item"
-              data-search="Module relationships diagrams/module-relationships.mmd"
-            >
-              <h3>Module relationships</h3>
-              <p class="muted"><code>diagrams/module-relationships.mmd</code></p>
-              <div class="mermaid">
-                graph LR module_src_ChessBoard_tsx[&quot;src/ChessBoard.tsx&quot;]
-                module_src_colors_ts[&quot;src/colors.ts&quot;]
-                module_src_engine_ts[&quot;src/engine.ts&quot;]
-                module_src_index_ts[&quot;src/index.ts&quot;]
-                module_src_meta_ts[&quot;src/meta.ts&quot;]
-                module_src_registry_ts[&quot;src/registry.ts&quot;]
-                module_src_squares_ts[&quot;src/squares.ts&quot;]
-                module_src_types_ts[&quot;src/types.ts&quot;] module_src_ChessBoard_tsx --&gt;
-                module_src_colors_ts module_src_ChessBoard_tsx --&gt; module_src_engine_ts
-                module_src_ChessBoard_tsx --&gt; module_src_squares_ts module_src_ChessBoard_tsx
-                --&gt; module_src_types_ts module_src_colors_ts --&gt; module_src_types_ts
-                module_src_engine_ts --&gt; module_src_types_ts module_src_registry_ts --&gt;
-                module_src_meta_ts module_src_squares_ts --&gt; module_src_types_ts
-              </div>
-              <details>
-                <summary>View Mermaid source</summary>
-                <pre>
-graph LR
+</div>
+    <details>
+      <summary>View Mermaid source</summary>
+      <pre>graph TD
+  package__ankhorage_zora_chess[&quot;@ankhorage/zora-chessboard&quot;]
+  entrypoint_src_index_ts[&quot;src/index.ts&quot;]
+  package__ankhorage_zora_chess --&gt; entrypoint_src_index_ts
+  module_src_ChessBoard_tsx[&quot;src/ChessBoard.tsx&quot;]
+  package__ankhorage_zora_chess -.-&gt; module_src_ChessBoard_tsx
+  module_src_ChessBoard_tsx --&gt; module_src_colors_ts
+  module_src_ChessBoard_tsx --&gt; module_src_engine_ts
+  module_src_ChessBoard_tsx --&gt; module_src_squares_ts
+  module_src_ChessBoard_tsx --&gt; module_src_types_ts
+  module_src_colors_ts[&quot;src/colors.ts&quot;]
+  package__ankhorage_zora_chess -.-&gt; module_src_colors_ts
+  module_src_colors_ts --&gt; module_src_types_ts
+  module_src_engine_ts[&quot;src/engine.ts&quot;]
+  package__ankhorage_zora_chess -.-&gt; module_src_engine_ts
+  module_src_engine_ts --&gt; module_src_types_ts
+  module_src_index_ts[&quot;src/index.ts&quot;]
+  module_src_meta_ts[&quot;src/meta.ts&quot;]
+  package__ankhorage_zora_chess -.-&gt; module_src_meta_ts
+  module_src_registry_ts[&quot;src/registry.ts&quot;]
+  package__ankhorage_zora_chess -.-&gt; module_src_registry_ts
+  module_src_registry_ts --&gt; module_src_meta_ts
+  module_src_squares_ts[&quot;src/squares.ts&quot;]
+  package__ankhorage_zora_chess -.-&gt; module_src_squares_ts
+  module_src_squares_ts --&gt; module_src_types_ts
+  module_src_types_ts[&quot;src/types.ts&quot;]
+  package__ankhorage_zora_chess -.-&gt; module_src_types_ts
+</pre>
+    </details>
+  </article><article class="item" data-search="Module relationships diagrams/module-relationships.mmd">
+    <h3>Module relationships</h3>
+    <p class="muted"><code>diagrams/module-relationships.mmd</code></p>
+    <div class="mermaid">graph LR
   module_src_ChessBoard_tsx[&quot;src/ChessBoard.tsx&quot;]
   module_src_colors_ts[&quot;src/colors.ts&quot;]
   module_src_engine_ts[&quot;src/engine.ts&quot;]
@@ -1455,80 +1092,32 @@ graph LR
   module_src_engine_ts --&gt; module_src_types_ts
   module_src_registry_ts --&gt; module_src_meta_ts
   module_src_squares_ts --&gt; module_src_types_ts
-</pre
-                >
-              </details>
-            </article>
-            <article class="item" data-search="Export graph diagrams/export-graph.mmd">
-              <h3>Export graph</h3>
-              <p class="muted"><code>diagrams/export-graph.mmd</code></p>
-              <div class="mermaid">
-                graph LR module_src_ChessBoard_tsx[&quot;src/ChessBoard.tsx&quot;]
-                module_src_colors_ts[&quot;src/colors.ts&quot;]
-                module_src_engine_ts[&quot;src/engine.ts&quot;]
-                module_src_index_ts[&quot;src/index.ts&quot;]
-                module_src_meta_ts[&quot;src/meta.ts&quot;]
-                module_src_registry_ts[&quot;src/registry.ts&quot;]
-                module_src_squares_ts[&quot;src/squares.ts&quot;]
-                module_src_types_ts[&quot;src/types.ts&quot;]
-                export_ChessBoard[&quot;ChessBoard&quot;] module_src_ChessBoard_tsx --&gt;
-                export_ChessBoard
-                export_ChessBoardColorOverrides[&quot;ChessBoardColorOverrides&quot;]
-                module_src_types_ts --&gt; export_ChessBoardColorOverrides
-                export_ChessBoardColorScheme[&quot;ChessBoardColorScheme&quot;] module_src_types_ts
-                --&gt; export_ChessBoardColorScheme
-                export_chessBoardMeta[&quot;chessBoardMeta&quot;] module_src_meta_ts --&gt;
-                export_chessBoardMeta
-                export_ChessBoardOrientation[&quot;ChessBoardOrientation&quot;] module_src_types_ts
-                --&gt; export_ChessBoardOrientation
-                export_ChessBoardProps[&quot;ChessBoardProps&quot;] module_src_types_ts --&gt;
-                export_ChessBoardProps export_ChessBoardProps -.-&gt; export_ChessBoardColorScheme
-                export_ChessBoardProps -.-&gt; export_ChessBoardOrientation export_ChessBoardProps
-                -.-&gt; export_ChessMoveAttempt export_ChessBoardProps -.-&gt;
-                export_ChessMoveResult export_ChessBoardProps -.-&gt; export_ChessPieceRenderer
-                export_ChessBoardProps -.-&gt; export_ChessSquareId
-                export_ChessColorThemeShape[&quot;ChessColorThemeShape&quot;] module_src_colors_ts
-                --&gt; export_ChessColorThemeShape
-                export_ChessMoveAttempt[&quot;ChessMoveAttempt&quot;] module_src_types_ts --&gt;
-                export_ChessMoveAttempt export_ChessMoveAttempt -.-&gt; export_ChessPromotionPiece
-                export_ChessMoveResult[&quot;ChessMoveResult&quot;] module_src_types_ts --&gt;
-                export_ChessMoveResult export_ChessMoveResult -.-&gt; export_ChessPromotionPiece
-                export_ChessPieceCode[&quot;ChessPieceCode&quot;] module_src_types_ts --&gt;
-                export_ChessPieceCode
-                export_ChessPieceRenderContext[&quot;ChessPieceRenderContext&quot;]
-                module_src_types_ts --&gt; export_ChessPieceRenderContext
-                export_ChessPieceRenderer[&quot;ChessPieceRenderer&quot;] module_src_types_ts --&gt;
-                export_ChessPieceRenderer export_ChessPieceState[&quot;ChessPieceState&quot;]
-                module_src_engine_ts --&gt; export_ChessPieceState
-                export_ChessPromotionPiece[&quot;ChessPromotionPiece&quot;] module_src_types_ts
-                --&gt; export_ChessPromotionPiece export_ChessSquareId[&quot;ChessSquareId&quot;]
-                module_src_types_ts --&gt; export_ChessSquareId
-                export_chessSquares[&quot;chessSquares&quot;] module_src_squares_ts --&gt;
-                export_chessSquares export_createBoardSquares[&quot;createBoardSquares&quot;]
-                module_src_squares_ts --&gt; export_createBoardSquares export_createBoardSquares
-                -.-&gt; export_ChessBoardOrientation
-                export_createChessBoardColorScheme[&quot;createChessBoardColorScheme&quot;]
-                module_src_colors_ts --&gt; export_createChessBoardColorScheme
-                export_createChessBoardColorScheme -.-&gt; export_ChessBoardColorScheme
-                export_createChessBoardColorScheme -.-&gt; export_ChessColorThemeShape
-                export_getLegalTargets[&quot;getLegalTargets&quot;] module_src_engine_ts --&gt;
-                export_getLegalTargets export_getSquareFile[&quot;getSquareFile&quot;]
-                module_src_squares_ts --&gt; export_getSquareFile
-                export_getSquareRank[&quot;getSquareRank&quot;] module_src_squares_ts --&gt;
-                export_getSquareRank export_isLightSquare[&quot;isLightSquare&quot;]
-                module_src_squares_ts --&gt; export_isLightSquare
-                export_readChessPieces[&quot;readChessPieces&quot;] module_src_engine_ts --&gt;
-                export_readChessPieces export_readChessPieces -.-&gt; export_ChessPieceState
-                export_tryMove[&quot;tryMove&quot;] module_src_engine_ts --&gt; export_tryMove
-                export_tryMove -.-&gt; export_ChessMoveAttempt export_tryMove -.-&gt;
-                export_ChessMoveResult
-                export_ZORA_CHESS_COMPONENT_META[&quot;ZORA_CHESS_COMPONENT_META&quot;]
-                module_src_registry_ts --&gt; export_ZORA_CHESS_COMPONENT_META
-              </div>
-              <details>
-                <summary>View Mermaid source</summary>
-                <pre>
-graph LR
+</div>
+    <details>
+      <summary>View Mermaid source</summary>
+      <pre>graph LR
+  module_src_ChessBoard_tsx[&quot;src/ChessBoard.tsx&quot;]
+  module_src_colors_ts[&quot;src/colors.ts&quot;]
+  module_src_engine_ts[&quot;src/engine.ts&quot;]
+  module_src_index_ts[&quot;src/index.ts&quot;]
+  module_src_meta_ts[&quot;src/meta.ts&quot;]
+  module_src_registry_ts[&quot;src/registry.ts&quot;]
+  module_src_squares_ts[&quot;src/squares.ts&quot;]
+  module_src_types_ts[&quot;src/types.ts&quot;]
+  module_src_ChessBoard_tsx --&gt; module_src_colors_ts
+  module_src_ChessBoard_tsx --&gt; module_src_engine_ts
+  module_src_ChessBoard_tsx --&gt; module_src_squares_ts
+  module_src_ChessBoard_tsx --&gt; module_src_types_ts
+  module_src_colors_ts --&gt; module_src_types_ts
+  module_src_engine_ts --&gt; module_src_types_ts
+  module_src_registry_ts --&gt; module_src_meta_ts
+  module_src_squares_ts --&gt; module_src_types_ts
+</pre>
+    </details>
+  </article><article class="item" data-search="Export graph diagrams/export-graph.mmd">
+    <h3>Export graph</h3>
+    <p class="muted"><code>diagrams/export-graph.mmd</code></p>
+    <div class="mermaid">graph LR
   module_src_ChessBoard_tsx[&quot;src/ChessBoard.tsx&quot;]
   module_src_colors_ts[&quot;src/colors.ts&quot;]
   module_src_engine_ts[&quot;src/engine.ts&quot;]
@@ -1539,6 +1128,7 @@ graph LR
   module_src_types_ts[&quot;src/types.ts&quot;]
   export_ChessBoard[&quot;ChessBoard&quot;]
   module_src_ChessBoard_tsx --&gt; export_ChessBoard
+  export_ChessBoard -.-&gt; export_ChessBoardProps
   export_ChessBoardColorOverrides[&quot;ChessBoardColorOverrides&quot;]
   module_src_types_ts --&gt; export_ChessBoardColorOverrides
   export_ChessBoardColorScheme[&quot;ChessBoardColorScheme&quot;]
@@ -1601,181 +1191,261 @@ graph LR
   export_tryMove -.-&gt; export_ChessMoveResult
   export_ZORA_CHESS_COMPONENT_META[&quot;ZORA_CHESS_COMPONENT_META&quot;]
   module_src_registry_ts --&gt; export_ZORA_CHESS_COMPONENT_META
-</pre
-                >
-              </details>
-            </article>
-            <article
-              class="item"
-              data-search="getLegalTargets sequence diagrams/sequences/get-legal-targets.mmd"
-            >
-              <h3>getLegalTargets sequence</h3>
-              <p class="muted"><code>diagrams/sequences/get-legal-targets.mmd</code></p>
-              <div class="mermaid">
-                sequenceDiagram participant participant_createChess as createChess participant
-                participant_getLegalTargets as getLegalTargets
-                participant_getLegalTargets-&gt;&gt;participant_createChess: createChess()
-                participant_createChess--&gt;&gt;participant_getLegalTargets: return
-              </div>
-              <details>
-                <summary>View Mermaid source</summary>
-                <pre>
-sequenceDiagram
+</div>
+    <details>
+      <summary>View Mermaid source</summary>
+      <pre>graph LR
+  module_src_ChessBoard_tsx[&quot;src/ChessBoard.tsx&quot;]
+  module_src_colors_ts[&quot;src/colors.ts&quot;]
+  module_src_engine_ts[&quot;src/engine.ts&quot;]
+  module_src_index_ts[&quot;src/index.ts&quot;]
+  module_src_meta_ts[&quot;src/meta.ts&quot;]
+  module_src_registry_ts[&quot;src/registry.ts&quot;]
+  module_src_squares_ts[&quot;src/squares.ts&quot;]
+  module_src_types_ts[&quot;src/types.ts&quot;]
+  export_ChessBoard[&quot;ChessBoard&quot;]
+  module_src_ChessBoard_tsx --&gt; export_ChessBoard
+  export_ChessBoard -.-&gt; export_ChessBoardProps
+  export_ChessBoardColorOverrides[&quot;ChessBoardColorOverrides&quot;]
+  module_src_types_ts --&gt; export_ChessBoardColorOverrides
+  export_ChessBoardColorScheme[&quot;ChessBoardColorScheme&quot;]
+  module_src_types_ts --&gt; export_ChessBoardColorScheme
+  export_chessBoardMeta[&quot;chessBoardMeta&quot;]
+  module_src_meta_ts --&gt; export_chessBoardMeta
+  export_ChessBoardOrientation[&quot;ChessBoardOrientation&quot;]
+  module_src_types_ts --&gt; export_ChessBoardOrientation
+  export_ChessBoardProps[&quot;ChessBoardProps&quot;]
+  module_src_types_ts --&gt; export_ChessBoardProps
+  export_ChessBoardProps -.-&gt; export_ChessBoardColorScheme
+  export_ChessBoardProps -.-&gt; export_ChessBoardOrientation
+  export_ChessBoardProps -.-&gt; export_ChessMoveAttempt
+  export_ChessBoardProps -.-&gt; export_ChessMoveResult
+  export_ChessBoardProps -.-&gt; export_ChessPieceRenderer
+  export_ChessBoardProps -.-&gt; export_ChessSquareId
+  export_ChessColorThemeShape[&quot;ChessColorThemeShape&quot;]
+  module_src_colors_ts --&gt; export_ChessColorThemeShape
+  export_ChessMoveAttempt[&quot;ChessMoveAttempt&quot;]
+  module_src_types_ts --&gt; export_ChessMoveAttempt
+  export_ChessMoveAttempt -.-&gt; export_ChessPromotionPiece
+  export_ChessMoveResult[&quot;ChessMoveResult&quot;]
+  module_src_types_ts --&gt; export_ChessMoveResult
+  export_ChessMoveResult -.-&gt; export_ChessPromotionPiece
+  export_ChessPieceCode[&quot;ChessPieceCode&quot;]
+  module_src_types_ts --&gt; export_ChessPieceCode
+  export_ChessPieceRenderContext[&quot;ChessPieceRenderContext&quot;]
+  module_src_types_ts --&gt; export_ChessPieceRenderContext
+  export_ChessPieceRenderer[&quot;ChessPieceRenderer&quot;]
+  module_src_types_ts --&gt; export_ChessPieceRenderer
+  export_ChessPieceState[&quot;ChessPieceState&quot;]
+  module_src_engine_ts --&gt; export_ChessPieceState
+  export_ChessPromotionPiece[&quot;ChessPromotionPiece&quot;]
+  module_src_types_ts --&gt; export_ChessPromotionPiece
+  export_ChessSquareId[&quot;ChessSquareId&quot;]
+  module_src_types_ts --&gt; export_ChessSquareId
+  export_chessSquares[&quot;chessSquares&quot;]
+  module_src_squares_ts --&gt; export_chessSquares
+  export_createBoardSquares[&quot;createBoardSquares&quot;]
+  module_src_squares_ts --&gt; export_createBoardSquares
+  export_createBoardSquares -.-&gt; export_ChessBoardOrientation
+  export_createChessBoardColorScheme[&quot;createChessBoardColorScheme&quot;]
+  module_src_colors_ts --&gt; export_createChessBoardColorScheme
+  export_createChessBoardColorScheme -.-&gt; export_ChessBoardColorScheme
+  export_createChessBoardColorScheme -.-&gt; export_ChessColorThemeShape
+  export_getLegalTargets[&quot;getLegalTargets&quot;]
+  module_src_engine_ts --&gt; export_getLegalTargets
+  export_getSquareFile[&quot;getSquareFile&quot;]
+  module_src_squares_ts --&gt; export_getSquareFile
+  export_getSquareRank[&quot;getSquareRank&quot;]
+  module_src_squares_ts --&gt; export_getSquareRank
+  export_isLightSquare[&quot;isLightSquare&quot;]
+  module_src_squares_ts --&gt; export_isLightSquare
+  export_readChessPieces[&quot;readChessPieces&quot;]
+  module_src_engine_ts --&gt; export_readChessPieces
+  export_readChessPieces -.-&gt; export_ChessPieceState
+  export_tryMove[&quot;tryMove&quot;]
+  module_src_engine_ts --&gt; export_tryMove
+  export_tryMove -.-&gt; export_ChessMoveAttempt
+  export_tryMove -.-&gt; export_ChessMoveResult
+  export_ZORA_CHESS_COMPONENT_META[&quot;ZORA_CHESS_COMPONENT_META&quot;]
+  module_src_registry_ts --&gt; export_ZORA_CHESS_COMPONENT_META
+</pre>
+    </details>
+  </article><article class="item" data-search="ChessBoard sequence diagrams/sequences/chess-board.mmd">
+    <h3>ChessBoard sequence</h3>
+    <p class="muted"><code>diagrams/sequences/chess-board.mmd</code></p>
+    <div class="mermaid">sequenceDiagram
+  participant participant_ChessBoard as ChessBoard
+  participant participant_useZoraTheme as useZoraTheme
+  participant_ChessBoard-&gt;&gt;participant_useZoraTheme: useZoraTheme()
+  participant_useZoraTheme--&gt;&gt;participant_ChessBoard: return
+</div>
+    <details>
+      <summary>View Mermaid source</summary>
+      <pre>sequenceDiagram
+  participant participant_ChessBoard as ChessBoard
+  participant participant_useZoraTheme as useZoraTheme
+  participant_ChessBoard-&gt;&gt;participant_useZoraTheme: useZoraTheme()
+  participant_useZoraTheme--&gt;&gt;participant_ChessBoard: return
+</pre>
+    </details>
+  </article><article class="item" data-search="getLegalTargets sequence diagrams/sequences/get-legal-targets.mmd">
+    <h3>getLegalTargets sequence</h3>
+    <p class="muted"><code>diagrams/sequences/get-legal-targets.mmd</code></p>
+    <div class="mermaid">sequenceDiagram
   participant participant_createChess as createChess
   participant participant_getLegalTargets as getLegalTargets
   participant_getLegalTargets-&gt;&gt;participant_createChess: createChess()
   participant_createChess--&gt;&gt;participant_getLegalTargets: return
-</pre
-                >
-              </details>
-            </article>
-            <article
-              class="item"
-              data-search="readChessPieces sequence diagrams/sequences/read-chess-pieces.mmd"
-            >
-              <h3>readChessPieces sequence</h3>
-              <p class="muted"><code>diagrams/sequences/read-chess-pieces.mmd</code></p>
-              <div class="mermaid">
-                sequenceDiagram participant participant_createChess as createChess participant
-                participant_readChessPieces as readChessPieces
-                participant_readChessPieces-&gt;&gt;participant_createChess: createChess()
-                participant_createChess--&gt;&gt;participant_readChessPieces: return
-              </div>
-              <details>
-                <summary>View Mermaid source</summary>
-                <pre>
-sequenceDiagram
+</div>
+    <details>
+      <summary>View Mermaid source</summary>
+      <pre>sequenceDiagram
+  participant participant_createChess as createChess
+  participant participant_getLegalTargets as getLegalTargets
+  participant_getLegalTargets-&gt;&gt;participant_createChess: createChess()
+  participant_createChess--&gt;&gt;participant_getLegalTargets: return
+</pre>
+    </details>
+  </article><article class="item" data-search="readChessPieces sequence diagrams/sequences/read-chess-pieces.mmd">
+    <h3>readChessPieces sequence</h3>
+    <p class="muted"><code>diagrams/sequences/read-chess-pieces.mmd</code></p>
+    <div class="mermaid">sequenceDiagram
   participant participant_createChess as createChess
   participant participant_readChessPieces as readChessPieces
   participant_readChessPieces-&gt;&gt;participant_createChess: createChess()
   participant_createChess--&gt;&gt;participant_readChessPieces: return
-</pre
-                >
-              </details>
-            </article>
-            <article class="item" data-search="tryMove sequence diagrams/sequences/try-move.mmd">
-              <h3>tryMove sequence</h3>
-              <p class="muted"><code>diagrams/sequences/try-move.mmd</code></p>
-              <div class="mermaid">
-                sequenceDiagram participant participant_createChess as createChess participant
-                participant_toMoveResult as toMoveResult participant participant_tryMove as tryMove
-                participant_tryMove-&gt;&gt;participant_createChess: createChess()
-                participant_createChess--&gt;&gt;participant_tryMove: return
-                participant_tryMove-&gt;&gt;participant_toMoveResult: toMoveResult()
-                participant_toMoveResult--&gt;&gt;participant_tryMove: return
-              </div>
-              <details>
-                <summary>View Mermaid source</summary>
-                <pre>
-sequenceDiagram
+</div>
+    <details>
+      <summary>View Mermaid source</summary>
+      <pre>sequenceDiagram
+  participant participant_createChess as createChess
+  participant participant_readChessPieces as readChessPieces
+  participant_readChessPieces-&gt;&gt;participant_createChess: createChess()
+  participant_createChess--&gt;&gt;participant_readChessPieces: return
+</pre>
+    </details>
+  </article><article class="item" data-search="tryMove sequence diagrams/sequences/try-move.mmd">
+    <h3>tryMove sequence</h3>
+    <p class="muted"><code>diagrams/sequences/try-move.mmd</code></p>
+    <div class="mermaid">sequenceDiagram
   participant participant_createChess as createChess
   participant participant_toMoveResult as toMoveResult
+  participant participant_toPromotionPiece as toPromotionPiece
   participant participant_tryMove as tryMove
   participant_tryMove-&gt;&gt;participant_createChess: createChess()
   participant_createChess--&gt;&gt;participant_tryMove: return
   participant_tryMove-&gt;&gt;participant_toMoveResult: toMoveResult()
+  participant_toMoveResult-&gt;&gt;participant_toPromotionPiece: toPromotionPiece()
+  participant_toPromotionPiece--&gt;&gt;participant_toMoveResult: return
   participant_toMoveResult--&gt;&gt;participant_tryMove: return
-</pre
-                >
-              </details>
-            </article>
-          </section>
+</div>
+    <details>
+      <summary>View Mermaid source</summary>
+      <pre>sequenceDiagram
+  participant participant_createChess as createChess
+  participant participant_toMoveResult as toMoveResult
+  participant participant_toPromotionPiece as toPromotionPiece
+  participant participant_tryMove as tryMove
+  participant_tryMove-&gt;&gt;participant_createChess: createChess()
+  participant_createChess--&gt;&gt;participant_tryMove: return
+  participant_tryMove-&gt;&gt;participant_toMoveResult: toMoveResult()
+  participant_toMoveResult-&gt;&gt;participant_toPromotionPiece: toPromotionPiece()
+  participant_toPromotionPiece--&gt;&gt;participant_toMoveResult: return
+  participant_toMoveResult--&gt;&gt;participant_tryMove: return
+</pre>
+    </details>
+  </article>
+    </section>
         </section>
         <section id="view-src-chessboard-tsx" class="view" data-view="src/ChessBoard.tsx" hidden>
-          <section class="panel">
-            <h2>src/ChessBoard.tsx</h2>
-            <article class="item" data-search="isDarkPiece src/ChessBoard.tsx ">
-              <h3>isDarkPiece</h3>
-              <p class="muted"><code>src/ChessBoard.tsx:31:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-            <article class="item" data-search="DefaultPiece src/ChessBoard.tsx ">
-              <h3>DefaultPiece</h3>
-              <p class="muted"><code>src/ChessBoard.tsx:35:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-            <article class="item" data-search="ChessBoardInner src/ChessBoard.tsx ">
-              <h3>ChessBoardInner</h3>
-              <p class="muted"><code>src/ChessBoard.tsx:43:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-            <article class="item" data-search="handleSquarePress src/ChessBoard.tsx ">
-              <h3>handleSquarePress</h3>
-              <p class="muted"><code>src/ChessBoard.tsx:81:9</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-          </section>
-        </section>
-        <section id="view-src-colors-ts" class="view" data-view="src/colors.ts" hidden>
-          <section class="panel">
-            <h2>src/colors.ts</h2>
-            <article class="item" data-search="createChessBoardColorScheme src/colors.ts ">
-              <h3>createChessBoardColorScheme</h3>
-              <p class="muted"><code>src/colors.ts:28:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-          </section>
-        </section>
-        <section id="view-src-engine-ts" class="view" data-view="src/engine.ts" hidden>
-          <section class="panel">
-            <h2>src/engine.ts</h2>
-            <article class="item" data-search="createChess src/engine.ts ">
-              <h3>createChess</h3>
-              <p class="muted"><code>src/engine.ts:11:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-            <article class="item" data-search="toPieceCode src/engine.ts ">
-              <h3>toPieceCode</h3>
-              <p class="muted"><code>src/engine.ts:19:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-            <article class="item" data-search="toMoveResult src/engine.ts ">
-              <h3>toMoveResult</h3>
-              <p class="muted"><code>src/engine.ts:23:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-            <article class="item" data-search="readChessPieces src/engine.ts ">
-              <h3>readChessPieces</h3>
-              <p class="muted"><code>src/engine.ts:34:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-            <article class="item" data-search="getLegalTargets src/engine.ts ">
-              <h3>getLegalTargets</h3>
-              <p class="muted"><code>src/engine.ts:60:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-            <article class="item" data-search="tryMove src/engine.ts ">
-              <h3>tryMove</h3>
-              <p class="muted"><code>src/engine.ts:69:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-          </section>
-        </section>
-        <section id="view-src-squares-ts" class="view" data-view="src/squares.ts" hidden>
-          <section class="panel">
-            <h2>src/squares.ts</h2>
-            <article class="item" data-search="createBoardSquares src/squares.ts ">
-              <h3>createBoardSquares</h3>
-              <p class="muted"><code>src/squares.ts:8:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-            <article class="item" data-search="isLightSquare src/squares.ts ">
-              <h3>isLightSquare</h3>
-              <p class="muted"><code>src/squares.ts:15:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-            <article class="item" data-search="getSquareFile src/squares.ts ">
-              <h3>getSquareFile</h3>
-              <p class="muted"><code>src/squares.ts:22:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-            <article class="item" data-search="getSquareRank src/squares.ts ">
-              <h3>getSquareRank</h3>
-              <p class="muted"><code>src/squares.ts:26:1</code></p>
-              <p class="empty">No description available.</p>
-            </article>
-          </section>
-        </section>
+    <section class="panel">
+      <h2>src/ChessBoard.tsx</h2>
+      <article class="item" data-search="isDarkPiece src/ChessBoard.tsx ">
+    <h3>isDarkPiece</h3>
+    <p class="muted"><code>src/ChessBoard.tsx:31:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="DefaultPiece src/ChessBoard.tsx ">
+    <h3>DefaultPiece</h3>
+    <p class="muted"><code>src/ChessBoard.tsx:35:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="ChessBoard src/ChessBoard.tsx ">
+    <h3>ChessBoard</h3>
+    <p class="muted"><code>src/ChessBoard.tsx:43:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="handleSquarePress src/ChessBoard.tsx ">
+    <h3>handleSquarePress</h3>
+    <p class="muted"><code>src/ChessBoard.tsx:79:9</code></p>
+    <p class="empty">No description available.</p>
+  </article>
+    </section>
+  </section><section id="view-src-colors-ts" class="view" data-view="src/colors.ts" hidden>
+    <section class="panel">
+      <h2>src/colors.ts</h2>
+      <article class="item" data-search="createChessBoardColorScheme src/colors.ts ">
+    <h3>createChessBoardColorScheme</h3>
+    <p class="muted"><code>src/colors.ts:28:1</code></p>
+    <p class="empty">No description available.</p>
+  </article>
+    </section>
+  </section><section id="view-src-engine-ts" class="view" data-view="src/engine.ts" hidden>
+    <section class="panel">
+      <h2>src/engine.ts</h2>
+      <article class="item" data-search="createChess src/engine.ts ">
+    <h3>createChess</h3>
+    <p class="muted"><code>src/engine.ts:17:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="toPieceCode src/engine.ts ">
+    <h3>toPieceCode</h3>
+    <p class="muted"><code>src/engine.ts:25:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="toPromotionPiece src/engine.ts ">
+    <h3>toPromotionPiece</h3>
+    <p class="muted"><code>src/engine.ts:29:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="toMoveResult src/engine.ts ">
+    <h3>toMoveResult</h3>
+    <p class="muted"><code>src/engine.ts:37:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="readChessPieces src/engine.ts ">
+    <h3>readChessPieces</h3>
+    <p class="muted"><code>src/engine.ts:48:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="getLegalTargets src/engine.ts ">
+    <h3>getLegalTargets</h3>
+    <p class="muted"><code>src/engine.ts:74:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="tryMove src/engine.ts ">
+    <h3>tryMove</h3>
+    <p class="muted"><code>src/engine.ts:83:1</code></p>
+    <p class="empty">No description available.</p>
+  </article>
+    </section>
+  </section><section id="view-src-squares-ts" class="view" data-view="src/squares.ts" hidden>
+    <section class="panel">
+      <h2>src/squares.ts</h2>
+      <article class="item" data-search="toSquare src/squares.ts ">
+    <h3>toSquare</h3>
+    <p class="muted"><code>src/squares.ts:6:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="createBoardSquares src/squares.ts ">
+    <h3>createBoardSquares</h3>
+    <p class="muted"><code>src/squares.ts:12:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="isLightSquare src/squares.ts ">
+    <h3>isLightSquare</h3>
+    <p class="muted"><code>src/squares.ts:19:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="getSquareFile src/squares.ts ">
+    <h3>getSquareFile</h3>
+    <p class="muted"><code>src/squares.ts:26:1</code></p>
+    <p class="empty">No description available.</p>
+  </article><article class="item" data-search="getSquareRank src/squares.ts ">
+    <h3>getSquareRank</h3>
+    <p class="muted"><code>src/squares.ts:30:1</code></p>
+    <p class="empty">No description available.</p>
+  </article>
+    </section>
+  </section>
       </main>
     </div>
     <script>
