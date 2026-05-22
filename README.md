@@ -17,6 +17,7 @@ Chessboard component for React Native and React Native Web apps built on ZORA.
 - [Export graph](././paradox/diagrams/export-graph.mmd)
 - [ChessBoard sequence](././paradox/diagrams/sequences/chess-board.mmd)
 - [getLegalTargets sequence](././paradox/diagrams/sequences/get-legal-targets.mmd)
+- [OpeningBook sequence](././paradox/diagrams/sequences/opening-book.mmd)
 - [readChessPieces sequence](././paradox/diagrams/sequences/read-chess-pieces.mmd)
 - [tryMove sequence](././paradox/diagrams/sequences/try-move.mmd)
 
@@ -45,6 +46,12 @@ graph TD
   module_src_index_ts["src/index.ts"]
   module_src_meta_ts["src/meta.ts"]
   package__ankhorage_zora_chess -.-> module_src_meta_ts
+  module_src_OpeningBook_tsx["src/OpeningBook.tsx"]
+  package__ankhorage_zora_chess -.-> module_src_OpeningBook_tsx
+  module_src_OpeningBook_tsx --> module_src_OpeningBookColors_ts
+  module_src_OpeningBookColors_ts["src/OpeningBookColors.ts"]
+  package__ankhorage_zora_chess -.-> module_src_OpeningBookColors_ts
+  module_src_OpeningBookColors_ts --> module_src_colors_ts
   module_src_registry_ts["src/registry.ts"]
   package__ankhorage_zora_chess -.-> module_src_registry_ts
   module_src_registry_ts --> module_src_meta_ts
