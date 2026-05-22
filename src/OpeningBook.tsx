@@ -57,7 +57,7 @@ export function OpeningBook({
     () => createOpeningBookColorScheme(theme, colorOverrides),
     [colorOverrides, theme],
   );
-  const stateText = loading ? 'Loading opening moves…' : errorText ?? emptyText;
+  const stateText = loading ? 'Loading opening moves…' : (errorText ?? emptyText);
   const showState = loading || errorText !== undefined || moves.length === 0;
 
   return (
@@ -71,11 +71,11 @@ export function OpeningBook({
       ]}
       testID={testID}
     >
-      <Text selectable={false} style={[styles.title, { color: colors.titleText }]}> 
+      <Text selectable={false} style={[styles.title, { color: colors.titleText }]}>
         {title}
       </Text>
       {showState ? (
-        <Text selectable={false} style={[styles.stateText, { color: colors.secondaryText }]}> 
+        <Text selectable={false} style={[styles.stateText, { color: colors.secondaryText }]}>
           {stateText}
         </Text>
       ) : (
@@ -101,16 +101,22 @@ export function OpeningBook({
                 testID={testID ? `${testID}-move-${move.san}` : undefined}
               >
                 <View style={styles.moveMain}>
-                  <Text selectable={false} style={[styles.moveSan, { color: colors.primaryText }]}> 
+                  <Text selectable={false} style={[styles.moveSan, { color: colors.primaryText }]}>
                     {move.san}
                   </Text>
-                  <Text selectable={false} style={[styles.moveMeta, { color: colors.secondaryText }]}> 
+                  <Text
+                    selectable={false}
+                    style={[styles.moveMeta, { color: colors.secondaryText }]}
+                  >
                     {formatOpeningBookMoveMeta(move)}
                   </Text>
                 </View>
                 {stats ? (
-                  <View style={[styles.metricBadge, { backgroundColor: colors.metricSurface }]}> 
-                    <Text selectable={false} style={[styles.metricText, { color: colors.secondaryText }]}> 
+                  <View style={[styles.metricBadge, { backgroundColor: colors.metricSurface }]}>
+                    <Text
+                      selectable={false}
+                      style={[styles.metricText, { color: colors.secondaryText }]}
+                    >
                       {stats}
                     </Text>
                   </View>
@@ -151,7 +157,11 @@ function isSelectedOpeningBookMove(move: OpeningBookMove, selectedMove: string |
 }
 
 function formatOpeningBookMoveMeta(move: OpeningBookMove): string {
-  const details = [move.eco, move.name, move.games === undefined ? undefined : `${move.games} games`];
+  const details = [
+    move.eco,
+    move.name,
+    move.games === undefined ? undefined : `${move.games} games`,
+  ];
   const formatted = details.filter(isString);
 
   return formatted.length > 0 ? formatted.join(' · ') : 'Book move';

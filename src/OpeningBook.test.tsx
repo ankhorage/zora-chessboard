@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'bun:test';
 
-import { createOpeningBookColorScheme } from './OpeningBook';
 import type { ChessColorThemeShape } from './colors';
+import { createOpeningBookColorScheme } from './OpeningBook';
 
 const theme = {
   semantics: {
@@ -43,8 +43,8 @@ describe('createOpeningBookColorScheme', () => {
   });
 
   it('applies explicit overrides last', () => {
-    expect(createOpeningBookColorScheme(theme, { selectedSurface: '#123456' }).selectedSurface).toBe(
-      '#123456',
-    );
+    expect(
+      createOpeningBookColorScheme(theme, { selectedSurface: '#123456' }).selectedSurface,
+    ).toBe('#123456');
   });
 });
