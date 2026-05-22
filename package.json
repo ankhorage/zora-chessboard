@@ -1,7 +1,7 @@
 {
   "name": "@ankhorage/zora-chess",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Chess UI components for React Native and React Native Web apps built on ZORA.",
   "homepage": "https://github.com/ankhorage/zora-chess#readme",
   "bugs": {
