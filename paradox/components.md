@@ -23,3 +23,21 @@ Export paths: `src/index.ts`
 | showCoordinates | `boolean \| undefined`                          | no       | `false`   |             |
 | testID          | `string \| undefined`                           | no       | —         |             |
 | validateMoves   | `boolean \| undefined`                          | no       | `true`    |             |
+
+## OpeningBook
+
+Source: `src/OpeningBook.tsx:32:1`
+
+Export paths: `src/index.ts`
+
+| Prop         | Type                                           | Required | Default                              | Description |
+| ------------ | ---------------------------------------------- | -------- | ------------------------------------ | ----------- |
+| colorScheme  | `OpeningBookColorOverrides \| undefined`       | no       | —                                    |             |
+| emptyText    | `string \| undefined`                          | no       | `'No book moves for this position.'` |             |
+| errorText    | `string \| undefined`                          | no       | —                                    |             |
+| loading      | `boolean \| undefined`                         | no       | `false`                              |             |
+| moves        | `readonly OpeningBookMove[] \| undefined`      | no       | `[]`                                 |             |
+| onMovePress  | `(move: OpeningBookMove) => void \| undefined` | no       | —                                    |             |
+| selectedMove | `string \| null \| undefined`                  | no       | `null`                               |             |
+| testID       | `string \| undefined`                          | no       | —                                    |             |
+| title        | `string \| undefined`                          | no       | `'Opening book'`                     |             |

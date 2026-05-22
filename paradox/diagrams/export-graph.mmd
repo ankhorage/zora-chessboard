@@ -4,6 +4,8 @@ graph LR
   module_src_engine_ts["src/engine.ts"]
   module_src_index_ts["src/index.ts"]
   module_src_meta_ts["src/meta.ts"]
+  module_src_OpeningBook_tsx["src/OpeningBook.tsx"]
+  module_src_OpeningBookColors_ts["src/OpeningBookColors.ts"]
   module_src_registry_ts["src/registry.ts"]
   module_src_squares_ts["src/squares.ts"]
   module_src_types_ts["src/types.ts"]
@@ -55,6 +57,10 @@ graph LR
   module_src_colors_ts --> export_createChessBoardColorScheme
   export_createChessBoardColorScheme -.-> export_ChessBoardColorScheme
   export_createChessBoardColorScheme -.-> export_ChessColorThemeShape
+  export_createOpeningBookColorScheme["createOpeningBookColorScheme"]
+  module_src_OpeningBookColors_ts --> export_createOpeningBookColorScheme
+  export_createOpeningBookColorScheme -.-> export_ChessColorThemeShape
+  export_createOpeningBookColorScheme -.-> export_OpeningBookColorScheme
   export_getLegalTargets["getLegalTargets"]
   module_src_engine_ts --> export_getLegalTargets
   export_getSquareFile["getSquareFile"]
@@ -63,6 +69,21 @@ graph LR
   module_src_squares_ts --> export_getSquareRank
   export_isLightSquare["isLightSquare"]
   module_src_squares_ts --> export_isLightSquare
+  export_OpeningBook["OpeningBook"]
+  module_src_OpeningBook_tsx --> export_OpeningBook
+  export_OpeningBook -.-> export_OpeningBookProps
+  export_OpeningBookColorOverrides["OpeningBookColorOverrides"]
+  module_src_OpeningBookColors_ts --> export_OpeningBookColorOverrides
+  export_OpeningBookColorScheme["OpeningBookColorScheme"]
+  module_src_OpeningBookColors_ts --> export_OpeningBookColorScheme
+  export_openingBookMeta["openingBookMeta"]
+  module_src_meta_ts --> export_openingBookMeta
+  export_OpeningBookMove["OpeningBookMove"]
+  module_src_OpeningBook_tsx --> export_OpeningBookMove
+  export_OpeningBookProps["OpeningBookProps"]
+  module_src_OpeningBook_tsx --> export_OpeningBookProps
+  export_OpeningBookProps -.-> export_OpeningBookColorScheme
+  export_OpeningBookProps -.-> export_OpeningBookMove
   export_readChessPieces["readChessPieces"]
   module_src_engine_ts --> export_readChessPieces
   export_readChessPieces -.-> export_ChessPieceState

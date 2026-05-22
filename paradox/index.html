@@ -214,6 +214,18 @@
               </button>
             </li>
             <li>
+              <button class="nav-button" type="button" data-target="src/OpeningBook.tsx">
+                src/OpeningBook.tsx
+                <small>7 functions</small>
+              </button>
+            </li>
+            <li>
+              <button class="nav-button" type="button" data-target="src/OpeningBookColors.ts">
+                src/OpeningBookColors.ts
+                <small>1 function</small>
+              </button>
+            </li>
+            <li>
               <button class="nav-button" type="button" data-target="src/squares.ts">
                 src/squares.ts
                 <small>5 functions</small>
@@ -227,9 +239,9 @@
           <section class="panel">
             <h2>Package overview</h2>
             <div class="summary">
-              <div><strong>25</strong><span class="muted">public exports</span></div>
-              <div><strong>1</strong><span class="muted">components</span></div>
-              <div><strong>8</strong><span class="muted">modules</span></div>
+              <div><strong>32</strong><span class="muted">public exports</span></div>
+              <div><strong>2</strong><span class="muted">components</span></div>
+              <div><strong>10</strong><span class="muted">modules</span></div>
               <div><strong>1</strong><span class="muted">entrypoints</span></div>
             </div>
             <h3>Entrypoints</h3>
@@ -278,7 +290,7 @@
             </article>
             <article
               class="item"
-              data-search="src/index.ts ChessBoard ChessBoardColorOverrides ChessBoardColorScheme chessBoardMeta ChessBoardOrientation ChessBoardProps ChessColorThemeShape ChessMoveAttempt ChessMoveResult ChessPieceCode ChessPieceRenderContext ChessPieceRenderer ChessPieceState ChessPromotionPiece ChessSquareId chessSquares createBoardSquares createChessBoardColorScheme getLegalTargets getSquareFile getSquareRank isLightSquare readChessPieces tryMove ZORA_CHESS_COMPONENT_META"
+              data-search="src/index.ts ChessBoard ChessBoardColorOverrides ChessBoardColorScheme chessBoardMeta ChessBoardOrientation ChessBoardProps ChessColorThemeShape ChessMoveAttempt ChessMoveResult ChessPieceCode ChessPieceRenderContext ChessPieceRenderer ChessPieceState ChessPromotionPiece ChessSquareId chessSquares createBoardSquares createChessBoardColorScheme createOpeningBookColorScheme getLegalTargets getSquareFile getSquareRank isLightSquare OpeningBook OpeningBookColorOverrides OpeningBookColorScheme openingBookMeta OpeningBookMove OpeningBookProps readChessPieces tryMove ZORA_CHESS_COMPONENT_META"
             >
               <h3>src/index.ts</h3>
               <p class="muted">Configured entrypoint</p>
@@ -293,17 +305,46 @@
                 <code>ChessPieceRenderer</code>, <code>ChessPieceState</code>,
                 <code>ChessPromotionPiece</code>, <code>ChessSquareId</code>,
                 <code>chessSquares</code>, <code>createBoardSquares</code>,
-                <code>createChessBoardColorScheme</code>, <code>getLegalTargets</code>,
-                <code>getSquareFile</code>, <code>getSquareRank</code>, <code>isLightSquare</code>,
-                <code>readChessPieces</code>, <code>tryMove</code>,
+                <code>createChessBoardColorScheme</code>, <code>createOpeningBookColorScheme</code>,
+                <code>getLegalTargets</code>, <code>getSquareFile</code>,
+                <code>getSquareRank</code>, <code>isLightSquare</code>, <code>OpeningBook</code>,
+                <code>OpeningBookColorOverrides</code>, <code>OpeningBookColorScheme</code>,
+                <code>openingBookMeta</code>, <code>OpeningBookMove</code>,
+                <code>OpeningBookProps</code>, <code>readChessPieces</code>, <code>tryMove</code>,
                 <code>ZORA_CHESS_COMPONENT_META</code>
               </p>
             </article>
-            <article class="item" data-search="src/meta.ts chessBoardMeta">
+            <article class="item" data-search="src/meta.ts chessBoardMeta openingBookMeta">
               <h3>src/meta.ts</h3>
               <p class="muted">Referenced module</p>
               <p><strong>Dependencies:</strong> <span class="empty">None</span></p>
-              <p><strong>Exports:</strong> <code>chessBoardMeta</code></p>
+              <p>
+                <strong>Exports:</strong> <code>chessBoardMeta</code>, <code>openingBookMeta</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/OpeningBook.tsx src/OpeningBookColors.ts OpeningBook OpeningBookMove OpeningBookProps"
+            >
+              <h3>src/OpeningBook.tsx</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <code>src/OpeningBookColors.ts</code></p>
+              <p>
+                <strong>Exports:</strong> <code>OpeningBook</code>, <code>OpeningBookMove</code>,
+                <code>OpeningBookProps</code>
+              </p>
+            </article>
+            <article
+              class="item"
+              data-search="src/OpeningBookColors.ts src/colors.ts createOpeningBookColorScheme OpeningBookColorOverrides OpeningBookColorScheme"
+            >
+              <h3>src/OpeningBookColors.ts</h3>
+              <p class="muted">Referenced module</p>
+              <p><strong>Dependencies:</strong> <code>src/colors.ts</code></p>
+              <p>
+                <strong>Exports:</strong> <code>createOpeningBookColorScheme</code>,
+                <code>OpeningBookColorOverrides</code>, <code>OpeningBookColorScheme</code>
+              </p>
             </article>
             <article
               class="item"
@@ -714,6 +755,408 @@
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+              <article
+                class="item"
+                id="symbol-openingbookmeta"
+                data-search="openingBookMeta value src/meta.ts "
+              >
+                <h4>openingBookMeta</h4>
+                <p class="muted">value • <code>src/meta.ts:10:14</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+            </section>
+            <section>
+              <h3>src/OpeningBook.tsx</h3>
+              <article
+                class="item"
+                id="symbol-openingbook"
+                data-search="OpeningBook function src/OpeningBook.tsx  OpeningBookProps ({&#10;  moves = [],&#10;  title = &#39;Opening book&#39;,&#10;  loading = false,&#10;  errorText,&#10;  emptyText = &#39;No book moves for this position.&#39;,&#10;  selectedMove = null,&#10;  colorScheme: colorOverrides,&#10;  onMovePress,&#10;  testID,&#10;}: OpeningBookProps) =&gt; React.JSX.Element"
+              >
+                <h4>OpeningBook</h4>
+                <p class="muted">function • <code>src/OpeningBook.tsx:32:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">OpeningBookProps</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+({
+  moves = [],
+  title = &#39;Opening book&#39;,
+  loading = false,
+  errorText,
+  emptyText = &#39;No book moves for this position.&#39;,
+  selectedMove = null,
+  colorScheme: colorOverrides,
+  onMovePress,
+  testID,
+}: OpeningBookProps) =&gt; React.JSX.Element</pre
+                  >
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <code
+                            >{ moves = [], title = &#39;Opening book&#39;, loading = false,
+                            errorText, emptyText = &#39;No book moves for this position.&#39;,
+                            selectedMove = null, colorScheme: colorOverrides, onMovePress, testID,
+                            }</code
+                          >
+                        </td>
+                        <td><code>OpeningBookProps</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Returns:</strong> <code>React.JSX.Element</code></p>
+                </div>
+              </article>
+              <article
+                class="item"
+                id="symbol-openingbookmove"
+                data-search="OpeningBookMove type src/OpeningBook.tsx "
+              >
+                <h4>OpeningBookMove</h4>
+                <p class="muted">type • <code>src/OpeningBook.tsx:8:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>blackWinRate</code></td>
+                      <td>property</td>
+                      <td><code>number | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>drawRate</code></td>
+                      <td>property</td>
+                      <td><code>number | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>eco</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>fen</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>games</code></td>
+                      <td>property</td>
+                      <td><code>number | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>name</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>san</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>uci</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>whiteWinRate</code></td>
+                      <td>property</td>
+                      <td><code>number | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+              <article
+                class="item"
+                id="symbol-openingbookprops"
+                data-search="OpeningBookProps type src/OpeningBook.tsx  OpeningBookColorScheme OpeningBookMove"
+              >
+                <h4>OpeningBookProps</h4>
+                <p class="muted">type • <code>src/OpeningBook.tsx:20:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">OpeningBookColorScheme</li>
+                    <li class="chip">OpeningBookMove</li>
+                  </ul>
+                </div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>colorScheme</code></td>
+                      <td>property</td>
+                      <td>
+                        <code
+                          >Partial&lt;import(&quot;/Users/a_rtiphishl_e/git/zora-chess/src/OpeningBookColors&quot;).OpeningBookColorScheme&gt;
+                          | undefined</code
+                        >
+                      </td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>emptyText</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>errorText</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>loading</code></td>
+                      <td>property</td>
+                      <td><code>boolean | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>moves</code></td>
+                      <td>property</td>
+                      <td><code>readonly OpeningBookMove[] | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>onMovePress</code></td>
+                      <td>property</td>
+                      <td><code>((move: OpeningBookMove) =&gt; void) | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>selectedMove</code></td>
+                      <td>property</td>
+                      <td><code>string | null | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>testID</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>title</code></td>
+                      <td>property</td>
+                      <td><code>string | undefined</code></td>
+                      <td>no</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </article>
+            </section>
+            <section>
+              <h3>src/OpeningBookColors.ts</h3>
+              <article
+                class="item"
+                id="symbol-createopeningbookcolorscheme"
+                data-search="createOpeningBookColorScheme function src/OpeningBookColors.ts  ChessColorThemeShape OpeningBookColorScheme (theme: ChessColorThemeShape, overrides?: Partial&lt;OpeningBookColorScheme&gt; | undefined) =&gt; OpeningBookColorScheme"
+              >
+                <h4>createOpeningBookColorScheme</h4>
+                <p class="muted">function • <code>src/OpeningBookColors.ts:16:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div>
+                  <strong>Related symbols:</strong>
+                  <ul class="chips">
+                    <li class="chip">ChessColorThemeShape</li>
+                    <li class="chip">OpeningBookColorScheme</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5>Signature</h5>
+                  <pre>
+(theme: ChessColorThemeShape, overrides?: Partial&lt;OpeningBookColorScheme&gt; | undefined) =&gt; OpeningBookColorScheme</pre
+                  >
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><code>overrides</code></td>
+                        <td><code>Partial&lt;OpeningBookColorScheme&gt; | undefined</code></td>
+                        <td>no</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td><code>theme</code></td>
+                        <td><code>ChessColorThemeShape</code></td>
+                        <td>yes</td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p><strong>Returns:</strong> <code>OpeningBookColorScheme</code></p>
+                </div>
+              </article>
+              <article
+                class="item"
+                id="symbol-openingbookcoloroverrides"
+                data-search="OpeningBookColorOverrides unknown src/OpeningBookColors.ts "
+              >
+                <h4>OpeningBookColorOverrides</h4>
+                <p class="muted">unknown • <code>src/OpeningBookColors.ts:14:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+              </article>
+              <article
+                class="item"
+                id="symbol-openingbookcolorscheme"
+                data-search="OpeningBookColorScheme type src/OpeningBookColors.ts "
+              >
+                <h4>OpeningBookColorScheme</h4>
+                <p class="muted">type • <code>src/OpeningBookColors.ts:3:1</code></p>
+
+                <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+                <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
+
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Member</th>
+                      <th>Kind</th>
+                      <th>Type</th>
+                      <th>Required</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>border</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>metricSurface</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>primaryText</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>secondaryText</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>selectedSurface</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>surface</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>surfaceHover</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><code>titleText</code></td>
+                      <td>property</td>
+                      <td><code>string</code></td>
+                      <td>yes</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
               </article>
             </section>
             <section>
@@ -1513,6 +1956,82 @@
                 </tbody>
               </table>
             </article>
+            <article
+              class="item"
+              id="component-openingbook"
+              data-search="OpeningBook src/OpeningBook.tsx  colorScheme OpeningBookColorOverrides | undefined emptyText string | undefined errorText string | undefined loading boolean | undefined moves readonly OpeningBookMove[] | undefined onMovePress (move: OpeningBookMove) =&gt; void | undefined selectedMove string | null | undefined testID string | undefined title string | undefined"
+            >
+              <h3>OpeningBook</h3>
+              <p class="muted"><code>src/OpeningBook.tsx:32:1</code></p>
+
+              <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Prop</th>
+                    <th>Type</th>
+                    <th>Required</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>colorScheme</code></td>
+                    <td><code>OpeningBookColorOverrides | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>emptyText</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>errorText</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>loading</code></td>
+                    <td><code>boolean | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>moves</code></td>
+                    <td><code>readonly OpeningBookMove[] | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>onMovePress</code></td>
+                    <td><code>(move: OpeningBookMove) =&gt; void | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>selectedMove</code></td>
+                    <td><code>string | null | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>testID</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><code>title</code></td>
+                    <td><code>string | undefined</code></td>
+                    <td>no</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
           </section>
           <section class="panel">
             <h2>Diagrams</h2>
@@ -1537,12 +2056,18 @@
                 -.-&gt; module_src_engine_ts module_src_engine_ts --&gt; module_src_types_ts
                 module_src_index_ts[&quot;src/index.ts&quot;]
                 module_src_meta_ts[&quot;src/meta.ts&quot;] package__ankhorage_zora_chess -.-&gt;
-                module_src_meta_ts module_src_registry_ts[&quot;src/registry.ts&quot;]
-                package__ankhorage_zora_chess -.-&gt; module_src_registry_ts module_src_registry_ts
-                --&gt; module_src_meta_ts module_src_squares_ts[&quot;src/squares.ts&quot;]
-                package__ankhorage_zora_chess -.-&gt; module_src_squares_ts module_src_squares_ts
-                --&gt; module_src_types_ts module_src_types_ts[&quot;src/types.ts&quot;]
-                package__ankhorage_zora_chess -.-&gt; module_src_types_ts
+                module_src_meta_ts module_src_OpeningBook_tsx[&quot;src/OpeningBook.tsx&quot;]
+                package__ankhorage_zora_chess -.-&gt; module_src_OpeningBook_tsx
+                module_src_OpeningBook_tsx --&gt; module_src_OpeningBookColors_ts
+                module_src_OpeningBookColors_ts[&quot;src/OpeningBookColors.ts&quot;]
+                package__ankhorage_zora_chess -.-&gt; module_src_OpeningBookColors_ts
+                module_src_OpeningBookColors_ts --&gt; module_src_colors_ts
+                module_src_registry_ts[&quot;src/registry.ts&quot;] package__ankhorage_zora_chess
+                -.-&gt; module_src_registry_ts module_src_registry_ts --&gt; module_src_meta_ts
+                module_src_squares_ts[&quot;src/squares.ts&quot;] package__ankhorage_zora_chess
+                -.-&gt; module_src_squares_ts module_src_squares_ts --&gt; module_src_types_ts
+                module_src_types_ts[&quot;src/types.ts&quot;] package__ankhorage_zora_chess -.-&gt;
+                module_src_types_ts
               </div>
               <details>
                 <summary>View Mermaid source</summary>
@@ -1566,6 +2091,12 @@ graph TD
   module_src_index_ts[&quot;src/index.ts&quot;]
   module_src_meta_ts[&quot;src/meta.ts&quot;]
   package__ankhorage_zora_chess -.-&gt; module_src_meta_ts
+  module_src_OpeningBook_tsx[&quot;src/OpeningBook.tsx&quot;]
+  package__ankhorage_zora_chess -.-&gt; module_src_OpeningBook_tsx
+  module_src_OpeningBook_tsx --&gt; module_src_OpeningBookColors_ts
+  module_src_OpeningBookColors_ts[&quot;src/OpeningBookColors.ts&quot;]
+  package__ankhorage_zora_chess -.-&gt; module_src_OpeningBookColors_ts
+  module_src_OpeningBookColors_ts --&gt; module_src_colors_ts
   module_src_registry_ts[&quot;src/registry.ts&quot;]
   package__ankhorage_zora_chess -.-&gt; module_src_registry_ts
   module_src_registry_ts --&gt; module_src_meta_ts
@@ -1590,14 +2121,18 @@ graph TD
                 module_src_engine_ts[&quot;src/engine.ts&quot;]
                 module_src_index_ts[&quot;src/index.ts&quot;]
                 module_src_meta_ts[&quot;src/meta.ts&quot;]
+                module_src_OpeningBook_tsx[&quot;src/OpeningBook.tsx&quot;]
+                module_src_OpeningBookColors_ts[&quot;src/OpeningBookColors.ts&quot;]
                 module_src_registry_ts[&quot;src/registry.ts&quot;]
                 module_src_squares_ts[&quot;src/squares.ts&quot;]
                 module_src_types_ts[&quot;src/types.ts&quot;] module_src_ChessBoard_tsx --&gt;
                 module_src_colors_ts module_src_ChessBoard_tsx --&gt; module_src_engine_ts
                 module_src_ChessBoard_tsx --&gt; module_src_squares_ts module_src_ChessBoard_tsx
                 --&gt; module_src_types_ts module_src_colors_ts --&gt; module_src_types_ts
-                module_src_engine_ts --&gt; module_src_types_ts module_src_registry_ts --&gt;
-                module_src_meta_ts module_src_squares_ts --&gt; module_src_types_ts
+                module_src_engine_ts --&gt; module_src_types_ts module_src_OpeningBook_tsx --&gt;
+                module_src_OpeningBookColors_ts module_src_OpeningBookColors_ts --&gt;
+                module_src_colors_ts module_src_registry_ts --&gt; module_src_meta_ts
+                module_src_squares_ts --&gt; module_src_types_ts
               </div>
               <details>
                 <summary>View Mermaid source</summary>
@@ -1608,6 +2143,8 @@ graph LR
   module_src_engine_ts[&quot;src/engine.ts&quot;]
   module_src_index_ts[&quot;src/index.ts&quot;]
   module_src_meta_ts[&quot;src/meta.ts&quot;]
+  module_src_OpeningBook_tsx[&quot;src/OpeningBook.tsx&quot;]
+  module_src_OpeningBookColors_ts[&quot;src/OpeningBookColors.ts&quot;]
   module_src_registry_ts[&quot;src/registry.ts&quot;]
   module_src_squares_ts[&quot;src/squares.ts&quot;]
   module_src_types_ts[&quot;src/types.ts&quot;]
@@ -1617,6 +2154,8 @@ graph LR
   module_src_ChessBoard_tsx --&gt; module_src_types_ts
   module_src_colors_ts --&gt; module_src_types_ts
   module_src_engine_ts --&gt; module_src_types_ts
+  module_src_OpeningBook_tsx --&gt; module_src_OpeningBookColors_ts
+  module_src_OpeningBookColors_ts --&gt; module_src_colors_ts
   module_src_registry_ts --&gt; module_src_meta_ts
   module_src_squares_ts --&gt; module_src_types_ts
 </pre
@@ -1632,6 +2171,8 @@ graph LR
                 module_src_engine_ts[&quot;src/engine.ts&quot;]
                 module_src_index_ts[&quot;src/index.ts&quot;]
                 module_src_meta_ts[&quot;src/meta.ts&quot;]
+                module_src_OpeningBook_tsx[&quot;src/OpeningBook.tsx&quot;]
+                module_src_OpeningBookColors_ts[&quot;src/OpeningBookColors.ts&quot;]
                 module_src_registry_ts[&quot;src/registry.ts&quot;]
                 module_src_squares_ts[&quot;src/squares.ts&quot;]
                 module_src_types_ts[&quot;src/types.ts&quot;]
@@ -1675,12 +2216,28 @@ graph LR
                 module_src_colors_ts --&gt; export_createChessBoardColorScheme
                 export_createChessBoardColorScheme -.-&gt; export_ChessBoardColorScheme
                 export_createChessBoardColorScheme -.-&gt; export_ChessColorThemeShape
+                export_createOpeningBookColorScheme[&quot;createOpeningBookColorScheme&quot;]
+                module_src_OpeningBookColors_ts --&gt; export_createOpeningBookColorScheme
+                export_createOpeningBookColorScheme -.-&gt; export_ChessColorThemeShape
+                export_createOpeningBookColorScheme -.-&gt; export_OpeningBookColorScheme
                 export_getLegalTargets[&quot;getLegalTargets&quot;] module_src_engine_ts --&gt;
                 export_getLegalTargets export_getSquareFile[&quot;getSquareFile&quot;]
                 module_src_squares_ts --&gt; export_getSquareFile
                 export_getSquareRank[&quot;getSquareRank&quot;] module_src_squares_ts --&gt;
                 export_getSquareRank export_isLightSquare[&quot;isLightSquare&quot;]
                 module_src_squares_ts --&gt; export_isLightSquare
+                export_OpeningBook[&quot;OpeningBook&quot;] module_src_OpeningBook_tsx --&gt;
+                export_OpeningBook export_OpeningBook -.-&gt; export_OpeningBookProps
+                export_OpeningBookColorOverrides[&quot;OpeningBookColorOverrides&quot;]
+                module_src_OpeningBookColors_ts --&gt; export_OpeningBookColorOverrides
+                export_OpeningBookColorScheme[&quot;OpeningBookColorScheme&quot;]
+                module_src_OpeningBookColors_ts --&gt; export_OpeningBookColorScheme
+                export_openingBookMeta[&quot;openingBookMeta&quot;] module_src_meta_ts --&gt;
+                export_openingBookMeta export_OpeningBookMove[&quot;OpeningBookMove&quot;]
+                module_src_OpeningBook_tsx --&gt; export_OpeningBookMove
+                export_OpeningBookProps[&quot;OpeningBookProps&quot;] module_src_OpeningBook_tsx
+                --&gt; export_OpeningBookProps export_OpeningBookProps -.-&gt;
+                export_OpeningBookColorScheme export_OpeningBookProps -.-&gt; export_OpeningBookMove
                 export_readChessPieces[&quot;readChessPieces&quot;] module_src_engine_ts --&gt;
                 export_readChessPieces export_readChessPieces -.-&gt; export_ChessPieceState
                 export_tryMove[&quot;tryMove&quot;] module_src_engine_ts --&gt; export_tryMove
@@ -1698,6 +2255,8 @@ graph LR
   module_src_engine_ts[&quot;src/engine.ts&quot;]
   module_src_index_ts[&quot;src/index.ts&quot;]
   module_src_meta_ts[&quot;src/meta.ts&quot;]
+  module_src_OpeningBook_tsx[&quot;src/OpeningBook.tsx&quot;]
+  module_src_OpeningBookColors_ts[&quot;src/OpeningBookColors.ts&quot;]
   module_src_registry_ts[&quot;src/registry.ts&quot;]
   module_src_squares_ts[&quot;src/squares.ts&quot;]
   module_src_types_ts[&quot;src/types.ts&quot;]
@@ -1749,6 +2308,10 @@ graph LR
   module_src_colors_ts --&gt; export_createChessBoardColorScheme
   export_createChessBoardColorScheme -.-&gt; export_ChessBoardColorScheme
   export_createChessBoardColorScheme -.-&gt; export_ChessColorThemeShape
+  export_createOpeningBookColorScheme[&quot;createOpeningBookColorScheme&quot;]
+  module_src_OpeningBookColors_ts --&gt; export_createOpeningBookColorScheme
+  export_createOpeningBookColorScheme -.-&gt; export_ChessColorThemeShape
+  export_createOpeningBookColorScheme -.-&gt; export_OpeningBookColorScheme
   export_getLegalTargets[&quot;getLegalTargets&quot;]
   module_src_engine_ts --&gt; export_getLegalTargets
   export_getSquareFile[&quot;getSquareFile&quot;]
@@ -1757,6 +2320,21 @@ graph LR
   module_src_squares_ts --&gt; export_getSquareRank
   export_isLightSquare[&quot;isLightSquare&quot;]
   module_src_squares_ts --&gt; export_isLightSquare
+  export_OpeningBook[&quot;OpeningBook&quot;]
+  module_src_OpeningBook_tsx --&gt; export_OpeningBook
+  export_OpeningBook -.-&gt; export_OpeningBookProps
+  export_OpeningBookColorOverrides[&quot;OpeningBookColorOverrides&quot;]
+  module_src_OpeningBookColors_ts --&gt; export_OpeningBookColorOverrides
+  export_OpeningBookColorScheme[&quot;OpeningBookColorScheme&quot;]
+  module_src_OpeningBookColors_ts --&gt; export_OpeningBookColorScheme
+  export_openingBookMeta[&quot;openingBookMeta&quot;]
+  module_src_meta_ts --&gt; export_openingBookMeta
+  export_OpeningBookMove[&quot;OpeningBookMove&quot;]
+  module_src_OpeningBook_tsx --&gt; export_OpeningBookMove
+  export_OpeningBookProps[&quot;OpeningBookProps&quot;]
+  module_src_OpeningBook_tsx --&gt; export_OpeningBookProps
+  export_OpeningBookProps -.-&gt; export_OpeningBookColorScheme
+  export_OpeningBookProps -.-&gt; export_OpeningBookMove
   export_readChessPieces[&quot;readChessPieces&quot;]
   module_src_engine_ts --&gt; export_readChessPieces
   export_readChessPieces -.-&gt; export_ChessPieceState
@@ -1814,6 +2392,30 @@ sequenceDiagram
   participant participant_getLegalTargets as getLegalTargets
   participant_getLegalTargets-&gt;&gt;participant_createChess: createChess()
   participant_createChess--&gt;&gt;participant_getLegalTargets: return
+</pre
+                >
+              </details>
+            </article>
+            <article
+              class="item"
+              data-search="OpeningBook sequence diagrams/sequences/opening-book.mmd"
+            >
+              <h3>OpeningBook sequence</h3>
+              <p class="muted"><code>diagrams/sequences/opening-book.mmd</code></p>
+              <div class="mermaid">
+                sequenceDiagram participant participant_OpeningBook as OpeningBook participant
+                participant_useZoraTheme as useZoraTheme
+                participant_OpeningBook-&gt;&gt;participant_useZoraTheme: useZoraTheme()
+                participant_useZoraTheme--&gt;&gt;participant_OpeningBook: return
+              </div>
+              <details>
+                <summary>View Mermaid source</summary>
+                <pre>
+sequenceDiagram
+  participant participant_OpeningBook as OpeningBook
+  participant participant_useZoraTheme as useZoraTheme
+  participant_OpeningBook-&gt;&gt;participant_useZoraTheme: useZoraTheme()
+  participant_useZoraTheme--&gt;&gt;participant_OpeningBook: return
 </pre
                 >
               </details>
@@ -1947,6 +2549,64 @@ sequenceDiagram
             <article class="item" data-search="tryMove src/engine.ts ">
               <h3>tryMove</h3>
               <p class="muted"><code>src/engine.ts:83:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+          </section>
+        </section>
+        <section id="view-src-openingbook-tsx" class="view" data-view="src/OpeningBook.tsx" hidden>
+          <section class="panel">
+            <h2>src/OpeningBook.tsx</h2>
+            <article class="item" data-search="OpeningBook src/OpeningBook.tsx ">
+              <h3>OpeningBook</h3>
+              <p class="muted"><code>src/OpeningBook.tsx:32:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="createOpeningBookMoveKey src/OpeningBook.tsx ">
+              <h3>createOpeningBookMoveKey</h3>
+              <p class="muted"><code>src/OpeningBook.tsx:121:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="isSelectedOpeningBookMove src/OpeningBook.tsx ">
+              <h3>isSelectedOpeningBookMove</h3>
+              <p class="muted"><code>src/OpeningBook.tsx:125:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="formatOpeningBookMoveMeta src/OpeningBook.tsx ">
+              <h3>formatOpeningBookMoveMeta</h3>
+              <p class="muted"><code>src/OpeningBook.tsx:130:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="formatOpeningBookMoveStats src/OpeningBook.tsx ">
+              <h3>formatOpeningBookMoveStats</h3>
+              <p class="muted"><code>src/OpeningBook.tsx:141:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="formatOpeningBookRate src/OpeningBook.tsx ">
+              <h3>formatOpeningBookRate</h3>
+              <p class="muted"><code>src/OpeningBook.tsx:151:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+            <article class="item" data-search="isString src/OpeningBook.tsx ">
+              <h3>isString</h3>
+              <p class="muted"><code>src/OpeningBook.tsx:157:1</code></p>
+              <p class="empty">No description available.</p>
+            </article>
+          </section>
+        </section>
+        <section
+          id="view-src-openingbookcolors-ts"
+          class="view"
+          data-view="src/OpeningBookColors.ts"
+          hidden
+        >
+          <section class="panel">
+            <h2>src/OpeningBookColors.ts</h2>
+            <article
+              class="item"
+              data-search="createOpeningBookColorScheme src/OpeningBookColors.ts "
+            >
+              <h3>createOpeningBookColorScheme</h3>
+              <p class="muted"><code>src/OpeningBookColors.ts:16:1</code></p>
               <p class="empty">No description available.</p>
             </article>
           </section>

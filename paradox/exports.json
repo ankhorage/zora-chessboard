@@ -687,6 +687,44 @@
     "structuredRows": []
   },
   {
+    "name": "createOpeningBookColorScheme",
+    "description": null,
+    "isReadme": false,
+    "examples": [],
+    "kind": "function",
+    "modulePath": "src/OpeningBookColors.ts",
+    "sourceLocation": {
+      "filePath": "src/OpeningBookColors.ts",
+      "line": 16,
+      "column": 1
+    },
+    "exportPaths": ["src/index.ts"],
+    "relatedSymbols": ["ChessColorThemeShape", "OpeningBookColorScheme"],
+    "signatures": [
+      {
+        "label": "(theme: ChessColorThemeShape, overrides?: Partial<OpeningBookColorScheme> | undefined) => OpeningBookColorScheme",
+        "parameters": [
+          {
+            "name": "overrides",
+            "type": "Partial<OpeningBookColorScheme> | undefined",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "theme",
+            "type": "ChessColorThemeShape",
+            "required": true,
+            "description": null
+          }
+        ],
+        "returnType": "OpeningBookColorScheme",
+        "returnDescription": null
+      }
+    ],
+    "members": [],
+    "structuredRows": []
+  },
+  {
     "name": "getLegalTargets",
     "description": null,
     "isReadme": false,
@@ -818,6 +856,313 @@
       }
     ],
     "members": [],
+    "structuredRows": []
+  },
+  {
+    "name": "OpeningBook",
+    "description": null,
+    "isReadme": false,
+    "examples": [],
+    "kind": "function",
+    "modulePath": "src/OpeningBook.tsx",
+    "sourceLocation": {
+      "filePath": "src/OpeningBook.tsx",
+      "line": 32,
+      "column": 1
+    },
+    "exportPaths": ["src/index.ts"],
+    "relatedSymbols": ["OpeningBookProps"],
+    "signatures": [
+      {
+        "label": "({\n  moves = [],\n  title = 'Opening book',\n  loading = false,\n  errorText,\n  emptyText = 'No book moves for this position.',\n  selectedMove = null,\n  colorScheme: colorOverrides,\n  onMovePress,\n  testID,\n}: OpeningBookProps) => React.JSX.Element",
+        "parameters": [
+          {
+            "name": "{\n  moves = [],\n  title = 'Opening book',\n  loading = false,\n  errorText,\n  emptyText = 'No book moves for this position.',\n  selectedMove = null,\n  colorScheme: colorOverrides,\n  onMovePress,\n  testID,\n}",
+            "type": "OpeningBookProps",
+            "required": true,
+            "description": null
+          }
+        ],
+        "returnType": "React.JSX.Element",
+        "returnDescription": null
+      }
+    ],
+    "members": [],
+    "structuredRows": []
+  },
+  {
+    "name": "OpeningBookColorOverrides",
+    "description": null,
+    "isReadme": false,
+    "examples": [],
+    "kind": "unknown",
+    "modulePath": "src/OpeningBookColors.ts",
+    "sourceLocation": {
+      "filePath": "src/OpeningBookColors.ts",
+      "line": 14,
+      "column": 1
+    },
+    "exportPaths": ["src/index.ts"],
+    "relatedSymbols": [],
+    "signatures": [],
+    "members": [],
+    "structuredRows": []
+  },
+  {
+    "name": "OpeningBookColorScheme",
+    "description": null,
+    "isReadme": false,
+    "examples": [],
+    "kind": "type",
+    "modulePath": "src/OpeningBookColors.ts",
+    "sourceLocation": {
+      "filePath": "src/OpeningBookColors.ts",
+      "line": 3,
+      "column": 1
+    },
+    "exportPaths": ["src/index.ts"],
+    "relatedSymbols": [],
+    "signatures": [],
+    "members": [
+      {
+        "name": "border",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "metricSurface",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "primaryText",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "secondaryText",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "selectedSurface",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "surface",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "surfaceHover",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "titleText",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      }
+    ],
+    "structuredRows": []
+  },
+  {
+    "name": "openingBookMeta",
+    "description": null,
+    "isReadme": false,
+    "examples": [],
+    "kind": "value",
+    "modulePath": "src/meta.ts",
+    "sourceLocation": {
+      "filePath": "src/meta.ts",
+      "line": 10,
+      "column": 14
+    },
+    "exportPaths": ["src/index.ts"],
+    "relatedSymbols": [],
+    "signatures": [],
+    "members": [],
+    "structuredRows": []
+  },
+  {
+    "name": "OpeningBookMove",
+    "description": null,
+    "isReadme": false,
+    "examples": [],
+    "kind": "type",
+    "modulePath": "src/OpeningBook.tsx",
+    "sourceLocation": {
+      "filePath": "src/OpeningBook.tsx",
+      "line": 8,
+      "column": 1
+    },
+    "exportPaths": ["src/index.ts"],
+    "relatedSymbols": [],
+    "signatures": [],
+    "members": [
+      {
+        "name": "blackWinRate",
+        "kind": "property",
+        "type": "number | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "drawRate",
+        "kind": "property",
+        "type": "number | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "eco",
+        "kind": "property",
+        "type": "string | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "fen",
+        "kind": "property",
+        "type": "string | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "games",
+        "kind": "property",
+        "type": "number | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "name",
+        "kind": "property",
+        "type": "string | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "san",
+        "kind": "property",
+        "type": "string",
+        "required": true,
+        "description": null
+      },
+      {
+        "name": "uci",
+        "kind": "property",
+        "type": "string | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "whiteWinRate",
+        "kind": "property",
+        "type": "number | undefined",
+        "required": false,
+        "description": null
+      }
+    ],
+    "structuredRows": []
+  },
+  {
+    "name": "OpeningBookProps",
+    "description": null,
+    "isReadme": false,
+    "examples": [],
+    "kind": "type",
+    "modulePath": "src/OpeningBook.tsx",
+    "sourceLocation": {
+      "filePath": "src/OpeningBook.tsx",
+      "line": 20,
+      "column": 1
+    },
+    "exportPaths": ["src/index.ts"],
+    "relatedSymbols": ["OpeningBookColorScheme", "OpeningBookMove"],
+    "signatures": [],
+    "members": [
+      {
+        "name": "colorScheme",
+        "kind": "property",
+        "type": "Partial<import(\"/Users/a_rtiphishl_e/git/zora-chess/src/OpeningBookColors\").OpeningBookColorScheme> | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "emptyText",
+        "kind": "property",
+        "type": "string | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "errorText",
+        "kind": "property",
+        "type": "string | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "loading",
+        "kind": "property",
+        "type": "boolean | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "moves",
+        "kind": "property",
+        "type": "readonly OpeningBookMove[] | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "onMovePress",
+        "kind": "property",
+        "type": "((move: OpeningBookMove) => void) | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "selectedMove",
+        "kind": "property",
+        "type": "string | null | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "testID",
+        "kind": "property",
+        "type": "string | undefined",
+        "required": false,
+        "description": null
+      },
+      {
+        "name": "title",
+        "kind": "property",
+        "type": "string | undefined",
+        "required": false,
+        "description": null
+      }
+    ],
     "structuredRows": []
   },
   {

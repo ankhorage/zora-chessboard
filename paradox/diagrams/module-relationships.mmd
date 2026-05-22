@@ -4,6 +4,8 @@ graph LR
   module_src_engine_ts["src/engine.ts"]
   module_src_index_ts["src/index.ts"]
   module_src_meta_ts["src/meta.ts"]
+  module_src_OpeningBook_tsx["src/OpeningBook.tsx"]
+  module_src_OpeningBookColors_ts["src/OpeningBookColors.ts"]
   module_src_registry_ts["src/registry.ts"]
   module_src_squares_ts["src/squares.ts"]
   module_src_types_ts["src/types.ts"]
@@ -13,5 +15,7 @@ graph LR
   module_src_ChessBoard_tsx --> module_src_types_ts
   module_src_colors_ts --> module_src_types_ts
   module_src_engine_ts --> module_src_types_ts
+  module_src_OpeningBook_tsx --> module_src_OpeningBookColors_ts
+  module_src_OpeningBookColors_ts --> module_src_colors_ts
   module_src_registry_ts --> module_src_meta_ts
   module_src_squares_ts --> module_src_types_ts

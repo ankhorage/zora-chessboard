@@ -237,6 +237,19 @@ Source: `src/colors.ts:28:1`
   - theme: `ChessColorThemeShape`
   - returns: `ChessBoardColorScheme`
 
+## createOpeningBookColorScheme
+
+Kind: `function`
+Module: `src/OpeningBookColors.ts`
+Source: `src/OpeningBookColors.ts:16:1`
+
+### Signatures
+
+- `(theme: ChessColorThemeShape, overrides?: Partial<OpeningBookColorScheme> | undefined) => OpeningBookColorScheme`
+  - overrides: `Partial<OpeningBookColorScheme> | undefined` (optional)
+  - theme: `ChessColorThemeShape`
+  - returns: `OpeningBookColorScheme`
+
 ## getLegalTargets
 
 Kind: `function`
@@ -285,6 +298,109 @@ Source: `src/squares.ts:19:1`
 - `(square: import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square) => boolean`
   - square: `import("/Users/a_rtiphishl_e/git/zora-chess/node_modules/chess.js/dist/types/chess").Square`
   - returns: `boolean`
+
+## OpeningBook
+
+Kind: `function`
+Module: `src/OpeningBook.tsx`
+Source: `src/OpeningBook.tsx:32:1`
+
+### Signatures
+
+- `({
+  moves = [],
+  title = 'Opening book',
+  loading = false,
+  errorText,
+  emptyText = 'No book moves for this position.',
+  selectedMove = null,
+  colorScheme: colorOverrides,
+  onMovePress,
+  testID,
+}: OpeningBookProps) => React.JSX.Element`
+  - {
+    moves = [],
+    title = 'Opening book',
+    loading = false,
+    errorText,
+    emptyText = 'No book moves for this position.',
+    selectedMove = null,
+    colorScheme: colorOverrides,
+    onMovePress,
+    testID,
+    }: `OpeningBookProps`
+  - returns: `React.JSX.Element`
+
+## OpeningBookColorOverrides
+
+Kind: `unknown`
+Module: `src/OpeningBookColors.ts`
+Source: `src/OpeningBookColors.ts:14:1`
+
+## OpeningBookColorScheme
+
+Kind: `type`
+Module: `src/OpeningBookColors.ts`
+Source: `src/OpeningBookColors.ts:3:1`
+
+### Members
+
+| Name            | Kind     | Type     | Required | Description |
+| --------------- | -------- | -------- | -------- | ----------- |
+| border          | property | `string` | yes      |             |
+| metricSurface   | property | `string` | yes      |             |
+| primaryText     | property | `string` | yes      |             |
+| secondaryText   | property | `string` | yes      |             |
+| selectedSurface | property | `string` | yes      |             |
+| surface         | property | `string` | yes      |             |
+| surfaceHover    | property | `string` | yes      |             |
+| titleText       | property | `string` | yes      |             |
+
+## openingBookMeta
+
+Kind: `value`
+Module: `src/meta.ts`
+Source: `src/meta.ts:10:14`
+
+## OpeningBookMove
+
+Kind: `type`
+Module: `src/OpeningBook.tsx`
+Source: `src/OpeningBook.tsx:8:1`
+
+### Members
+
+| Name         | Kind     | Type                  | Required | Description |
+| ------------ | -------- | --------------------- | -------- | ----------- |
+| blackWinRate | property | `number \| undefined` | no       |             |
+| drawRate     | property | `number \| undefined` | no       |             |
+| eco          | property | `string \| undefined` | no       |             |
+| fen          | property | `string \| undefined` | no       |             |
+| games        | property | `number \| undefined` | no       |             |
+| name         | property | `string \| undefined` | no       |             |
+| san          | property | `string`              | yes      |             |
+| uci          | property | `string \| undefined` | no       |             |
+| whiteWinRate | property | `number \| undefined` | no       |             |
+
+## OpeningBookProps
+
+Kind: `type`
+Module: `src/OpeningBook.tsx`
+Source: `src/OpeningBook.tsx:20:1`
+
+### Members
+
+| Name         | Kind     | Type                                                                                                               | Required | Description |
+| ------------ | -------- | ------------------------------------------------------------------------------------------------------------------ | -------- | ----------- |
+| colorScheme  | property | `Partial<import("/Users/a_rtiphishl_e/git/zora-chess/src/OpeningBookColors").OpeningBookColorScheme> \| undefined` | no       |             |
+| emptyText    | property | `string \| undefined`                                                                                              | no       |             |
+| errorText    | property | `string \| undefined`                                                                                              | no       |             |
+| loading      | property | `boolean \| undefined`                                                                                             | no       |             |
+| moves        | property | `readonly OpeningBookMove[] \| undefined`                                                                          | no       |             |
+| onMovePress  | property | `((move: OpeningBookMove) => void) \| undefined`                                                                   | no       |             |
+| selectedMove | property | `string \| null \| undefined`                                                                                      | no       |             |
+| testID       | property | `string \| undefined`                                                                                              | no       |             |
+| title        | property | `string \| undefined`                                                                                              | no       |             |
 
 ## readChessPieces
 
