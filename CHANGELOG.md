@@ -1,5 +1,11 @@
 # @ankhorage/zora-chess
 
+## 0.1.1
+
+### Patch Changes
+
+- c4b9968: Add runtime-binding-ready metadata for ChessBoard events and OpeningBook props.
+
 ## 0.1.0
 
 ### Minor Changes
