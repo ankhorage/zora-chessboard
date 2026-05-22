@@ -2,7 +2,8 @@ import { useZoraTheme } from '@ankhorage/zora';
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-import type { ChessColorThemeShape } from './colors';
+import { createOpeningBookColorScheme } from './OpeningBookColors';
+import type { OpeningBookColorOverrides } from './OpeningBookColors';
 
 export interface OpeningBookMove {
   readonly san: string;
@@ -15,19 +16,6 @@ export interface OpeningBookMove {
   readonly drawRate?: number;
   readonly blackWinRate?: number;
 }
-
-export interface OpeningBookColorScheme {
-  readonly border: string;
-  readonly surface: string;
-  readonly surfaceHover: string;
-  readonly selectedSurface: string;
-  readonly titleText: string;
-  readonly primaryText: string;
-  readonly secondaryText: string;
-  readonly metricSurface: string;
-}
-
-export type OpeningBookColorOverrides = Partial<OpeningBookColorScheme>;
 
 export interface OpeningBookProps {
   readonly moves?: readonly OpeningBookMove[];
@@ -71,11 +59,11 @@ export function OpeningBook({
       ]}
       testID={testID}
     >
-      <Text selectable={false} style={[styles.title, { color: colors.titleText }]}>
+      <Text selectable={false} style={[styles.title, { color: colors.titleText }]}> 
         {title}
       </Text>
       {showState ? (
-        <Text selectable={false} style={[styles.stateText, { color: colors.secondaryText }]}>
+        <Text selectable={false} style={[styles.stateText, { color: colors.secondaryText }]}> 
           {stateText}
         </Text>
       ) : (
@@ -101,22 +89,16 @@ export function OpeningBook({
                 testID={testID ? `${testID}-move-${move.san}` : undefined}
               >
                 <View style={styles.moveMain}>
-                  <Text selectable={false} style={[styles.moveSan, { color: colors.primaryText }]}>
+                  <Text selectable={false} style={[styles.moveSan, { color: colors.primaryText }]}> 
                     {move.san}
                   </Text>
-                  <Text
-                    selectable={false}
-                    style={[styles.moveMeta, { color: colors.secondaryText }]}
-                  >
+                  <Text selectable={false} style={[styles.moveMeta, { color: colors.secondaryText }]}> 
                     {formatOpeningBookMoveMeta(move)}
                   </Text>
                 </View>
                 {stats ? (
-                  <View style={[styles.metricBadge, { backgroundColor: colors.metricSurface }]}>
-                    <Text
-                      selectable={false}
-                      style={[styles.metricText, { color: colors.secondaryText }]}
-                    >
+                  <View style={[styles.metricBadge, { backgroundColor: colors.metricSurface }]}> 
+                    <Text selectable={false} style={[styles.metricText, { color: colors.secondaryText }]}> 
                       {stats}
                     </Text>
                   </View>
@@ -128,23 +110,6 @@ export function OpeningBook({
       )}
     </View>
   );
-}
-
-export function createOpeningBookColorScheme(
-  theme: ChessColorThemeShape,
-  overrides?: OpeningBookColorOverrides,
-): OpeningBookColorScheme {
-  return {
-    border: theme.semantics.neutral.divider,
-    metricSurface: theme.semantics.neutral.surface,
-    primaryText: theme.semantics.content.default,
-    secondaryText: theme.semantics.content.muted,
-    selectedSurface: theme.semantics.action.primary.softBg,
-    surface: theme.semantics.neutral.surface,
-    surfaceHover: theme.semantics.neutral.surfaceHover,
-    titleText: theme.semantics.content.default,
-    ...overrides,
-  };
 }
 
 function createOpeningBookMoveKey(move: OpeningBookMove): string {
