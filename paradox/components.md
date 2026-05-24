@@ -2,7 +2,12 @@
 
 ## ChessBoard
 
-Source: `src/ChessBoard.tsx:43:1`
+Source: `src/ChessBoard.tsx:60:1`
+
+Theme-aware chessboard surface for FEN-backed positions and move attempts.
+
+Use `ChessBoard` to render a position, highlight selected/legal/last-move
+squares, and wire square presses into trainer or game-state logic.
 
 Export paths: `src/index.ts`
 
@@ -26,7 +31,12 @@ Export paths: `src/index.ts`
 
 ## OpeningBook
 
-Source: `src/OpeningBook.tsx:32:1`
+Source: `src/OpeningBook.tsx:47:1`
+
+Binding-ready opening move list for chess trainers and analysis views.
+
+Use `OpeningBook` to present suggested moves, ECO/name metadata, and simple
+win/draw/loss percentages next to a `ChessBoard` or position explorer.
 
 Export paths: `src/index.ts`
 

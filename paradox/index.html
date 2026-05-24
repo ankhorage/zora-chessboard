@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>@ankhorage/zora-chessboard • Paradox</title>
+    <title>@ankhorage/zora-chess • Paradox</title>
     <style>
       :root {
         color-scheme: light;
@@ -184,8 +184,8 @@
     <div class="layout">
       <aside class="sidebar">
         <p class="muted">Generated with Paradox</p>
-        <h1>@ankhorage/zora-chessboard</h1>
-        <p>Chessboard component for React Native and React Native Web apps built on ZORA.</p>
+        <h1>@ankhorage/zora-chess</h1>
+        <p>Chess UI components for React Native and React Native Web apps built on ZORA.</p>
         <input id="search" class="search" type="search" placeholder="Search current view" />
         <nav aria-label="Documentation sections">
           <ul class="nav-list">
@@ -393,11 +393,15 @@
               <article
                 class="item"
                 id="symbol-chessboard"
-                data-search="ChessBoard function src/ChessBoard.tsx  ChessBoardProps ({&#10;  fen,&#10;  orientation = &#39;white&#39;,&#10;  selectedSquare = null,&#10;  legalTargets,&#10;  lastMove = null,&#10;  disabled = false,&#10;  showCoordinates = false,&#10;  validateMoves = true,&#10;  colorScheme: colorOverrides,&#10;  onSquarePress,&#10;  onMoveAttempt,&#10;  onLegalMove,&#10;  onInvalidMove,&#10;  renderPiece,&#10;  testID,&#10;}: ChessBoardProps) =&gt; React.JSX.Element"
+                data-search="ChessBoard function src/ChessBoard.tsx Theme-aware chessboard surface for FEN-backed positions and move attempts.&#10;&#10;Use `ChessBoard` to render a position, highlight selected/legal/last-move&#10;squares, and wire square presses into trainer or game-state logic. ChessBoardProps ({&#10;  fen,&#10;  orientation = &#39;white&#39;,&#10;  selectedSquare = null,&#10;  legalTargets,&#10;  lastMove = null,&#10;  disabled = false,&#10;  showCoordinates = false,&#10;  validateMoves = true,&#10;  colorScheme: colorOverrides,&#10;  onSquarePress,&#10;  onMoveAttempt,&#10;  onLegalMove,&#10;  onInvalidMove,&#10;  renderPiece,&#10;  testID,&#10;}: ChessBoardProps) =&gt; React.JSX.Element"
               >
                 <h4>ChessBoard</h4>
-                <p class="muted">function • <code>src/ChessBoard.tsx:43:1</code></p>
-
+                <p class="muted">function • <code>src/ChessBoard.tsx:60:1</code></p>
+                <p>
+                  Theme-aware chessboard surface for FEN-backed positions and move attempts. Use
+                  `ChessBoard` to render a position, highlight selected/legal/last-move squares, and
+                  wire square presses into trainer or game-state logic.
+                </p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
                   <strong>Related symbols:</strong>
@@ -499,11 +503,16 @@
               <article
                 class="item"
                 id="symbol-createchessboardcolorscheme"
-                data-search="createChessBoardColorScheme function src/colors.ts  ChessBoardColorScheme ChessColorThemeShape (theme: ChessColorThemeShape, overrides?: Partial&lt;ChessBoardColorScheme&gt; | undefined) =&gt; ChessBoardColorScheme"
+                data-search="createChessBoardColorScheme function src/colors.ts Creates the theme-derived palette used by `ChessBoard`.&#10;&#10;Use `createChessBoardColorScheme` when custom board overlays, piece renderers,&#10;or adjacent chess UI need to share the same square, highlight, coordinate, and&#10;piece colors as the built-in board. ChessBoardColorScheme ChessColorThemeShape (theme: ChessColorThemeShape, overrides?: Partial&lt;ChessBoardColorScheme&gt; | undefined) =&gt; ChessBoardColorScheme"
               >
                 <h4>createChessBoardColorScheme</h4>
-                <p class="muted">function • <code>src/colors.ts:28:1</code></p>
-
+                <p class="muted">function • <code>src/colors.ts:41:1</code></p>
+                <p>
+                  Creates the theme-derived palette used by `ChessBoard`. Use
+                  `createChessBoardColorScheme` when custom board overlays, piece renderers, or
+                  adjacent chess UI need to share the same square, highlight, coordinate, and piece
+                  colors as the built-in board.
+                </p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
                   <strong>Related symbols:</strong>
@@ -762,7 +771,7 @@
                 data-search="openingBookMeta value src/meta.ts "
               >
                 <h4>openingBookMeta</h4>
-                <p class="muted">value • <code>src/meta.ts:10:14</code></p>
+                <p class="muted">value • <code>src/meta.ts:113:14</code></p>
 
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div><strong>Related symbols:</strong> <span class="empty">None</span></div>
@@ -773,11 +782,15 @@
               <article
                 class="item"
                 id="symbol-openingbook"
-                data-search="OpeningBook function src/OpeningBook.tsx  OpeningBookProps ({&#10;  moves = [],&#10;  title = &#39;Opening book&#39;,&#10;  loading = false,&#10;  errorText,&#10;  emptyText = &#39;No book moves for this position.&#39;,&#10;  selectedMove = null,&#10;  colorScheme: colorOverrides,&#10;  onMovePress,&#10;  testID,&#10;}: OpeningBookProps) =&gt; React.JSX.Element"
+                data-search="OpeningBook function src/OpeningBook.tsx Binding-ready opening move list for chess trainers and analysis views.&#10;&#10;Use `OpeningBook` to present suggested moves, ECO/name metadata, and simple&#10;win/draw/loss percentages next to a `ChessBoard` or position explorer. OpeningBookProps ({&#10;  moves = [],&#10;  title = &#39;Opening book&#39;,&#10;  loading = false,&#10;  errorText,&#10;  emptyText = &#39;No book moves for this position.&#39;,&#10;  selectedMove = null,&#10;  colorScheme: colorOverrides,&#10;  onMovePress,&#10;  testID,&#10;}: OpeningBookProps) =&gt; React.JSX.Element"
               >
                 <h4>OpeningBook</h4>
-                <p class="muted">function • <code>src/OpeningBook.tsx:32:1</code></p>
-
+                <p class="muted">function • <code>src/OpeningBook.tsx:47:1</code></p>
+                <p>
+                  Binding-ready opening move list for chess trainers and analysis views. Use
+                  `OpeningBook` to present suggested moves, ECO/name metadata, and simple
+                  win/draw/loss percentages next to a `ChessBoard` or position explorer.
+                </p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
                   <strong>Related symbols:</strong>
@@ -1021,11 +1034,15 @@
               <article
                 class="item"
                 id="symbol-createopeningbookcolorscheme"
-                data-search="createOpeningBookColorScheme function src/OpeningBookColors.ts  ChessColorThemeShape OpeningBookColorScheme (theme: ChessColorThemeShape, overrides?: Partial&lt;OpeningBookColorScheme&gt; | undefined) =&gt; OpeningBookColorScheme"
+                data-search="createOpeningBookColorScheme function src/OpeningBookColors.ts Creates the theme-derived palette used by `OpeningBook`.&#10;&#10;Use `createOpeningBookColorScheme` when custom opening-list rows, badges, or&#10;trainer panels should match the built-in book surface and selected-move states. ChessColorThemeShape OpeningBookColorScheme (theme: ChessColorThemeShape, overrides?: Partial&lt;OpeningBookColorScheme&gt; | undefined) =&gt; OpeningBookColorScheme"
               >
                 <h4>createOpeningBookColorScheme</h4>
-                <p class="muted">function • <code>src/OpeningBookColors.ts:16:1</code></p>
-
+                <p class="muted">function • <code>src/OpeningBookColors.ts:28:1</code></p>
+                <p>
+                  Creates the theme-derived palette used by `OpeningBook`. Use
+                  `createOpeningBookColorScheme` when custom opening-list rows, badges, or trainer
+                  panels should match the built-in book surface and selected-move states.
+                </p>
                 <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
                 <div>
                   <strong>Related symbols:</strong>
@@ -1847,11 +1864,15 @@
             <article
               class="item"
               id="component-chessboard"
-              data-search="ChessBoard src/ChessBoard.tsx  colorScheme ChessBoardColorOverrides | undefined disabled boolean | undefined fen string lastMove ChessMoveAttempt | null | undefined legalTargets readonly ChessSquareId[] | undefined onInvalidMove (move: ChessMoveAttempt) =&gt; void | undefined onLegalMove (move: ChessMoveResult) =&gt; void | undefined onMoveAttempt (move: ChessMoveAttempt) =&gt; void | undefined onSquarePress (square: ChessSquareId) =&gt; void | undefined orientation ChessBoardOrientation | undefined renderPiece ChessPieceRenderer | undefined selectedSquare ChessSquareId | null | undefined showCoordinates boolean | undefined testID string | undefined validateMoves boolean | undefined"
+              data-search="ChessBoard src/ChessBoard.tsx Theme-aware chessboard surface for FEN-backed positions and move attempts.&#10;&#10;Use `ChessBoard` to render a position, highlight selected/legal/last-move&#10;squares, and wire square presses into trainer or game-state logic. colorScheme ChessBoardColorOverrides | undefined disabled boolean | undefined fen string lastMove ChessMoveAttempt | null | undefined legalTargets readonly ChessSquareId[] | undefined onInvalidMove (move: ChessMoveAttempt) =&gt; void | undefined onLegalMove (move: ChessMoveResult) =&gt; void | undefined onMoveAttempt (move: ChessMoveAttempt) =&gt; void | undefined onSquarePress (square: ChessSquareId) =&gt; void | undefined orientation ChessBoardOrientation | undefined renderPiece ChessPieceRenderer | undefined selectedSquare ChessSquareId | null | undefined showCoordinates boolean | undefined testID string | undefined validateMoves boolean | undefined"
             >
               <h3>ChessBoard</h3>
-              <p class="muted"><code>src/ChessBoard.tsx:43:1</code></p>
-
+              <p class="muted"><code>src/ChessBoard.tsx:60:1</code></p>
+              <p>
+                Theme-aware chessboard surface for FEN-backed positions and move attempts. Use
+                `ChessBoard` to render a position, highlight selected/legal/last-move squares, and
+                wire square presses into trainer or game-state logic.
+              </p>
               <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
               <table>
                 <thead>
@@ -1959,11 +1980,15 @@
             <article
               class="item"
               id="component-openingbook"
-              data-search="OpeningBook src/OpeningBook.tsx  colorScheme OpeningBookColorOverrides | undefined emptyText string | undefined errorText string | undefined loading boolean | undefined moves readonly OpeningBookMove[] | undefined onMovePress (move: OpeningBookMove) =&gt; void | undefined selectedMove string | null | undefined testID string | undefined title string | undefined"
+              data-search="OpeningBook src/OpeningBook.tsx Binding-ready opening move list for chess trainers and analysis views.&#10;&#10;Use `OpeningBook` to present suggested moves, ECO/name metadata, and simple&#10;win/draw/loss percentages next to a `ChessBoard` or position explorer. colorScheme OpeningBookColorOverrides | undefined emptyText string | undefined errorText string | undefined loading boolean | undefined moves readonly OpeningBookMove[] | undefined onMovePress (move: OpeningBookMove) =&gt; void | undefined selectedMove string | null | undefined testID string | undefined title string | undefined"
             >
               <h3>OpeningBook</h3>
-              <p class="muted"><code>src/OpeningBook.tsx:32:1</code></p>
-
+              <p class="muted"><code>src/OpeningBook.tsx:47:1</code></p>
+              <p>
+                Binding-ready opening move list for chess trainers and analysis views. Use
+                `OpeningBook` to present suggested moves, ECO/name metadata, and simple
+                win/draw/loss percentages next to a `ChessBoard` or position explorer.
+              </p>
               <p><strong>Export paths:</strong> <code>src/index.ts</code></p>
               <table>
                 <thead>
@@ -2042,7 +2067,7 @@
               <h3>Architecture overview</h3>
               <p class="muted"><code>diagrams/architecture-overview.mmd</code></p>
               <div class="mermaid">
-                graph TD package__ankhorage_zora_chess[&quot;@ankhorage/zora-chessboard&quot;]
+                graph TD package__ankhorage_zora_chess[&quot;@ankhorage/zora-chess&quot;]
                 entrypoint_src_index_ts[&quot;src/index.ts&quot;] package__ankhorage_zora_chess
                 --&gt; entrypoint_src_index_ts
                 module_src_ChessBoard_tsx[&quot;src/ChessBoard.tsx&quot;]
@@ -2073,7 +2098,7 @@
                 <summary>View Mermaid source</summary>
                 <pre>
 graph TD
-  package__ankhorage_zora_chess[&quot;@ankhorage/zora-chessboard&quot;]
+  package__ankhorage_zora_chess[&quot;@ankhorage/zora-chess&quot;]
   entrypoint_src_index_ts[&quot;src/index.ts&quot;]
   package__ankhorage_zora_chess --&gt; entrypoint_src_index_ts
   module_src_ChessBoard_tsx[&quot;src/ChessBoard.tsx&quot;]
@@ -2491,14 +2516,21 @@ sequenceDiagram
               <p class="muted"><code>src/ChessBoard.tsx:35:1</code></p>
               <p class="empty">No description available.</p>
             </article>
-            <article class="item" data-search="ChessBoard src/ChessBoard.tsx ">
+            <article
+              class="item"
+              data-search="ChessBoard src/ChessBoard.tsx Theme-aware chessboard surface for FEN-backed positions and move attempts.&#10;&#10;Use `ChessBoard` to render a position, highlight selected/legal/last-move&#10;squares, and wire square presses into trainer or game-state logic."
+            >
               <h3>ChessBoard</h3>
-              <p class="muted"><code>src/ChessBoard.tsx:43:1</code></p>
-              <p class="empty">No description available.</p>
+              <p class="muted"><code>src/ChessBoard.tsx:60:1</code></p>
+              <p>
+                Theme-aware chessboard surface for FEN-backed positions and move attempts. Use
+                `ChessBoard` to render a position, highlight selected/legal/last-move squares, and
+                wire square presses into trainer or game-state logic.
+              </p>
             </article>
             <article class="item" data-search="handleSquarePress src/ChessBoard.tsx ">
               <h3>handleSquarePress</h3>
-              <p class="muted"><code>src/ChessBoard.tsx:79:9</code></p>
+              <p class="muted"><code>src/ChessBoard.tsx:96:9</code></p>
               <p class="empty">No description available.</p>
             </article>
           </section>
@@ -2506,10 +2538,18 @@ sequenceDiagram
         <section id="view-src-colors-ts" class="view" data-view="src/colors.ts" hidden>
           <section class="panel">
             <h2>src/colors.ts</h2>
-            <article class="item" data-search="createChessBoardColorScheme src/colors.ts ">
+            <article
+              class="item"
+              data-search="createChessBoardColorScheme src/colors.ts Creates the theme-derived palette used by `ChessBoard`.&#10;&#10;Use `createChessBoardColorScheme` when custom board overlays, piece renderers,&#10;or adjacent chess UI need to share the same square, highlight, coordinate, and&#10;piece colors as the built-in board."
+            >
               <h3>createChessBoardColorScheme</h3>
-              <p class="muted"><code>src/colors.ts:28:1</code></p>
-              <p class="empty">No description available.</p>
+              <p class="muted"><code>src/colors.ts:41:1</code></p>
+              <p>
+                Creates the theme-derived palette used by `ChessBoard`. Use
+                `createChessBoardColorScheme` when custom board overlays, piece renderers, or
+                adjacent chess UI need to share the same square, highlight, coordinate, and piece
+                colors as the built-in board.
+              </p>
             </article>
           </section>
         </section>
@@ -2556,39 +2596,46 @@ sequenceDiagram
         <section id="view-src-openingbook-tsx" class="view" data-view="src/OpeningBook.tsx" hidden>
           <section class="panel">
             <h2>src/OpeningBook.tsx</h2>
-            <article class="item" data-search="OpeningBook src/OpeningBook.tsx ">
+            <article
+              class="item"
+              data-search="OpeningBook src/OpeningBook.tsx Binding-ready opening move list for chess trainers and analysis views.&#10;&#10;Use `OpeningBook` to present suggested moves, ECO/name metadata, and simple&#10;win/draw/loss percentages next to a `ChessBoard` or position explorer."
+            >
               <h3>OpeningBook</h3>
-              <p class="muted"><code>src/OpeningBook.tsx:32:1</code></p>
-              <p class="empty">No description available.</p>
+              <p class="muted"><code>src/OpeningBook.tsx:47:1</code></p>
+              <p>
+                Binding-ready opening move list for chess trainers and analysis views. Use
+                `OpeningBook` to present suggested moves, ECO/name metadata, and simple
+                win/draw/loss percentages next to a `ChessBoard` or position explorer.
+              </p>
             </article>
             <article class="item" data-search="createOpeningBookMoveKey src/OpeningBook.tsx ">
               <h3>createOpeningBookMoveKey</h3>
-              <p class="muted"><code>src/OpeningBook.tsx:121:1</code></p>
+              <p class="muted"><code>src/OpeningBook.tsx:136:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="isSelectedOpeningBookMove src/OpeningBook.tsx ">
               <h3>isSelectedOpeningBookMove</h3>
-              <p class="muted"><code>src/OpeningBook.tsx:125:1</code></p>
+              <p class="muted"><code>src/OpeningBook.tsx:140:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="formatOpeningBookMoveMeta src/OpeningBook.tsx ">
               <h3>formatOpeningBookMoveMeta</h3>
-              <p class="muted"><code>src/OpeningBook.tsx:130:1</code></p>
+              <p class="muted"><code>src/OpeningBook.tsx:145:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="formatOpeningBookMoveStats src/OpeningBook.tsx ">
               <h3>formatOpeningBookMoveStats</h3>
-              <p class="muted"><code>src/OpeningBook.tsx:141:1</code></p>
+              <p class="muted"><code>src/OpeningBook.tsx:156:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="formatOpeningBookRate src/OpeningBook.tsx ">
               <h3>formatOpeningBookRate</h3>
-              <p class="muted"><code>src/OpeningBook.tsx:151:1</code></p>
+              <p class="muted"><code>src/OpeningBook.tsx:166:1</code></p>
               <p class="empty">No description available.</p>
             </article>
             <article class="item" data-search="isString src/OpeningBook.tsx ">
               <h3>isString</h3>
-              <p class="muted"><code>src/OpeningBook.tsx:157:1</code></p>
+              <p class="muted"><code>src/OpeningBook.tsx:172:1</code></p>
               <p class="empty">No description available.</p>
             </article>
           </section>
@@ -2603,11 +2650,15 @@ sequenceDiagram
             <h2>src/OpeningBookColors.ts</h2>
             <article
               class="item"
-              data-search="createOpeningBookColorScheme src/OpeningBookColors.ts "
+              data-search="createOpeningBookColorScheme src/OpeningBookColors.ts Creates the theme-derived palette used by `OpeningBook`.&#10;&#10;Use `createOpeningBookColorScheme` when custom opening-list rows, badges, or&#10;trainer panels should match the built-in book surface and selected-move states."
             >
               <h3>createOpeningBookColorScheme</h3>
-              <p class="muted"><code>src/OpeningBookColors.ts:16:1</code></p>
-              <p class="empty">No description available.</p>
+              <p class="muted"><code>src/OpeningBookColors.ts:28:1</code></p>
+              <p>
+                Creates the theme-derived palette used by `OpeningBook`. Use
+                `createOpeningBookColorScheme` when custom opening-list rows, badges, or trainer
+                panels should match the built-in book surface and selected-move states.
+              </p>
             </article>
           </section>
         </section>

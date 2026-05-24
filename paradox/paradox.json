@@ -1,7 +1,7 @@
 {
-  "packageName": "@ankhorage/zora-chessboard",
+  "packageName": "@ankhorage/zora-chess",
   "packageId": "@ankhorage/zora-chess",
-  "description": "Chessboard component for React Native and React Native Web apps built on ZORA.",
+  "description": "Chess UI components for React Native and React Native Web apps built on ZORA.",
   "badges": [
     {
       "id": "license",
@@ -12,7 +12,7 @@
     {
       "id": "npm",
       "label": "npm",
-      "value": "v0.0.0",
+      "value": "v0.1.1",
       "color": "cb3837"
     },
     {
@@ -59,6 +59,15 @@
     }
   ],
   "usage": null,
+  "readmeUsage": [
+    {
+      "title": "Minimal chess app root.",
+      "description": "Minimal chess app root.\n\nUse `ChessBoard` for the board surface and `OpeningBook` for binding-ready\nmove suggestions or trainer data alongside the current position.",
+      "language": "tsx",
+      "code": "import {\n  AppBar,\n  AppShell,\n  Screen,\n  ScreenSection,\n  ZoraProvider,\n  type ZoraTheme,\n} from '@ankhorage/zora';\nimport { ChessBoard, OpeningBook, type OpeningBookMove } from '@ankhorage/zora-chess';\n\nconst chessTheme: ZoraTheme = {\n  id: 'basic-chess',\n  name: 'Basic chess',\n  appCategory: 'games',\n  primaryColor: '#2563eb',\n  harmony: 'analogous',\n};\n\nconst openingMoves: readonly OpeningBookMove[] = [\n  {\n    san: 'Nf3',\n    uci: 'g1f3',\n    eco: 'A04',\n    name: 'Reti Opening',\n    games: 12400,\n    whiteWinRate: 0.38,\n    drawRate: 0.34,\n    blackWinRate: 0.28,\n  },\n  {\n    san: 'c4',\n    uci: 'c2c4',\n    eco: 'A10',\n    name: 'English Opening',\n    games: 9800,\n    whiteWinRate: 0.37,\n    drawRate: 0.35,\n    blackWinRate: 0.28,\n  },\n];\n\nexport default function BasicChessApp() {\n  return (\n    <ZoraProvider initialMode=\"light\" theme={chessTheme}>\n      <AppShell header={<AppBar title=\"Chess\" subtitle=\"Board and opening book UI\" />}>\n        <Screen>\n          <ScreenSection title=\"Position\" description=\"Render a FEN position with coordinates.\">\n            <ChessBoard\n              fen=\"rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 1 1\"\n              selectedSquare=\"g1\"\n              legalTargets={['f3', 'h3']}\n              showCoordinates\n            />\n          </ScreenSection>\n          <ScreenSection title=\"Book moves\" description=\"Present engine or database suggestions.\">\n            <OpeningBook moves={openingMoves} selectedMove=\"Nf3\" />\n          </ScreenSection>\n        </Screen>\n      </AppShell>\n    </ZoraProvider>\n  );\n}",
+      "sourcePath": "examples/basic-chess/App.tsx"
+    }
+  ],
   "config": null,
   "entrypoints": ["src/index.ts"],
   "modules": [
@@ -181,14 +190,20 @@
   "exports": [
     {
       "name": "ChessBoard",
-      "description": null,
-      "isReadme": false,
-      "examples": [],
+      "description": "Theme-aware chessboard surface for FEN-backed positions and move attempts.\n\nUse `ChessBoard` to render a position, highlight selected/legal/last-move\nsquares, and wire square presses into trainer or game-state logic.",
+      "isReadme": true,
+      "examples": [
+        {
+          "title": "Interactive board",
+          "language": "tsx",
+          "code": "<ChessBoard\n  fen=\"rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 1 1\"\n  selectedSquare=\"g1\"\n  legalTargets={[\"f3\", \"h3\"]}\n  showCoordinates\n/>"
+        }
+      ],
       "kind": "function",
       "modulePath": "src/ChessBoard.tsx",
       "sourceLocation": {
         "filePath": "src/ChessBoard.tsx",
-        "line": 43,
+        "line": 60,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -830,14 +845,20 @@
     },
     {
       "name": "createChessBoardColorScheme",
-      "description": null,
-      "isReadme": false,
-      "examples": [],
+      "description": "Creates the theme-derived palette used by `ChessBoard`.\n\nUse `createChessBoardColorScheme` when custom board overlays, piece renderers,\nor adjacent chess UI need to share the same square, highlight, coordinate, and\npiece colors as the built-in board.",
+      "isReadme": true,
+      "examples": [
+        {
+          "title": "Custom board colors",
+          "language": "ts",
+          "code": "const colors = createChessBoardColorScheme(theme, { selectedSquare: '#fde68a' });"
+        }
+      ],
       "kind": "function",
       "modulePath": "src/colors.ts",
       "sourceLocation": {
         "filePath": "src/colors.ts",
-        "line": 28,
+        "line": 41,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -868,14 +889,20 @@
     },
     {
       "name": "createOpeningBookColorScheme",
-      "description": null,
-      "isReadme": false,
-      "examples": [],
+      "description": "Creates the theme-derived palette used by `OpeningBook`.\n\nUse `createOpeningBookColorScheme` when custom opening-list rows, badges, or\ntrainer panels should match the built-in book surface and selected-move states.",
+      "isReadme": true,
+      "examples": [
+        {
+          "title": "Custom opening book colors",
+          "language": "ts",
+          "code": "const colors = createOpeningBookColorScheme(theme, { selectedSurface: '#dbeafe' });"
+        }
+      ],
       "kind": "function",
       "modulePath": "src/OpeningBookColors.ts",
       "sourceLocation": {
         "filePath": "src/OpeningBookColors.ts",
-        "line": 16,
+        "line": 28,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1040,14 +1067,20 @@
     },
     {
       "name": "OpeningBook",
-      "description": null,
-      "isReadme": false,
-      "examples": [],
+      "description": "Binding-ready opening move list for chess trainers and analysis views.\n\nUse `OpeningBook` to present suggested moves, ECO/name metadata, and simple\nwin/draw/loss percentages next to a `ChessBoard` or position explorer.",
+      "isReadme": true,
+      "examples": [
+        {
+          "title": "Opening suggestions",
+          "language": "tsx",
+          "code": "<OpeningBook\n  selectedMove=\"Nf3\"\n  moves={[{ san: 'Nf3', eco: 'A04', name: 'Reti Opening' }]}\n/>"
+        }
+      ],
       "kind": "function",
       "modulePath": "src/OpeningBook.tsx",
       "sourceLocation": {
         "filePath": "src/OpeningBook.tsx",
-        "line": 32,
+        "line": 47,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1172,7 +1205,7 @@
       "modulePath": "src/meta.ts",
       "sourceLocation": {
         "filePath": "src/meta.ts",
-        "line": 10,
+        "line": 113,
         "column": 14
       },
       "exportPaths": ["src/index.ts"],
@@ -1437,13 +1470,19 @@
   "components": [
     {
       "name": "ChessBoard",
-      "description": null,
-      "isReadme": false,
-      "examples": [],
+      "description": "Theme-aware chessboard surface for FEN-backed positions and move attempts.\n\nUse `ChessBoard` to render a position, highlight selected/legal/last-move\nsquares, and wire square presses into trainer or game-state logic.",
+      "isReadme": true,
+      "examples": [
+        {
+          "title": "Interactive board",
+          "language": "tsx",
+          "code": "<ChessBoard\n  fen=\"rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 1 1\"\n  selectedSquare=\"g1\"\n  legalTargets={[\"f3\", \"h3\"]}\n  showCoordinates\n/>"
+        }
+      ],
       "modulePath": "src/ChessBoard.tsx",
       "sourceLocation": {
         "filePath": "src/ChessBoard.tsx",
-        "line": 43,
+        "line": 60,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1548,13 +1587,19 @@
     },
     {
       "name": "OpeningBook",
-      "description": null,
-      "isReadme": false,
-      "examples": [],
+      "description": "Binding-ready opening move list for chess trainers and analysis views.\n\nUse `OpeningBook` to present suggested moves, ECO/name metadata, and simple\nwin/draw/loss percentages next to a `ChessBoard` or position explorer.",
+      "isReadme": true,
+      "examples": [
+        {
+          "title": "Opening suggestions",
+          "language": "tsx",
+          "code": "<OpeningBook\n  selectedMove=\"Nf3\"\n  moves={[{ san: 'Nf3', eco: 'A04', name: 'Reti Opening' }]}\n/>"
+        }
+      ],
       "modulePath": "src/OpeningBook.tsx",
       "sourceLocation": {
         "filePath": "src/OpeningBook.tsx",
-        "line": 32,
+        "line": 47,
         "column": 1
       },
       "exportPaths": ["src/index.ts"],
@@ -1642,10 +1687,10 @@
     },
     {
       "name": "ChessBoard",
-      "description": null,
+      "description": "Theme-aware chessboard surface for FEN-backed positions and move attempts.\n\nUse `ChessBoard` to render a position, highlight selected/legal/last-move\nsquares, and wire square presses into trainer or game-state logic.",
       "sourceLocation": {
         "filePath": "src/ChessBoard.tsx",
-        "line": 43,
+        "line": 60,
         "column": 1
       }
     },
@@ -1654,16 +1699,16 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/ChessBoard.tsx",
-        "line": 79,
+        "line": 96,
         "column": 9
       }
     },
     {
       "name": "createChessBoardColorScheme",
-      "description": null,
+      "description": "Creates the theme-derived palette used by `ChessBoard`.\n\nUse `createChessBoardColorScheme` when custom board overlays, piece renderers,\nor adjacent chess UI need to share the same square, highlight, coordinate, and\npiece colors as the built-in board.",
       "sourceLocation": {
         "filePath": "src/colors.ts",
-        "line": 28,
+        "line": 41,
         "column": 1
       }
     },
@@ -1732,10 +1777,10 @@
     },
     {
       "name": "OpeningBook",
-      "description": null,
+      "description": "Binding-ready opening move list for chess trainers and analysis views.\n\nUse `OpeningBook` to present suggested moves, ECO/name metadata, and simple\nwin/draw/loss percentages next to a `ChessBoard` or position explorer.",
       "sourceLocation": {
         "filePath": "src/OpeningBook.tsx",
-        "line": 32,
+        "line": 47,
         "column": 1
       }
     },
@@ -1744,7 +1789,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/OpeningBook.tsx",
-        "line": 121,
+        "line": 136,
         "column": 1
       }
     },
@@ -1753,7 +1798,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/OpeningBook.tsx",
-        "line": 125,
+        "line": 140,
         "column": 1
       }
     },
@@ -1762,7 +1807,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/OpeningBook.tsx",
-        "line": 130,
+        "line": 145,
         "column": 1
       }
     },
@@ -1771,7 +1816,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/OpeningBook.tsx",
-        "line": 141,
+        "line": 156,
         "column": 1
       }
     },
@@ -1780,7 +1825,7 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/OpeningBook.tsx",
-        "line": 151,
+        "line": 166,
         "column": 1
       }
     },
@@ -1789,16 +1834,16 @@
       "description": null,
       "sourceLocation": {
         "filePath": "src/OpeningBook.tsx",
-        "line": 157,
+        "line": 172,
         "column": 1
       }
     },
     {
       "name": "createOpeningBookColorScheme",
-      "description": null,
+      "description": "Creates the theme-derived palette used by `OpeningBook`.\n\nUse `createOpeningBookColorScheme` when custom opening-list rows, badges, or\ntrainer panels should match the built-in book surface and selected-move states.",
       "sourceLocation": {
         "filePath": "src/OpeningBookColors.ts",
-        "line": 16,
+        "line": 28,
         "column": 1
       }
     },
@@ -1854,8 +1899,8 @@
       "name": "ChessBoard",
       "sourcePath": "src/ChessBoard.tsx",
       "symbolName": "ChessBoard",
-      "description": null,
-      "isReadme": false
+      "description": "Theme-aware chessboard surface for FEN-backed positions and move attempts.\n\nUse `ChessBoard` to render a position, highlight selected/legal/last-move\nsquares, and wire square presses into trainer or game-state logic.",
+      "isReadme": true
     },
     {
       "kind": "export",
@@ -1870,16 +1915,16 @@
       "name": "createChessBoardColorScheme",
       "sourcePath": "src/colors.ts",
       "symbolName": "createChessBoardColorScheme",
-      "description": null,
-      "isReadme": false
+      "description": "Creates the theme-derived palette used by `ChessBoard`.\n\nUse `createChessBoardColorScheme` when custom board overlays, piece renderers,\nor adjacent chess UI need to share the same square, highlight, coordinate, and\npiece colors as the built-in board.",
+      "isReadme": true
     },
     {
       "kind": "export",
       "name": "createOpeningBookColorScheme",
       "sourcePath": "src/OpeningBookColors.ts",
       "symbolName": "createOpeningBookColorScheme",
-      "description": null,
-      "isReadme": false
+      "description": "Creates the theme-derived palette used by `OpeningBook`.\n\nUse `createOpeningBookColorScheme` when custom opening-list rows, badges, or\ntrainer panels should match the built-in book surface and selected-move states.",
+      "isReadme": true
     },
     {
       "kind": "export",
@@ -1918,8 +1963,8 @@
       "name": "OpeningBook",
       "sourcePath": "src/OpeningBook.tsx",
       "symbolName": "OpeningBook",
-      "description": null,
-      "isReadme": false
+      "description": "Binding-ready opening move list for chess trainers and analysis views.\n\nUse `OpeningBook` to present suggested moves, ECO/name metadata, and simple\nwin/draw/loss percentages next to a `ChessBoard` or position explorer.",
+      "isReadme": true
     },
     {
       "kind": "export",

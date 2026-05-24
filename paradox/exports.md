@@ -4,7 +4,12 @@
 
 Kind: `function`
 Module: `src/ChessBoard.tsx`
-Source: `src/ChessBoard.tsx:43:1`
+Source: `src/ChessBoard.tsx:60:1`
+
+Theme-aware chessboard surface for FEN-backed positions and move attempts.
+
+Use `ChessBoard` to render a position, highlight selected/legal/last-move
+squares, and wire square presses into trainer or game-state logic.
 
 ### Signatures
 
@@ -228,7 +233,13 @@ Source: `src/squares.ts:12:1`
 
 Kind: `function`
 Module: `src/colors.ts`
-Source: `src/colors.ts:28:1`
+Source: `src/colors.ts:41:1`
+
+Creates the theme-derived palette used by `ChessBoard`.
+
+Use `createChessBoardColorScheme` when custom board overlays, piece renderers,
+or adjacent chess UI need to share the same square, highlight, coordinate, and
+piece colors as the built-in board.
 
 ### Signatures
 
@@ -241,7 +252,12 @@ Source: `src/colors.ts:28:1`
 
 Kind: `function`
 Module: `src/OpeningBookColors.ts`
-Source: `src/OpeningBookColors.ts:16:1`
+Source: `src/OpeningBookColors.ts:28:1`
+
+Creates the theme-derived palette used by `OpeningBook`.
+
+Use `createOpeningBookColorScheme` when custom opening-list rows, badges, or
+trainer panels should match the built-in book surface and selected-move states.
 
 ### Signatures
 
@@ -303,7 +319,12 @@ Source: `src/squares.ts:19:1`
 
 Kind: `function`
 Module: `src/OpeningBook.tsx`
-Source: `src/OpeningBook.tsx:32:1`
+Source: `src/OpeningBook.tsx:47:1`
+
+Binding-ready opening move list for chess trainers and analysis views.
+
+Use `OpeningBook` to present suggested moves, ECO/name metadata, and simple
+win/draw/loss percentages next to a `ChessBoard` or position explorer.
 
 ### Signatures
 
@@ -360,7 +381,7 @@ Source: `src/OpeningBookColors.ts:3:1`
 
 Kind: `value`
 Module: `src/meta.ts`
-Source: `src/meta.ts:10:14`
+Source: `src/meta.ts:113:14`
 
 ## OpeningBookMove
 
