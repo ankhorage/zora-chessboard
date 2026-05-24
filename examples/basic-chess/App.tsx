@@ -1,4 +1,11 @@
-import { AppBar, AppShell, Screen, ScreenSection, ZoraProvider, type ZoraTheme } from '@ankhorage/zora';
+import {
+  AppBar,
+  AppShell,
+  Screen,
+  ScreenSection,
+  ZoraProvider,
+  type ZoraTheme,
+} from '@ankhorage/zora';
 import { ChessBoard, OpeningBook, type OpeningBookMove } from '@ankhorage/zora-chess';
 
 const chessTheme: ZoraTheme = {
@@ -50,7 +57,7 @@ export default function BasicChessApp() {
             <ChessBoard
               fen="rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 1 1"
               selectedSquare="g1"
-              legalTargets={["f3", "h3"]}
+              legalTargets={['f3', 'h3']}
               showCoordinates
             />
           </ScreenSection>
