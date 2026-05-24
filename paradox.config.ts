@@ -4,8 +4,11 @@ export default defineParadoxConfig({
   mode: 'write',
 
   docs: {
-    title: '@ankhorage/zora-chessboard',
-    description: 'Chessboard component for React Native and React Native Web apps built on ZORA.',
+    title: '@ankhorage/zora-chess',
+    description: 'Chess UI components for React Native and React Native Web apps built on ZORA.',
+    usage: {
+      entrypoints: ['examples/basic-chess/App.tsx'],
+    },
   },
 
   package: {

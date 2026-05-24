@@ -25,6 +25,19 @@ export interface ChessColorThemeShape {
   };
 }
 
+/***
+ * Creates the theme-derived palette used by `ChessBoard`.
+ *
+ * Use `createChessBoardColorScheme` when custom board overlays, piece renderers,
+ * or adjacent chess UI need to share the same square, highlight, coordinate, and
+ * piece colors as the built-in board.
+ *
+ * @readme
+ * @example Custom board colors
+ * ```ts
+ * const colors = createChessBoardColorScheme(theme, { selectedSquare: '#fde68a' });
+ * ```
+ */
 export function createChessBoardColorScheme(
   theme: ChessColorThemeShape,
   overrides?: ChessBoardColorOverrides,

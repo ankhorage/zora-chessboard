@@ -29,6 +29,21 @@ export interface OpeningBookProps {
   readonly testID?: string;
 }
 
+/***
+ * Binding-ready opening move list for chess trainers and analysis views.
+ *
+ * Use `OpeningBook` to present suggested moves, ECO/name metadata, and simple
+ * win/draw/loss percentages next to a `ChessBoard` or position explorer.
+ *
+ * @readme
+ * @example Opening suggestions
+ * ```tsx
+ * <OpeningBook
+ *   selectedMove="Nf3"
+ *   moves={[{ san: 'Nf3', eco: 'A04', name: 'Reti Opening' }]}
+ * />
+ * ```
+ */
 export function OpeningBook({
   moves = [],
   title = 'Opening book',

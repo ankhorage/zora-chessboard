@@ -40,6 +40,23 @@ function DefaultPiece({ color, piece }: ChessPieceRenderContext) {
   );
 }
 
+/***
+ * Theme-aware chessboard surface for FEN-backed positions and move attempts.
+ *
+ * Use `ChessBoard` to render a position, highlight selected/legal/last-move
+ * squares, and wire square presses into trainer or game-state logic.
+ *
+ * @readme
+ * @example Interactive board
+ * ```tsx
+ * <ChessBoard
+ *   fen="rnbqkbnr/pppppppp/8/8/8/5N2/PPPPPPPP/RNBQKB1R b KQkq - 1 1"
+ *   selectedSquare="g1"
+ *   legalTargets={["f3", "h3"]}
+ *   showCoordinates
+ * />
+ * ```
+ */
 export function ChessBoard({
   fen,
   orientation = 'white',
