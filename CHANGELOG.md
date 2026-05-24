@@ -1,5 +1,11 @@
 # @ankhorage/zora-chess
 
+## 0.1.2
+
+### Patch Changes
+
+- 7238b0f: Add Paradox README and usage documentation comments for chess UI exports.
+
 ## 0.1.1
 
 ### Patch Changes
