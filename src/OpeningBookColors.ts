@@ -13,6 +13,18 @@ export interface OpeningBookColorScheme {
 
 export type OpeningBookColorOverrides = Partial<OpeningBookColorScheme>;
 
+/***
+ * Creates the theme-derived palette used by `OpeningBook`.
+ *
+ * Use `createOpeningBookColorScheme` when custom opening-list rows, badges, or
+ * trainer panels should match the built-in book surface and selected-move states.
+ *
+ * @readme
+ * @example Custom opening book colors
+ * ```ts
+ * const colors = createOpeningBookColorScheme(theme, { selectedSurface: '#dbeafe' });
+ * ```
+ */
 export function createOpeningBookColorScheme(
   theme: ChessColorThemeShape,
   overrides?: OpeningBookColorOverrides,
